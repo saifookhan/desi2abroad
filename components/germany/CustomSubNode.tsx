@@ -17,7 +17,7 @@ function CustomSubNode({ data }) {
   const newData = [
     {
       key: '1',
-      label: data.job,
+      label: data.label,
       children: <p>{text}</p>,
     },
   ]

@@ -11,7 +11,7 @@ function CustomNode({ data }) {
         </div>
         <div className="ml-2">
           <div className="text-lg font-bold text-blue-900">{data.name}</div>
-          <div className="text-gray-500">{data.job}</div>
+          <div className="text-gray-500">{data.label}</div>
         </div>
       </div>
       <Handle type="source" id="a" position={Position.Top} className="w-16 !bg-teal-500" />

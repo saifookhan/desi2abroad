@@ -9,7 +9,7 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `
 type CollapsableNode = {
-  data: { job: string }
+  data: { label: string }
   targetPosition: 'top' | 'right' | 'bottom' | 'left'
 }
 
@@ -21,7 +21,7 @@ function CollapsableNode(props) {
   const newData = [
     {
       key: '1',
-      label: props.data.job,
+      label: props.data.label,
       children: <p>{text}</p>,
     },
   ]

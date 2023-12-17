@@ -15,7 +15,7 @@ function CustomHeadingNode({ data }) {
   const newData = [
     {
       key: '1',
-      label: data.job,
+      label: data.label,
       children: <p>{text}</p>,
     },
   ]
@@ -23,7 +23,7 @@ function CustomHeadingNode({ data }) {
     <div className=" w-64 shadow-md rounded-md bg-white border-2 border-stone-400">
       {/* <div className="flex">
         <div className="ml-2 w-40">
-          <div className="text-gray-500 text-xs">{data.job}</div>
+          <div className="text-gray-500 text-xs">{data.label}</div>
         </div>
       </div> */}
       <Handle type="target" id="a" position={Position.Top} className="!bg-teal-500" />
