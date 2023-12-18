@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useCallback } from 'react'
 import ReactFlow, {
   useNodesState,
@@ -15,6 +17,7 @@ import CustomNode from './CustomNode'
 import CustomHeadingNode from './CustomHeadingNode'
 import CustomSubNode from './CustomSubNode'
 import CollapsableNode from '../general/CollapsableNode'
+import useScreenSize from 'app/utils/useScreenSize'
 
 const nodeTypes = {
   custom: CustomNode,
@@ -314,7 +317,7 @@ const initEdges = [
   },
   {
     ...basicEdgeConfig,
-    id: 'a2-a2_1',
+    id: 'a2_1-a3',
     source: 'a2_1',
     target: 'a3',
     sourceHandle: 'c',
@@ -488,8 +491,19 @@ const Flow = () => {
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
 
+  const screenSize = useScreenSize()
+
+  //TODO:: fix the server vs client size issue
+  const displaySize = screenSize.mobileView
+    ? {
+        minViewHeight: 500,
+      }
+    : {
+        minViewHeight: 1200,
+      }
+
   return (
-    <div style={{ height: 500 }}>
+    <div style={{ height: displaySize.minViewHeight }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
