@@ -80,7 +80,7 @@ export default function GermanyLayout({
 
   return (
     <>
-      <SectionContainer>
+      <SectionContainer backgroundStyle={'gradientDark'}>
         <Flow />
       </SectionContainer>
       <div className="pb-6 pt-6">

@@ -20,7 +20,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
   const { path, slug, date, title } = content
 
   return (
-    <SectionContainer>
+    <SectionContainer backgroundStyle={'gradientDark'}>
       <ScrollTopAndComment />
       <article>
         <div>

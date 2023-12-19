@@ -23,7 +23,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
     images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
 
   return (
-    <SectionContainer>
+    <SectionContainer backgroundStyle={'gradientDark'}>
       <ScrollTopAndComment />
       <article>
         <div>
