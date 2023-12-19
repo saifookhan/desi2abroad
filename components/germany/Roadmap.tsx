@@ -495,7 +495,9 @@ const Flow = () => {
   if (screenSize.mobileView === undefined) {
     return null
   }
+
   //TODO:: fix the server vs client size issue
+  //TODO:: Hide reactflow stamp
   const displaySize = screenSize.mobileView
     ? {
         minViewHeight: 500,
