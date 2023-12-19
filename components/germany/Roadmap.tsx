@@ -13,16 +13,10 @@ import ReactFlow, {
 import 'reactflow/dist/base.css'
 // import 'reactflow/dist/style.css'
 
-import CustomNode from './CustomNode'
-import CustomHeadingNode from './CustomHeadingNode'
-import CustomSubNode from './CustomSubNode'
 import CollapsableNode from '../general/CollapsableNode'
 import useScreenSize from 'app/utils/useScreenSize'
 
 const nodeTypes = {
-  custom: CustomNode,
-  customHeading: CustomHeadingNode,
-  customSubNode: CustomSubNode,
   collapsableNode: CollapsableNode,
 }
 
@@ -44,7 +38,7 @@ const initNodes = [
   },
   {
     id: 'a1',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Start',
     },
@@ -52,10 +46,11 @@ const initNodes = [
   },
   {
     id: 'a2',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Have you done O/A Levels?',
     },
+    targetPosition: Position.Left,
     position: { x: 0, y: 100 },
   },
   {
@@ -69,7 +64,7 @@ const initNodes = [
   },
   {
     id: 'a3',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Apply for degree at your uni & transcript attestation from HEC',
     },
@@ -77,7 +72,7 @@ const initNodes = [
   },
   {
     id: 'a4',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Take IELTS exam',
     },
@@ -85,7 +80,7 @@ const initNodes = [
   },
   {
     id: 'a5',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Shortlist universities',
     },
@@ -138,7 +133,7 @@ const initNodes = [
   },
   {
     id: 'a6',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Write Letter of Motivation (not all unis require it)',
     },
@@ -146,7 +141,7 @@ const initNodes = [
   },
   {
     id: 'a7',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Get letters of recommendation from profs (not all unis require it)',
     },
@@ -154,7 +149,7 @@ const initNodes = [
   },
   {
     id: 'a8',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Start applying as soon as admissions open',
     },
@@ -162,7 +157,7 @@ const initNodes = [
   },
   {
     id: 'a8_1',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Uni-assist Application' },
     targetPosition: Position.Right,
     position: { x: -400, y: 500 },
@@ -183,31 +178,32 @@ const initNodes = [
   },
   {
     id: 'a8_4',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Direct Application on uni portal' },
     position: { x: -400, y: 710 },
+    targetPosition: Position.Right,
   },
   {
     id: 'b1',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: { label: 'Did you get an admission offer?' },
     position: { x: 0, y: 750 },
   },
   {
     id: 'c1',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: { label: 'Book your visa appointment' },
     position: { x: 0, y: 850 },
   },
   {
     id: 'c2',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: { label: 'Apply for hostel accommodations' },
     position: { x: 0, y: 920 },
   },
   {
     id: 'c4',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Open blocked account and remit blocked amount',
     },
@@ -215,7 +211,7 @@ const initNodes = [
   },
   {
     id: 'c5',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Appear for visa interview',
     },
@@ -244,7 +240,7 @@ const initNodes = [
   },
   {
     id: 'c6',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Did you receive your visa?',
     },
@@ -252,7 +248,7 @@ const initNodes = [
   },
   {
     id: 'c7',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Book flight (student discount)',
     },
@@ -268,37 +264,42 @@ const initNodes = [
   },
   {
     id: 'c8_1',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Shopping List' },
     position: { x: -400, y: 1200 },
+    targetPosition: Position.Right,
   },
   {
     id: 'c8_2',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Make connections (PSA/ISA)' },
     position: { x: -400, y: 1250 },
+    targetPosition: Position.Right,
   },
   {
     id: 'c8_3',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Train Ticket Tutorial' },
     position: { x: -400, y: 1320 },
+    targetPosition: Position.Right,
   },
   {
     id: 'c8_4',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Important Mobile Apps' },
     position: { x: -400, y: 1370 },
+    targetPosition: Position.Right,
   },
   {
     id: 'c8_5',
-    type: 'customSubNode',
+    type: 'collapsableNode',
     data: { label: 'Drivers License' },
     position: { x: -400, y: 1420 },
+    targetPosition: Position.Right,
   },
   {
     id: 'd1',
-    type: 'customHeading',
+    type: 'collapsableNode',
     data: {
       label: 'Land in Germany',
     },
