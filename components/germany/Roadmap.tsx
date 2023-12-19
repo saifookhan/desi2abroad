@@ -310,6 +310,13 @@ const initNodes = [
 const initEdges = [
   {
     ...basicEdgeConfig,
+    id: 'a1-d1',
+    source: 'a1',
+    target: 'd1',
+    sourceHandle: 'c',
+  },
+  {
+    ...basicEdgeConfig,
     id: 'a2-a2_1',
     source: 'a2',
     target: 'a2_1',
