@@ -18,7 +18,7 @@ const Header = () => {
               <Image src="/static/images/logo.svg" height={30} width={30} alt="some" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="h-6 text-xl font-semibold sm:text-2xl">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
@@ -39,8 +39,8 @@ const Header = () => {
               {link.title}
             </Link>
           ))}
-        <SearchButton />
-        <ThemeSwitch />
+        {/* <SearchButton /> */}
+        {/* <ThemeSwitch /> */}
         <MobileNav />
       </div>
     </header>
