@@ -28,7 +28,7 @@ const HomePage = () => (
               <span className="hidden sm:inline">
                 Join our Whatsapp group. <span className="font-semibold">Click here</span>
               </span>
-              <span className="inline sm:hidden">Announcing roadmaps for teams!</span>
+              <span className="inline sm:hidden">Join our work/study Whatsapp group!</span>
             </a>{' '}
           </p>{' '}
           <h1 className="mb-2 bg-gradient-to-b from-amber-50 to-purple-500 bg-clip-text text-2xl font-bold text-transparent sm:mb-4 sm:text-5xl">
@@ -38,10 +38,10 @@ const HomePage = () => (
             {' '}
             <span className="font-medium text-gray-400">desi2abroad.com</span> is a collaborative
             platform for students and professionals from the sub-continent to join forces, exchange
-            knowledge, and navigate pathways for studying and working abroad.
+            knowledge, and navigate pathways for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </p>{' '}
           <p className="text-md block px-0 text-gray-400 sm:hidden">
-            Community created roadmaps, guides and articles to help developers grow in their career.
+            Step-by-step guides, communities, articles for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </p>{' '}
         </div>{' '}
       </div>
