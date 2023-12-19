@@ -1,13 +1,8 @@
-import GermanyLayout from '@/layouts/GermanyLayoutWithTags'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import SectionContainer from '@/components/SectionContainer'
 import Flow from '@/components/germany/Roadmap'
-import Footer from '@/components/Footer'
 
-const POSTS_PER_PAGE = 5
-
+//TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default function BlogPage() {
@@ -245,23 +240,7 @@ export default function BlogPage() {
                       <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                       <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                     </svg>
-                    What is Frontend Development?
-                  </span>
-                  <span className="flex-shrink-0 text-gray-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-chevron-down inline-block h-5 w-5"
-                    >
-                      <path d="m6 9 6 6 6-6"></path>
-                    </svg>
+                    Start with clicking on the topic of your choice
                   </span>
                 </h2>
                 <div className="absolute left-0 right-0 top-0 z-50 mt-0 rounded-md border bg-white hidden">
@@ -307,10 +286,6 @@ export default function BlogPage() {
       <SectionContainer backgroundStyle={'lightGrey'}>
         <Flow />
       </SectionContainer>
-      {/* <SectionContainer>
-
-      </SectionContainer> */}
-      <Footer />
     </>
   )
 }

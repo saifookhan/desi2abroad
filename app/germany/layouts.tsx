@@ -73,23 +73,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white 	">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <div className="bg-slate-900">
             {' '}
             <Header />
           </div>
+
           <SectionContainer backgroundStyle={'gradientDark'}>
-            <div className="flex h-screen flex-col justify-between font-sans">
+            <div
+              className="flex h-full flex-col justify-between font-sans"
+              style={{ height: '100%' }}
+            >
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <main className="mb-auto">{children}</main>
               </SearchProvider>
             </div>
           </SectionContainer>
-          <Footer />
         </ThemeProviders>
       </body>
+      <Footer />
     </html>
   )
 }

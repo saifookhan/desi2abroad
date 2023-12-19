@@ -513,7 +513,7 @@ const Flow = () => {
         nodeTypes={nodeTypes}
         fitView
         snapToGrid
-        className="bg-teal-50"
+        className="bg-grey-100"
         nodesDraggable={false}
         // defaultViewport={zoom: }
         minZoom={0.35}
