@@ -34,8 +34,8 @@ export default function BlogPage() {
                         y2="137.092"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop offset="0" stop-color="#57d163" />
-                        <stop offset="1" stop-color="#23b33a" />
+                        <stop offset="0" stopColor="#57d163" />
+                        <stop offset="1" stopColor="#23b33a" />
                       </linearGradient>
                       <filter
                         id="a"
@@ -43,7 +43,7 @@ export default function BlogPage() {
                         height="1.114"
                         x="-.057"
                         y="-.057"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
                         <feGaussianBlur stdDeviation="3.531" />
                       </filter>
