@@ -12,6 +12,7 @@ import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
 import GermanyTimeline from '@/components/germany/Timeline'
 import Flow from '@/components/germany/Roadmap'
+import SectionContainer from '@/components/SectionContainer'
 
 interface PaginationProps {
   totalPages: number
@@ -79,7 +80,9 @@ export default function GermanyLayout({
 
   return (
     <>
-      <Flow />
+      <SectionContainer>
+        <Flow />
+      </SectionContainer>
       <div className="pb-6 pt-6">
         <h1 className="sm:hidden text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           {title}
