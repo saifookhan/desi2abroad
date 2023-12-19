@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Desi2Abroad',
   author: 'Saifoo Khan',
-  headerTitle: 'Desi2Abroad',
+  headerTitle: 'Desi2Abroad 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵',
   description: '🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵',
   language: 'en-us',
   theme: 'system', // system, dark or light

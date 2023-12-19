@@ -492,7 +492,9 @@ const Flow = () => {
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
 
   const screenSize = useScreenSize()
-
+  if (screenSize.mobileView === undefined) {
+    return null
+  }
   //TODO:: fix the server vs client size issue
   const displaySize = screenSize.mobileView
     ? {

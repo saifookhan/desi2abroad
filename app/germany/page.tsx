@@ -41,7 +41,7 @@ export default function BlogPage() {
               </div>{' '}
               <h1 className="mb-0.5 text-2xl font-bold sm:mb-2 sm:text-4xl text-black">
                 {' '}
-                Frontend Developer <span className="relative top-0 sm:-top-1"> </span>{' '}
+                Germany 🇩🇪 <span className="relative top-0 sm:-top-1"> </span>{' '}
               </h1>{' '}
               <p className="text-sm text-gray-500 sm:text-lg">
                 Step by step guide to applying for study in Germany in 2024
@@ -243,26 +243,6 @@ export default function BlogPage() {
                     Start with clicking on the topic of your choice
                   </span>
                 </h2>
-                <div className="absolute left-0 right-0 top-0 z-50 mt-0 rounded-md border bg-white hidden">
-                  <div className="bg-gray-100 p-3 text-base [&amp;>h2]:mb-2 [&amp;>h2]:mt-5 [&amp;>h2]:text-[17px] [&amp;>h2]:font-medium [&amp;>p:last-child]:mb-0 [&amp;>p>a]:font-semibold [&amp;>p>a]:underline [&amp;>p>a]:underline-offset-2 [&amp;>p]:mb-3 [&amp;>p]:font-normal [&amp;>p]:leading-relaxed [&amp;>p]:text-gray-800">
-                    <p>
-                      Front-end development is the development of visual and interactive elements of
-                      a website that users interact with directly. It's a combination of HTML, CSS
-                      and <a href="/javascript">JavaScript</a>, where HTML provides the structure,
-                      CSS the styling and layout, and JavaScript the dynamic behaviour and
-                      interactivity.
-                    </p>
-                    <h2>What does a Frontend Developer do?</h2>
-                    <p>
-                      As a front-end developer, you'll be responsible for creating the user
-                      interface of a website, to ensure it looks good and is easy to use, with great
-                      focus on design principles and user experience. You'll be working closely with
-                      designers, back-end developers, and project managers to make sure the final
-                      product meets the client's needs and provides the best possible experience for
-                      the end-users.
-                    </p>
-                  </div>
-                </div>
               </div>{' '}
             </div>{' '}
           </div>{' '}
