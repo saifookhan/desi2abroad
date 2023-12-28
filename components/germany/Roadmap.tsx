@@ -95,7 +95,7 @@ const initNodes = [
       label: 'Types of Unis: FH vs Uni',
     },
     targetPosition: Position.Left,
-    position: { x: 400, y: 250 },
+    position: { x: 400, y: 300 },
   },
   {
     id: 'a5_2',
@@ -406,6 +406,13 @@ const initEdges = [
     id: 'a5-a5_4',
     source: 'a5',
     target: 'a5_4',
+    ...basicEdgeConfig,
+    sourceHandle: 'b',
+  },
+  {
+    id: 'a5-a5_5',
+    source: 'a5',
+    target: 'a5_5',
     ...basicEdgeConfig,
     sourceHandle: 'b',
   },

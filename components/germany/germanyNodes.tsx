@@ -61,7 +61,7 @@ const germanyNodes: StudyParentNode[] = [
           label: 'Types of Unis: FH vs Uni',
         },
         targetPosition: Position.Left,
-        position: { x: 400, y: 250 },
+        position: { x: 400, y: 300 },
       },
       {
         id: 'a5_2',
@@ -82,7 +82,7 @@ const germanyNodes: StudyParentNode[] = [
         position: { x: 400, y: 380 },
       },
       {
-        id: 'a5_3',
+        id: 'a5_4',
         type: 'collapsableNode',
         data: {
           label: 'Entry-test/NC-free',
@@ -91,7 +91,7 @@ const germanyNodes: StudyParentNode[] = [
         position: { x: 400, y: 380 },
       },
       {
-        id: 'a5_4',
+        id: 'a5_5',
         type: 'collapsableNode',
         data: {
           label: 'IELTS / German language / ECTS / CGPA',
