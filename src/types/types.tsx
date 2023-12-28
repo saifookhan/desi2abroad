@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Node, Position } from 'reactflow'
 
 export interface StudyNode extends Node {
@@ -5,6 +6,7 @@ export interface StudyNode extends Node {
   type: string
   data: {
     label: string
+    descriptionHTML?: Element | ReactElement<any, any>
   }
   position: { x: number; y: number }
   targetPosition?: Position

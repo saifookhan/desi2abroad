@@ -1,7 +1,7 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import { Handle, Position } from 'reactflow'
-import type { CollapseProps } from 'antd'
 import { Collapse } from 'antd'
+import { RightOutlined } from '@ant-design/icons'
 
 const text = `
   A dog is a type of domesticated animal.
@@ -14,15 +14,18 @@ type CollapsableNode = {
 }
 
 function CollapsableNode(props) {
+  const [collpased, setCollapsed] = useState(false)
   const onChange = (key: string | string[]) => {
     console.log(key)
+    setCollapsed(key.length > 0)
   }
 
   const newData = [
     {
       key: props.id,
       label: props.data.label,
-      children: <p>{text}</p>,
+      description: props.data.descriptionHTML,
+      children: props.data.descriptionHTML,
     },
   ]
 
@@ -52,7 +55,13 @@ function CollapsableNode(props) {
         position={Position.Left}
         className=" !bg-teal-500"
       />
-      <Collapse items={newData} onChange={onChange} />
+      <Collapse
+        items={newData}
+        onChange={onChange}
+        expandIcon={({ isActive }) =>
+          newData[0].description && <RightOutlined rotate={isActive ? 90 : 0} />
+        }
+      />
     </div>
   )
 }

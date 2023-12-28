@@ -14,7 +14,7 @@ const germanyNodes: StudyParentNode[] = [
     id: 'a2',
     type: 'collapsableNode',
     data: {
-      label: 'Have you done O/A Levels?',
+      label: 'O/A Levels?',
     },
     targetPosition: Position.Left,
     position: { x: 0, y: 100 },
@@ -23,7 +23,19 @@ const germanyNodes: StudyParentNode[] = [
         id: 'a2_1',
         type: 'collapsableNode',
         data: {
-          label: 'Get equivalency from HEC',
+          label: 'Equivalency from IBCC',
+          descriptionHTML: (
+            <div>
+              <p>Get your equivalency made from Inter Board / FSC to send it to HEC</p>
+              <a
+                className="text-blue-600"
+                href="https://ibcc.edu.pk/rules-for-equivalence/"
+                target="_blank"
+              >
+                IBCC Website
+              </a>
+            </div>
+          ),
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 100 },
@@ -34,7 +46,19 @@ const germanyNodes: StudyParentNode[] = [
     id: 'a3',
     type: 'collapsableNode',
     data: {
-      label: 'Apply for degree at your uni & transcript attestation from HEC',
+      label: 'Equivalency from HEC',
+      descriptionHTML: (
+        <div>
+          <p>Get your equivalency made from HEC to apply to universities</p>
+          <a
+            className="text-blue-600"
+            href="https://www.hec.gov.pk/english/services/students/DAS/Pages/Degree-Attestation.aspx"
+            target="_blank"
+          >
+            HEC Website
+          </a>
+        </div>
+      ),
     },
     position: { x: 0, y: 200 },
   },
