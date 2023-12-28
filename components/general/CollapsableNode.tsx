@@ -20,7 +20,7 @@ function CollapsableNode(props) {
 
   const newData = [
     {
-      key: '1',
+      key: props.id,
       label: props.data.label,
       children: <p>{text}</p>,
     },
