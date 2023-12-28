@@ -1,7 +1,7 @@
 import { genPageMetadata } from 'app/seo'
-import SectionContainer from '@/components/SectionContainer'
-import Flow from '@/components/germany/Roadmap'
-import DisqusComments from '@/components/general/Disqus/disqus'
+import SectionContainer from 'components/SectionContainer'
+import Flow from 'components/germany/Roadmap'
+import DisqusComments from 'components/general/Disqus/disqus'
 
 //TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })

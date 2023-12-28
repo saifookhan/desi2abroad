@@ -3,11 +3,53 @@
 import React from 'react'
 import { ConfigProvider } from 'antd'
 import theme from '../css/themeConfig'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from 'components/SectionContainer'
+import BubbleList from '@/components/general/BubbleList/BubbleList'
+import { HomepageCateogries } from 'src/types/types'
+
+const categories: HomepageCateogries[] = [
+  {
+    chapter: 'Germany 🇩🇪',
+    subChapters: [
+      {
+        title: 'Germany (Masters)',
+        path: '/germany',
+      },
+      {
+        title: 'Germany (Bachelors)',
+        path: '/germany-bachelors',
+      },
+    ],
+    subChaptersTwo: [
+      {
+        title: 'Germany (Work)',
+        path: '/germany-work',
+      },
+    ],
+  },
+  {
+    chapter: 'Italy 🇮🇹',
+    subChapters: [
+      {
+        title: 'Italy ',
+        path: '/italy',
+      },
+    ],
+  },
+  {
+    chapter: 'America 🇺🇸',
+    subChapters: [
+      {
+        title: 'America',
+        path: '/america',
+      },
+    ],
+  },
+]
 
 const HomePage = () => (
   <ConfigProvider theme={theme}>
-    <SectionContainer backgroundStyle={'gradientDark'}>
+    <SectionContainer backgroundStyle={'lightGrey'}>
       <div className="min-h-auto relative min-h-[192px] border-b border-b-[#1e293c] sm:min-h-[281px] transition-all">
         {' '}
         <div
@@ -31,12 +73,12 @@ const HomePage = () => (
               <span className="inline sm:hidden">Join our work/study Whatsapp group!</span>
             </a>{' '}
           </p>{' '}
-          <h1 className="mb-2 bg-gradient-to-b from-amber-50 to-purple-500 bg-clip-text text-2xl font-bold text-transparent sm:mb-4 sm:text-5xl">
+          <h1 className="mb-2 bg-gradient-to-b from-purple-500 to-purple-950 bg-clip-text text-2xl font-bold text-transparent sm:mb-4 sm:text-5xl">
             Study/Work Abroad Roadmaps
           </h1>{' '}
-          <p className="hidden px-4 text-lg text-gray-400 sm:block">
+          <p className="hidden px-4 text-lg text-gray-800 sm:block">
             {' '}
-            <span className="font-medium text-gray-400">desi2abroad.com</span> is a collaborative
+            <span className="font-medium text-gray-800">desi2abroad.com</span> is a collaborative
             platform for students and professionals from the sub-continent to join forces, exchange
             knowledge, and navigate pathways for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </p>{' '}
@@ -45,84 +87,28 @@ const HomePage = () => (
           </p>{' '}
         </div>{' '}
       </div>
-      <div className="relative border-b border-b-[#1e293c] py-10 sm:py-14">
-        {' '}
-        <div className="container">
-          {' '}
-          <h2 className="text-md font-regular absolute -top-[17px] flex rounded-lg border border-[#1e293c] bg-slate-900 px-3 py-1 text-slate-400 sm:left-1/2 sm:-translate-x-1/2">
+
+      {categories.map((category) => {
+        return (
+          <div key={category.chapter}>
             {' '}
-            Current Roadmaps
-          </h2>{' '}
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
-            {' '}
-            <li>
+            <div className="relative border-b border-b-[#1e293c] py-10 sm:py-14">
               {' '}
-              <a
-                className="group border border-slate-800 bg-slate-900 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-slate-400 font-regular text-md hover:border-slate-600 hover:text-slate-100 overflow-hidden"
-                href="/germany"
-              >
+              <div className="container">
                 {' '}
-                <span className="relative z-20 text-slate-400"> Germany (Masters) </span>{' '}
-                <span
-                  data-progress=""
-                  className="absolute bottom-0 left-0 top-0 z-10 w-0 bg-[#172a3a] transition-[width] duration-300"
-                ></span>{' '}
-              </a>{' '}
-            </li>
-            <li>
-              {' '}
-              <a
-                className="group border border-slate-800 bg-slate-900 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-slate-400 font-regular text-md hover:border-slate-600 hover:text-slate-100 overflow-hidden"
-                href="/germany"
-              >
-                {' '}
-                <span className="relative z-20 text-slate-400"> Germany (Bachelors) </span>{' '}
-                <span
-                  data-progress=""
-                  className="absolute bottom-0 left-0 top-0 z-10 w-0 bg-[#172a3a] transition-[width] duration-300"
-                ></span>{' '}
-              </a>{' '}
-            </li>
-            <li>
-              {' '}
-              <a
-                className="group border border-slate-800 bg-slate-900 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-slate-400 font-regular text-md hover:border-slate-600 hover:text-slate-100 overflow-hidden"
-                href="/usa"
-              >
-                {' '}
-                <span className="relative z-20 text-slate-400"> United States of Amerca </span>{' '}
-                <span
-                  data-progress=""
-                  className="absolute bottom-0 left-0 top-0 z-10 w-0 bg-[#172a3a] transition-[width] duration-300"
-                ></span>{' '}
-              </a>{' '}
-            </li>
-            <li>
-              {' '}
-              <a
-                className="group border border-slate-800 bg-slate-900 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-slate-400 font-regular text-md hover:border-slate-600 hover:text-slate-100 overflow-hidden"
-                href="/italy"
-              >
-                {' '}
-                <span className="relative z-20 text-slate-400"> Italy </span>{' '}
-                <span className="absolute bottom-1.5 right-2 flex items-center rounded-br rounded-tl text-xs font-medium text-purple-300">
+                <h2 className="text-md font-regular absolute -top-[17px] flex rounded-lg border border-[#1e293c] bg-slate-200 px-3 py-1 text-slate-800 sm:left-1/2 sm:-translate-x-1/2">
                   {' '}
-                  <span className="mr-1.5 flex h-2 w-2">
-                    {' '}
-                    <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-purple-400 opacity-75"></span>{' '}
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-purple-500"></span>{' '}
-                  </span>
-                  New
-                </span>{' '}
-                <span
-                  data-progress=""
-                  className="absolute bottom-0 left-0 top-0 z-10 w-0 bg-[#172a3a] transition-[width] duration-300"
-                ></span>{' '}
-              </a>{' '}
-            </li>{' '}
-          </ul>{' '}
-        </div>{' '}
-      </div>
+                  {category.chapter}
+                </h2>{' '}
+                {category.subChapters && <BubbleList category={category.subChapters} />}
+                {category.subChaptersTwo && (
+                  <BubbleList category={category.subChaptersTwo} secondCateogryFlag />
+                )}
+              </div>{' '}
+            </div>
+          </div>
+        )
+      })}
     </SectionContainer>
   </ConfigProvider>
 )

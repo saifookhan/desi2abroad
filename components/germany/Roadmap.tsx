@@ -14,7 +14,9 @@ import 'reactflow/dist/base.css'
 // import 'reactflow/dist/style.css'
 
 import CollapsableNode from '../general/CollapsableNode'
-import useScreenSize from 'app/utils/useScreenSize'
+import useScreenSize from 'src/utils/useScreenSize'
+import { nodesMapper } from 'src/utils/nodesMapper'
+import germanyNodes from './germanyNodes'
 
 const nodeTypes = {
   collapsableNode: CollapsableNode,
@@ -34,7 +36,7 @@ const initNodes = [
     data: { label: 'Before Admission Steps' },
     position: { x: -50, y: 100 },
     className: 'light',
-    style: { backgroundColor: 'rgba(255, 0, 0, 0.2)', width: 350, height: 600 },
+    style: { backgroundColor: 'rgba(255, 0, 0, 0.15)', width: 400, height: 600 },
   },
   {
     id: 'a1',
@@ -513,11 +515,12 @@ const Flow = () => {
     : {
         minViewHeight: 1200,
       }
+  nodesMapper(germanyNodes)
 
   return (
     <div style={{ height: displaySize.minViewHeight }}>
       <ReactFlow
-        nodes={nodes}
+        nodes={nodesMapper(germanyNodes)}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
