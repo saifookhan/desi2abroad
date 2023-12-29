@@ -1,23 +1,23 @@
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 import { Handle, Position } from 'reactflow'
 import { Collapse } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
+import { useStore } from '../germany/Roadmap'
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`
 type CollapsableNode = {
   data: { label: string }
   targetPosition: 'top' | 'right' | 'bottom' | 'left'
 }
 
 function CollapsableNode(props) {
-  const [collpased, setCollapsed] = useState(false)
+  const { currentExpanded, setCurrentExpanded } = useStore()
+
   const onChange = (key: string | string[]) => {
-    console.log(key)
-    setCollapsed(key.length > 0)
+    if (key.length > 0) {
+      setCurrentExpanded(key[0])
+    } else {
+      setCurrentExpanded(undefined)
+    }
   }
 
   const newData = [
@@ -61,6 +61,7 @@ function CollapsableNode(props) {
         expandIcon={({ isActive }) =>
           newData[0].description && <RightOutlined rotate={isActive ? 90 : 0} />
         }
+        activeKey={props.id === currentExpanded && currentExpanded}
       />
     </div>
   )

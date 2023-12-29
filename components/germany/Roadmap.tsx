@@ -1,7 +1,14 @@
 'use client'
 
-import React, { useCallback } from 'react'
-import ReactFlow, { useNodesState, useEdgesState, addEdge, Controls } from 'reactflow'
+import React, { useCallback, useEffect, useState } from 'react'
+import ReactFlow, {
+  useNodesState,
+  useEdgesState,
+  addEdge,
+  Controls,
+  ReactFlowProvider,
+} from 'reactflow'
+import { create } from 'zustand'
 
 import 'reactflow/dist/base.css'
 // import 'reactflow/dist/style.css'
@@ -11,6 +18,11 @@ import useScreenSize from 'src/utils/useScreenSize'
 import { nodesMapper } from 'src/utils/nodesMapper'
 import { germanyNodes, germanyEdges } from './germanyNodes'
 
+export const useStore = create((set) => ({
+  currentExpanded: undefined,
+  setCurrentExpanded: (newV) => set((state) => ({ currentExpanded: newV })),
+}))
+
 const nodeTypes = {
   collapsableNode: CollapsableNode,
 }
@@ -19,7 +31,23 @@ const Flow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(germanyNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState(germanyEdges)
 
+  const [myNodes, setMyNodes] = useState(nodesMapper(germanyNodes))
+
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
+  const { currentExpanded } = useStore()
+
+  useEffect(() => {
+    const zIndex = myNodes?.map((node) => {
+      const xNode = node
+      if (xNode.id === currentExpanded) {
+        xNode.zIndex = 1
+      } else {
+        xNode.zIndex = 0
+      }
+      return { ...xNode }
+    })
+    setMyNodes(zIndex)
+  }, [currentExpanded])
 
   const screenSize = useScreenSize()
   if (screenSize.mobileView === undefined) {
@@ -40,7 +68,7 @@ const Flow = () => {
   return (
     <div style={{ height: displaySize.minViewHeight }}>
       <ReactFlow
-        nodes={nodesMapper(germanyNodes)}
+        nodes={myNodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
@@ -63,4 +91,12 @@ const Flow = () => {
   )
 }
 
-export default Flow
+function FlowWithProvider(props) {
+  return (
+    <ReactFlowProvider>
+      <Flow {...props} />
+    </ReactFlowProvider>
+  )
+}
+
+export default FlowWithProvider
