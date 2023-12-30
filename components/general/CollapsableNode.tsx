@@ -61,7 +61,7 @@ function CollapsableNode(props) {
         expandIcon={({ isActive }) =>
           newData[0].description && <RightOutlined rotate={isActive ? 90 : 0} />
         }
-        activeKey={props.id === currentExpanded && currentExpanded}
+        activeKey={props.id === currentExpanded ? currentExpanded : undefined}
       />
     </div>
   )
