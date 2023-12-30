@@ -29,7 +29,7 @@ const Flow = () => {
   const [myNodes, setMyNodes] = useState(nodesMapper(germanyNodes))
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
-  const { currentExpanded } = store.getState()
+  const { currentExpanded } = store()
 
   useEffect(() => {
     const zIndex = myNodes?.map((node) => {
