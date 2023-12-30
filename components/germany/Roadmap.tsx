@@ -8,7 +8,6 @@ import ReactFlow, {
   Controls,
   ReactFlowProvider,
 } from 'reactflow'
-import { create } from 'zustand'
 
 import 'reactflow/dist/base.css'
 // import 'reactflow/dist/style.css'
@@ -17,11 +16,7 @@ import CollapsableNode from '../general/CollapsableNode'
 import useScreenSize from 'src/utils/useScreenSize'
 import { nodesMapper } from 'src/utils/nodesMapper'
 import { germanyNodes, germanyEdges } from './germanyNodes'
-
-export const useStore = create((set) => ({
-  currentExpanded: undefined,
-  setCurrentExpanded: (newV) => set((state) => ({ currentExpanded: newV })),
-}))
+import store from 'src/store'
 
 const nodeTypes = {
   collapsableNode: CollapsableNode,
@@ -34,7 +29,7 @@ const Flow = () => {
   const [myNodes, setMyNodes] = useState(nodesMapper(germanyNodes))
 
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
-  const { currentExpanded } = useStore()
+  const { currentExpanded } = store.getState()
 
   useEffect(() => {
     const zIndex = myNodes?.map((node) => {

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { Handle, Position } from 'reactflow'
 import { Collapse } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
-import { useStore } from '../germany/Roadmap'
+import store from 'src/store'
 
 type CollapsableNode = {
   data: { label: string }
@@ -10,7 +10,7 @@ type CollapsableNode = {
 }
 
 function CollapsableNode(props) {
-  const { currentExpanded, setCurrentExpanded } = useStore()
+  const { currentExpanded, setCurrentExpanded } = store.getState()
 
   const onChange = (key: string | string[]) => {
     if (key.length > 0) {
