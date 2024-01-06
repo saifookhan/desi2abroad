@@ -289,51 +289,53 @@ const germanyNodes: StudyParentNode[] = [
         type: 'collapsableNode',
         data: {
           label: 'IELTS / German language / ECTS / CGPA',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                  <p>
-                      <strong>Language Proficiency:</strong>
-                      Essential for studying in Germany, language proficiency is demonstrated through IELTS or German language exams.
-                  </p>
+              <p>
+                <strong>Language Proficiency:</strong>
+                Essential for studying in Germany, language proficiency is demonstrated through
+                IELTS or German language exams.
+              </p>
 
-                  <strong>IELTS:</strong>
-                  <ul>
-                      <li>May be required for programs with English instruction.</li>
-                      <li>Aim for a score aligned with program requirements.</li>
-                      <li>Prepare through practice tests and language exercises.</li>
-                  </ul>
+              <strong>IELTS:</strong>
+              <ul>
+                <li>May be required for programs with English instruction.</li>
+                <li>Aim for a score aligned with program requirements.</li>
+                <li>Prepare through practice tests and language exercises.</li>
+              </ul>
 
-                  <strong>German Language:</strong>
-                  <ul>
-                      <li>Needed if your course is in German.</li>
-                      <li>Check language requirements and consider language courses.</li>
-                  </ul>
+              <strong>German Language:</strong>
+              <ul>
+                <li>Needed if your course is in German.</li>
+                <li>Check language requirements and consider language courses.</li>
+              </ul>
 
-                  <strong>ECTS:</strong>
-                  <ul>
-                      <li>Standard for comparing student progress in Europe.</li>
-                      <li>Understand ECTS credits and their alignment with your academic system.</li>
-                  </ul>
+              <strong>ECTS:</strong>
+              <ul>
+                <li>Standard for comparing student progress in Europe.</li>
+                <li>Understand ECTS credits and their alignment with your academic system.</li>
+              </ul>
 
-                  <strong>CGPA:</strong>
-                  <ul>
-                      <li>Considered during the application process.</li>
-                      <li>Ensure your CGPA meets or exceeds university criteria.</li>
-                  </ul>
+              <strong>CGPA:</strong>
+              <ul>
+                <li>Considered during the application process.</li>
+                <li>Ensure your CGPA meets or exceeds university criteria.</li>
+              </ul>
 
-                  <strong>Document Preparation:</strong>
-                  <ul>
-                      <li>Obtain transcripts, IELTS scores, and language certificates.</li>
-                      <li>Ensure documents meet university and program requirements.</li>
-                  </ul>
+              <strong>Document Preparation:</strong>
+              <ul>
+                <li>Obtain transcripts, IELTS scores, and language certificates.</li>
+                <li>Ensure documents meet university and program requirements.</li>
+              </ul>
 
-                  <strong>Contact Information:</strong>
-                  <p>
-                      For language proficiency requirements, contact the university's admissions office or language department.
-                      Check the university's official website for detailed information on ECTS, CGPA requirements, and document guidelines.
-                  </p>
+              <strong>Contact Information:</strong>
+              <p>
+                For language proficiency requirements, contact the university's admissions office or
+                language department. Check the university's official website for detailed
+                information on ECTS, CGPA requirements, and document guidelines.
+              </p>
             </div>
-          )
+          ),
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 450 },
@@ -431,135 +433,133 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'a8_1',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Uni-assist Application',
           descriptionHTML: (
             <div>
               <p>
-                  <strong>Uni-assist</strong> short for University Application Service for International Students, 
-                  is a centralized organization in Germany that  streamlining the application process. 
-                  Here's a quick overview:
+                <strong>Uni-assist</strong> short for University Application Service for
+                International Students, is a centralized organization in Germany that streamlining
+                the application process. Here's a quick overview:
               </p>
               <br />
 
               <ul>
-                  <li>
-                      <strong>Purpose:</strong> Evaluates academic documents for German university admission standards, demonstrating equivalence.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Process:</strong> Submit applications and documents through the 
-                      <a 
-                      className="text-blue-600"
-                      href="https://www.uni-assist.de/en/" 
-                      target="_blank"
-                      >
-                       &nbsp;Uni-assist portal
-                      </a>. Uni-assist assesses and forwards evaluations to chosen German universities.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Fees:</strong> Charges fees for services, varying based on the number of universities and evaluation complexity.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Participating Universities:</strong> Not all require Uni-assist; check specific requirements of chosen universities.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Deadlines:</strong> Specific application deadlines for each semester; adhere to ensure timely processing.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Language Requirements:</strong> Proficiency in German or English (via tests like IELTS or TOEFL) may be required.
-                  </li>
-                  <br />
-                  <li>
-                      <strong>Contact:</strong> For inquiries, visit the 
-                      <a
-                      className="text-blue-600" 
-                      href="https://www.uni-assist.de/en/" 
-                      target="_blank"
-                      >
-                       &nbsp;Uni-assist website
-                      </a> or contact your chosen universities.
-                  </li>
-                  <br />
+                <li>
+                  <strong>Purpose:</strong> Evaluates academic documents for German university
+                  admission standards, demonstrating equivalence.
+                </li>
+                <br />
+                <li>
+                  <strong>Process:</strong> Submit applications and documents through the
+                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                    &nbsp;Uni-assist portal
+                  </a>
+                  . Uni-assist assesses and forwards evaluations to chosen German universities.
+                </li>
+                <br />
+                <li>
+                  <strong>Fees:</strong> Charges fees for services, varying based on the number of
+                  universities and evaluation complexity.
+                </li>
+                <br />
+                <li>
+                  <strong>Participating Universities:</strong> Not all require Uni-assist; check
+                  specific requirements of chosen universities.
+                </li>
+                <br />
+                <li>
+                  <strong>Deadlines:</strong> Specific application deadlines for each semester;
+                  adhere to ensure timely processing.
+                </li>
+                <br />
+                <li>
+                  <strong>Language Requirements:</strong> Proficiency in German or English (via
+                  tests like IELTS or TOEFL) may be required.
+                </li>
+                <br />
+                <li>
+                  <strong>Contact:</strong> For inquiries, visit the
+                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                    &nbsp;Uni-assist website
+                  </a>{' '}
+                  or contact your chosen universities.
+                </li>
+                <br />
               </ul>
 
               <p>
-                  Navigating the Uni-assist Application is crucial for international students aspiring to study in Germany. Follow instructions and deadlines for a successful application.
+                Navigating the Uni-assist Application is crucial for international students aspiring
+                to study in Germany. Follow instructions and deadlines for a successful application.
               </p>
             </div>
           ),
-         },
+        },
         targetPosition: Position.Right,
         position: { x: -400, y: 500 },
       },
       {
         id: 'a8_2',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'upload the VPD & apply through uni portal',
           descriptionHTML: (
             <div>
-                <ul>
-                  <p>
-                      VPD, or Vorprüfungsdokumentation, is a Preliminary Document Review provided by uni-assist.
-                      It assesses the equivalence of your foreign qualifications to German education standards.
-                  </p>
-                  <br />
+              <ul>
+                <p>
+                  VPD, or Vorprüfungsdokumentation, is a Preliminary Document Review provided by
+                  uni-assist. It assesses the equivalence of your foreign qualifications to German
+                  education standards.
+                </p>
+                <br />
 
-              <li>
+                <li>
                   <strong>Obtaining VPD:</strong>
                   <p>
                     Complete the preliminary review process with uni-assist to receive your VPD.
                   </p>
-              </li>
-              <br />
+                </li>
+                <br />
 
-              <li>
+                <li>
                   <strong>University's Online Portal:</strong>
-                  <p>
-                     Log in to the official portal of the German university you are applying to.
-                  </p>
-              </li>
-              <br />
+                  <p>Log in to the official portal of the German university you are applying to.</p>
+                </li>
+                <br />
 
-              <li>
+                <li>
                   <strong>Upload VPD:</strong>
                   <p>
-                      Follow the portal instructions to upload your VPD.
-                      Ensure that your document adheres to specified format and size guidelines.
+                    Follow the portal instructions to upload your VPD. Ensure that your document
+                    adheres to specified format and size guidelines.
                   </p>
-              </li>
-              <br />
+                </li>
+                <br />
 
-              <li>
+                <li>
                   <strong>Application Form:</strong>
                   <p>
-                      Complete the university's application form within the portal.
-                      Provide accurate personal information, academic history, and any additional required documents.
+                    Complete the university's application form within the portal. Provide accurate
+                    personal information, academic history, and any additional required documents.
                   </p>
-              </li>
-              <br />
+                </li>
+                <br />
 
-              <li>
+                <li>
                   <strong>Check Requirements:</strong>
                   <p>
-                    Verify and fulfill any additional requirements specified by the university for the application process.
+                    Verify and fulfill any additional requirements specified by the university for
+                    the application process.
                   </p>
-              </li>
-              <br />
+                </li>
+                <br />
 
-              <li>
+                <li>
                   <strong>Submission:</strong>
-                  <p>
-                     Submit your application through the university portal.
-                  </p>
-              </li>
-              <br />
-           </ul>
+                  <p>Submit your application through the university portal.</p>
+                </li>
+                <br />
+              </ul>
             </div>
           ),
         },
@@ -572,7 +572,6 @@ const germanyNodes: StudyParentNode[] = [
         data: {
           label: 'Uni-assist (VPD)',
           descriptionHTML: (
-
             <div>
               <p>
                 In the context of uni-assist, "VPD" stands for "Vorprüfungsdokumentation," which
@@ -603,79 +602,85 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'a8_4',
         type: 'collapsableNode',
-        data: { label: 'Direct Application on uni portal',
-        descriptionHTML:(
-
-          <div>
-
-            <ul>
+        data: {
+          label: 'Direct Application on uni portal',
+          descriptionHTML: (
+            <div>
+              <ul>
                 <li>
                   <strong>Overview:</strong>
-                  Many German universities allow students to apply directly through their official online portals.
-                   This process bypasses the need for intermediary services like uni-assist.
+                  Many German universities allow students to apply directly through their official
+                  online portals. This process bypasses the need for intermediary services like
+                  uni-assist.
                 </li>
                 <br />
 
                 <li>
                   <strong>Procedure:</strong>
-                  Visit the official website of the German university you are interested in.
-                  Locate the admissions or application section to access the online portal.
+                  Visit the official website of the German university you are interested in. Locate
+                  the admissions or application section to access the online portal.
                 </li>
                 <br />
 
                 <li>
                   <strong>Document Submission:</strong>
-                  Upload the required documents directly to the university's portal.
-                  Ensure documents meet the specified format and size requirements.
+                  Upload the required documents directly to the university's portal. Ensure
+                  documents meet the specified format and size requirements.
                 </li>
                 <br />
 
                 <li>
                   <strong>Application Form:</strong>
-                  Complete the university's online application form with accurate personal and academic information.
+                  Complete the university's online application form with accurate personal and
+                  academic information.
                 </li>
                 <br />
 
                 <li>
                   <strong>Additional Requirements:</strong>
-                  Check for any specific requirements outlined by the university, such as letters of recommendation or a statement of purpose.
+                  Check for any specific requirements outlined by the university, such as letters of
+                  recommendation or a statement of purpose.
                 </li>
                 <br />
 
                 <li>
                   <strong>Language Proficiency:</strong>
-                  Demonstrate proficiency in the required language (German or English) as per the university's guidelines.
+                  Demonstrate proficiency in the required language (German or English) as per the
+                  university's guidelines.
                 </li>
                 <br />
 
                 <li>
                   <strong>Application Fee:</strong>
-                  Be aware of any application fees that the university may charge. Pay attention to payment instructions.
+                  Be aware of any application fees that the university may charge. Pay attention to
+                  payment instructions.
                 </li>
                 <br />
 
                 <li>
                   <strong>Submission Deadline:</strong>
-                  Adhere to the application deadlines set by the university for the desired semester.
+                  Adhere to the application deadlines set by the university for the desired
+                  semester.
                 </li>
                 <br />
 
                 <li>
                   <strong>Tracking Application:</strong>
-                  Utilize the university's online tracking system to monitor the status of your application.
+                  Utilize the university's online tracking system to monitor the status of your
+                  application.
                 </li>
                 <br />
 
                 <li>
                   <strong>Contact University:</strong>
-                  For inquiries or additional information, contact the university's admissions office directly.
+                  For inquiries or additional information, contact the university's admissions
+                  office directly.
                 </li>
                 <br />
-            </ul>
-          </div>
-
-        ),
-      },
+              </ul>
+            </div>
+          ),
+        },
         position: { x: -400, y: 710 },
         targetPosition: Position.Right,
       },
@@ -765,192 +770,218 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c8_1',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Shopping List',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                <p><strong>Shopping List Overview:</strong>
-                    Before your journey to Germany, ensure a smooth transition by preparing a concise shopping list for essential items.
-                </p>
+              <p>
+                <strong>Shopping List Overview:</strong>
+                Before your journey to Germany, ensure a smooth transition by preparing a concise
+                shopping list for essential items.
+              </p>
 
-                <p>
-                  <strong>Watch the Videos:</strong>
-                  Check out my YouTube videos for detailed insights on what to bring to Germany 
-                  <a
-                    className="text-blue-600" 
-                    href="https://youtu.be/zM_7f6Rv2qQ?si=TgdrQhdYww660GVZ" 
-                    target="_blank"
-                    >
-                    &nbsp; View Video 1
-                  </a>
-                  <a
-                    className="text-blue-600" 
-                    href="https://youtu.be/-FnhGBzof0o?si=lejG6gFDdxCcfDPi"
-                    target="_blank"
-                  >
+              <p>
+                <strong>Watch the Videos:</strong>
+                Check out my YouTube videos for detailed insights on what to bring to Germany
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/zM_7f6Rv2qQ?si=TgdrQhdYww660GVZ"
+                  target="_blank"
+                >
+                  &nbsp; View Video 1
+                </a>
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/-FnhGBzof0o?si=lejG6gFDdxCcfDPi"
+                  target="_blank"
+                >
                   &nbsp; View Video 2
-                  </a>
-                </p>
-                <p><strong>Key Items to Include:</strong></p>
-                <br />
+                </a>
+              </p>
+              <p>
+                <strong>Key Items to Include:</strong>
+              </p>
+              <br />
 
-                <p><strong>Clothing:</strong>
-                    Pack suitable attire for the German climate, including jackets, comfortable shoes, and versatile layers.
-                </p>
+              <p>
+                <strong>Clothing:</strong>
+                Pack suitable attire for the German climate, including jackets, comfortable shoes,
+                and versatile layers.
+              </p>
 
-                <p><strong>Personal Care Products:</strong>
-                    Bring preferred personal care items; local stores offer a variety of brands.
-                </p>
+              <p>
+                <strong>Personal Care Products:</strong>
+                Bring preferred personal care items; local stores offer a variety of brands.
+              </p>
 
-                <p><strong>Documentation:</strong>
-                    Ensure necessary documents like passport, visa, and permits. Carry printed copies.
-                </p>
+              <p>
+                <strong>Documentation:</strong>
+                Ensure necessary documents like passport, visa, and permits. Carry printed copies.
+              </p>
 
-                <p><strong>Electronics:</strong>
-                    Pack essentials like a laptop, phone, and chargers. Consider a power adapter.
-                </p>
+              <p>
+                <strong>Electronics:</strong>
+                Pack essentials like a laptop, phone, and chargers. Consider a power adapter.
+              </p>
 
-                <p><strong>Kitchen Essentials:</strong>
-                    For independent living, bring basic kitchen items; supplement locally as needed.
-                </p>
+              <p>
+                <strong>Kitchen Essentials:</strong>
+                For independent living, bring basic kitchen items; supplement locally as needed.
+              </p>
 
-                <p><strong>Medications:</strong>
-                    Carry a supply of prescription medications; familiarize yourself with local pharmacies.
-                </p>
+              <p>
+                <strong>Medications:</strong>
+                Carry a supply of prescription medications; familiarize yourself with local
+                pharmacies.
+              </p>
 
-                <p><strong>Banking and Finances:</strong>
-                    Inform your bank; set up online banking for easy access to funds.
-                </p>
+              <p>
+                <strong>Banking and Finances:</strong>
+                Inform your bank; set up online banking for easy access to funds.
+              </p>
 
-                <p><strong>Language Learning Materials:</strong>
-                    Enhance German skills with language learning resources like dictionaries or apps.
-                </p>
+              <p>
+                <strong>Language Learning Materials:</strong>
+                Enhance German skills with language learning resources like dictionaries or apps.
+              </p>
 
-                <p><strong>Adapters and Converters:</strong>
-                    Ensure compatibility with German outlets for electronic devices. Purchase adapters if necessary.
-                </p>
+              <p>
+                <strong>Adapters and Converters:</strong>
+                Ensure compatibility with German outlets for electronic devices. Purchase adapters
+                if necessary.
+              </p>
             </div>
-          )
-         },
+          ),
+        },
         position: { x: -400, y: 1200 },
         targetPosition: Position.Right,
       },
       {
         id: 'c8_2',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Make connections (PSA/ISA)',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                  <p>
-                      <strong>Overview:</strong> 
-                      Join the Pakistani Student Association (PSA) and Indian Student Association (ISA) 
-                      to enhance your German student experience. These communities provide support, connections, and a sense of belonging.
-                  </p>
+              <p>
+                <strong>Overview:</strong>
+                Join the Pakistani Student Association (PSA) and Indian Student Association (ISA) to
+                enhance your German student experience. These communities provide support,
+                connections, and a sense of belonging.
+              </p>
 
-                  <p>
-                      <strong>Purpose:</strong> 
-                      PSA and ISA assist students from Pakistan and India, offering help in finding accommodation, 
-                      sharing local insights, and organizing events for community building.
-                  </p>
+              <p>
+                <strong>Purpose:</strong>
+                PSA and ISA assist students from Pakistan and India, offering help in finding
+                accommodation, sharing local insights, and organizing events for community building.
+              </p>
 
-                  <p>
-                      <strong>City-wise Presence:</strong> 
-                      With chapters across Germany, PSA and ISA provide localized support and engagement opportunities for students in various cities.
-                  </p>
+              <p>
+                <strong>City-wise Presence:</strong>
+                With chapters across Germany, PSA and ISA provide localized support and engagement
+                opportunities for students in various cities.
+              </p>
 
-                  <p>
-                      <strong>Watch the Video:</strong> 
-                      Explore the activities and benefits of PSA and ISA in my YouTube video 
-                      <a 
-                      className="text-blue-600"
-                      href="https://youtu.be/tcIPiG1pX5M?si=ja8_5a908gsURqRx"
-                      target="_blank"
-                      >
-                      &nbsp; here
-                      </a>.
-                  </p>
+              <p>
+                <strong>Watch the Video:</strong>
+                Explore the activities and benefits of PSA and ISA in my YouTube video
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/tcIPiG1pX5M?si=ja8_5a908gsURqRx"
+                  target="_blank"
+                >
+                  &nbsp; here
+                </a>
+                .
+              </p>
 
-                  <p>
-                      <strong>Getting Involved:</strong>
-                       New students are encouraged to connect with these associations, attend events, 
-                       and actively participate in community activities for a vibrant student experience.
-                  </p>
+              <p>
+                <strong>Getting Involved:</strong>
+                New students are encouraged to connect with these associations, attend events, and
+                actively participate in community activities for a vibrant student experience.
+              </p>
 
-                  <p>
-                      <strong>Contact Information:</strong>
-                       For more details or to get involved, visit the PSA and ISA chapters in your city or check their online platforms.
-                  </p>
+              <p>
+                <strong>Contact Information:</strong>
+                For more details or to get involved, visit the PSA and ISA chapters in your city or
+                check their online platforms.
+              </p>
 
-                  <p>
-                      Connecting with PSA and ISA opens doors to a supportive community, fostering friendships 
-                      and enriching your study abroad journey in Germany.
-                  </p>
-              </div>
-            )
-         },
+              <p>
+                Connecting with PSA and ISA opens doors to a supportive community, fostering
+                friendships and enriching your study abroad journey in Germany.
+              </p>
+            </div>
+          ),
+        },
         position: { x: -400, y: 1250 },
         targetPosition: Position.Right,
       },
       {
         id: 'c8_3',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Train Ticket Tutorial',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                  <p>
-                      <strong>How to Book:</strong>
-                  </p>
+              <p>
+                <strong>How to Book:</strong>
+              </p>
 
-                  <p>
-                      <strong>Download the DB App:</strong>
-                      Install the Deutsche Bahn app on your smartphone. It's available for both Android and iOS devices.
-                  </p>
+              <p>
+                <strong>Download the DB App:</strong>
+                Install the Deutsche Bahn app on your smartphone. It's available for both Android
+                and iOS devices.
+              </p>
 
-                  <p>
-                      <strong>Create an Account:</strong>
-                      Register for an account within the app, providing necessary details.
-                  </p>
+              <p>
+                <strong>Create an Account:</strong>
+                Register for an account within the app, providing necessary details.
+              </p>
 
-                  <p>
-                      <strong>Plan Your Journey:</strong>
-                      Enter your departure and arrival stations, along with the desired date and time of travel.
-                  </p>
+              <p>
+                <strong>Plan Your Journey:</strong>
+                Enter your departure and arrival stations, along with the desired date and time of
+                travel.
+              </p>
 
-                  <p>
-                      <strong>Select Your Train:</strong>
-                      Browse through available train options and choose the one that suits your schedule.
-                  </p>
+              <p>
+                <strong>Select Your Train:</strong>
+                Browse through available train options and choose the one that suits your schedule.
+              </p>
 
-                  <p>
-                      <strong>Choose Ticket Type:</strong>
-                      Select the type of ticket you need, whether it's a one-way, round-trip, or any special fare.
-                  </p>
+              <p>
+                <strong>Choose Ticket Type:</strong>
+                Select the type of ticket you need, whether it's a one-way, round-trip, or any
+                special fare.
+              </p>
 
-                  <p>
-                      <strong>Payment:</strong>
-                      Complete the payment process securely within the app.
-                  </p>
+              <p>
+                <strong>Payment:</strong>
+                Complete the payment process securely within the app.
+              </p>
 
-                  <p>
-                      <strong>Receive E-Ticket:</strong>
-                      Your electronic ticket will be generated and stored in the app. Show this E-ticket during your journey.
-                  </p>
+              <p>
+                <strong>Receive E-Ticket:</strong>
+                Your electronic ticket will be generated and stored in the app. Show this E-ticket
+                during your journey.
+              </p>
 
-                  <p>
-                      <strong>Watch the Video:</strong>
-                      For a step-by-step guide on booking train tickets with the DB app, watch my YouTube video 
-                      <a 
-                      className="text-blue-600"
-                      href="https://youtu.be/8W1kFp68SGY?si=BJRhmQyCVFbKOnv6" 
-                      target="_blank"
-                      >
-                      &nbsp; here
-                      </a>.
-                  </p>
+              <p>
+                <strong>Watch the Video:</strong>
+                For a step-by-step guide on booking train tickets with the DB app, watch my YouTube
+                video
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/8W1kFp68SGY?si=BJRhmQyCVFbKOnv6"
+                  target="_blank"
+                >
+                  &nbsp; here
+                </a>
+                .
+              </p>
             </div>
-          )
+          ),
         },
         position: { x: -400, y: 1320 },
         targetPosition: Position.Right,
@@ -958,154 +989,192 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c8_4',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Important Mobile Apps',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                  <p>
-                      Streamline your student life in Germany with must-have mobile apps spanning various categories, 
-                      including transportation, language learning, accommodation, finance, health, and communication.
-                  </p>
+              <p>
+                Streamline your student life in Germany with must-have mobile apps spanning various
+                categories, including transportation, language learning, accommodation, finance,
+                health, and communication.
+              </p>
 
-                  <p>
-                      <strong>Transportation:</strong>
-                      <ul>
-                          <li><strong>DB Navigator:</strong> Official Deutsche Bahn app for train schedules and tickets.</li>
-                      </ul>
-                  </p>
+              <p>
+                <strong>Transportation:</strong>
+                <ul>
+                  <li>
+                    <strong>DB Navigator:</strong> Official Deutsche Bahn app for train schedules
+                    and tickets.
+                  </li>
+                </ul>
+              </p>
 
-                  <p>
-                      <strong>Language Learning:</strong>
-                      <ul>
-                          <li><strong>Duolingo:</strong> User-friendly language learning for improving German skills.</li>
-                          <li><strong>Babbel:</strong> Tailored language courses focusing on practical communication.</li>
-                      </ul>
-                  </p>
+              <p>
+                <strong>Language Learning:</strong>
+                <ul>
+                  <li>
+                    <strong>Duolingo:</strong> User-friendly language learning for improving German
+                    skills.
+                  </li>
+                  <li>
+                    <strong>Babbel:</strong> Tailored language courses focusing on practical
+                    communication.
+                  </li>
+                </ul>
+              </p>
 
-                  <p>
-                      <strong>Accommodation:</strong>
-                      <ul>
-                          <li><strong>WG-Gesucht:</strong> Popular app for finding shared accommodation.</li>
-                          <li><strong>Immobilienscout24:</strong> Explore a wide range of rental properties and apartments.</li>
-                      </ul>
-                  </p>
+              <p>
+                <strong>Accommodation:</strong>
+                <ul>
+                  <li>
+                    <strong>WG-Gesucht:</strong> Popular app for finding shared accommodation.
+                  </li>
+                  <li>
+                    <strong>Immobilienscout24:</strong> Explore a wide range of rental properties
+                    and apartments.
+                  </li>
+                </ul>
+              </p>
 
-                  <p>
-                      <strong>Finance:</strong>
-                      <ul>
-                          <li><strong>Revolut:</strong> Mobile banking with a focus on international students.</li>
-                          <li><strong>TransferWise:</strong> Convenient for international money transfers.</li>
-                      </ul>
-                  </p>
+              <p>
+                <strong>Finance:</strong>
+                <ul>
+                  <li>
+                    <strong>Revolut:</strong> Mobile banking with a focus on international students.
+                  </li>
+                  <li>
+                    <strong>TransferWise:</strong> Convenient for international money transfers.
+                  </li>
+                </ul>
+              </p>
 
-                  <p>
-                      <strong>Health and Well-being:</strong>
-                      <ul>
-                          <li><strong>TK-App:</strong> Provided by Techniker Krankenkasse, offering health insurance services.
-                          </li>
-                      </ul>
-                  </p>
-                  <p>
-                      <strong>Watch the Video:</strong>
-                      Explore detailed usage tips in my YouTube video 
-                      <a 
-                      className="text-blue-600"
-                      href="https://youtu.be/4xdHEWCiNW4?si=JSBcNwnniS9cHdwm" 
-                      target="_blank"
-                      >
-                      &nbsp; here
-                      </a>.
-                  </p>
+              <p>
+                <strong>Health and Well-being:</strong>
+                <ul>
+                  <li>
+                    <strong>TK-App:</strong> Provided by Techniker Krankenkasse, offering health
+                    insurance services.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                <strong>Watch the Video:</strong>
+                Explore detailed usage tips in my YouTube video
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/4xdHEWCiNW4?si=JSBcNwnniS9cHdwm"
+                  target="_blank"
+                >
+                  &nbsp; here
+                </a>
+                .
+              </p>
             </div>
-          )
-       },
+          ),
+        },
         position: { x: -400, y: 1370 },
         targetPosition: Position.Right,
       },
       {
         id: 'c8_5',
         type: 'collapsableNode',
-        data: { 
+        data: {
           label: 'Drivers License',
-          descriptionHTML:(
+          descriptionHTML: (
             <div>
-                <p>
-                    <strong>Acquiring a Driving License in Germany:</strong>
-                    Acquiring a driving license in Germany can significantly enhance your mobility. 
-                    Here's what you need to know as a student:
-                </p>
+              <p>
+                <strong>Acquiring a Driving License in Germany:</strong>
+                Acquiring a driving license in Germany can significantly enhance your mobility.
+                Here's what you need to know as a student:
+              </p>
 
-                <p>
-                    <strong>Eligibility:</strong>
-                    <ul>
-                        <li>International students can use their home country's driving license for the first six months in Germany.</li>
-                        <li>After six months, you'll need to obtain a German driving license if you plan to continue driving.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Eligibility:</strong>
+                <ul>
+                  <li>
+                    International students can use their home country's driving license for the
+                    first six months in Germany.
+                  </li>
+                  <li>
+                    After six months, you'll need to obtain a German driving license if you plan to
+                    continue driving.
+                  </li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Conversion Process:</strong>
-                    <ul>
-                        <li>Some countries have agreements with Germany for direct license conversion, while others may require tests.</li>
-                        <li>Check the specific requirements based on your country of origin.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Conversion Process:</strong>
+                <ul>
+                  <li>
+                    Some countries have agreements with Germany for direct license conversion, while
+                    others may require tests.
+                  </li>
+                  <li>Check the specific requirements based on your country of origin.</li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Requirements for Conversion:</strong>
-                    <ul>
-                        <li>Valid residence permit.</li>
-                        <li>Passport-sized photos.</li>
-                        <li>Proof of completion of a first aid course.</li>
-                        <li>Certificate of eye test.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Requirements for Conversion:</strong>
+                <ul>
+                  <li>Valid residence permit.</li>
+                  <li>Passport-sized photos.</li>
+                  <li>Proof of completion of a first aid course.</li>
+                  <li>Certificate of eye test.</li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Testing Process:</strong>
-                    <ul>
-                        <li>If direct conversion isn't possible, you might need to take theoretical and practical exams.</li>
-                        <li>The theoretical exam typically covers traffic rules and road signs.</li>
-                        <li>The practical exam involves driving with an examiner to demonstrate your skills.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Testing Process:</strong>
+                <ul>
+                  <li>
+                    If direct conversion isn't possible, you might need to take theoretical and
+                    practical exams.
+                  </li>
+                  <li>The theoretical exam typically covers traffic rules and road signs.</li>
+                  <li>
+                    The practical exam involves driving with an examiner to demonstrate your skills.
+                  </li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Language Proficiency:</strong>
-                    <ul>
-                        <li>Ensure you have a good understanding of German road signs and rules.</li>
-                        <li>Consider taking driving lessons in German to prepare for the exams.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Language Proficiency:</strong>
+                <ul>
+                  <li>Ensure you have a good understanding of German road signs and rules.</li>
+                  <li>Consider taking driving lessons in German to prepare for the exams.</li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Watch the Video:</strong>
-                    For a comprehensive guide and insights into the driving license process, watch my YouTube video
-                     <a 
-                     className="text-blue-600"
-                     href="https://youtu.be/3T7c66BppLs?si=zeOyAGDsgYnHTPx_" 
-                     target="_blank"
-                     >
-                    &nbsp; here
-                    </a>.
-                </p>
+              <p>
+                <strong>Watch the Video:</strong>
+                For a comprehensive guide and insights into the driving license process, watch my
+                YouTube video
+                <a
+                  className="text-blue-600"
+                  href="https://youtu.be/3T7c66BppLs?si=zeOyAGDsgYnHTPx_"
+                  target="_blank"
+                >
+                  &nbsp; here
+                </a>
+                .
+              </p>
 
-                <p>
-                    <strong>Post-License Considerations:</strong>
-                    <ul>
-                        <li>Familiarize yourself with German traffic regulations and parking rules.</li>
-                        <li>Understand the implications of traffic violations on your driving record.</li>
-                    </ul>
-                </p>
+              <p>
+                <strong>Post-License Considerations:</strong>
+                <ul>
+                  <li>Familiarize yourself with German traffic regulations and parking rules.</li>
+                  <li>Understand the implications of traffic violations on your driving record.</li>
+                </ul>
+              </p>
 
-                <p>
-                    <strong>Contact Information:</strong>
-                    For specific information and inquiries, contact the local driver's license office or check their online resources.
-                </p>
+              <p>
+                <strong>Contact Information:</strong>
+                For specific information and inquiries, contact the local driver's license office or
+                check their online resources.
+              </p>
             </div>
-
-          )
-       },
+          ),
+        },
         position: { x: -400, y: 1420 },
         targetPosition: Position.Right,
       },
