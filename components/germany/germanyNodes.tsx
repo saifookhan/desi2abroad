@@ -15,6 +15,22 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'O/A Levels?',
+      descriptionHTML: (
+        <div>
+          <p>
+            O/A Levels (GCE Ordinary and Advanced Levels) are qualifications widely taken by
+            students globally, including in the UK, Pakistan, and other Commonwealth nations.
+          </p>
+
+          <p>
+            <strong>Equivalency for German Education:</strong> Obtaining an equivalency assessment
+            for O/A Level qualifications is crucial when applying to the German education system.
+            This ensures alignment with German standards. Universities may have specific
+            requirements, and language proficiency tests may be necessary for the chosen master's
+            program.
+          </p>
+        </div>
+      ),
     },
     targetPosition: Position.Left,
     position: { x: 0, y: 100 },
@@ -134,6 +150,44 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Shortlist universities',
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>
+              <strong>Program Suitability:</strong> Align master's programs with your academic and
+              career goals.
+            </li>
+
+            <li>
+              <strong>Accreditation:</strong> Verify university accreditation for global degree
+              acceptance.
+            </li>
+
+            <li>
+              <strong>Rankings and Reputation:</strong> Consider rankings and reputation in your
+              field for better opportunities.
+            </li>
+
+            <li>
+              <strong>Language of Instruction:</strong> Check course language, proficiency
+              requirements, and explore language preparation if needed.
+            </li>
+
+            <li>
+              <strong>Financial Considerations:</strong> Assess fees, scholarships, and living costs
+              to budget for your master's program.
+            </li>
+
+            <li>
+              <strong>DAAD Course Search:</strong> Utilize DAAD (
+              <a href="https://www.daad.de/en/" target="_blank">
+                www.daad.de/en/
+              </a>
+              ) for Germany course and program searches, offering comprehensive information.
+            </li>
+          </ul>
+        </div>
+      ),
     },
     position: { x: 0, y: 350 },
     children: [
@@ -292,48 +346,33 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Language Proficiency:</strong>
-                Essential for studying in Germany, language proficiency is demonstrated through
-                IELTS or German language exams.
+                <strong>Language Proficiency:</strong> IELTS or German exams are essential.
               </p>
 
               <strong>IELTS:</strong>
               <ul>
-                <li>May be required for programs with English instruction.</li>
-                <li>Aim for a score aligned with program requirements.</li>
-                <li>Prepare through practice tests and language exercises.</li>
+                <li>For English-instructed programs.</li>
+                <li>Aim for a program-aligned score.</li>
+                <li>Prepare through practice tests.</li>
               </ul>
 
               <strong>German Language:</strong>
               <ul>
-                <li>Needed if your course is in German.</li>
-                <li>Check language requirements and consider language courses.</li>
+                <li>Required for German courses.</li>
+                <li>Check language requirements.</li>
               </ul>
 
-              <strong>ECTS:</strong>
+              <strong>ECTS & CGPA:</strong>
               <ul>
-                <li>Standard for comparing student progress in Europe.</li>
-                <li>Understand ECTS credits and their alignment with your academic system.</li>
+                <li>Understand ECTS credits and CGPA criteria.</li>
+                <li>Ensure CGPA meets university standards.</li>
               </ul>
 
-              <strong>CGPA:</strong>
+              <strong>Document Prep:</strong>
               <ul>
-                <li>Considered during the application process.</li>
-                <li>Ensure your CGPA meets or exceeds university criteria.</li>
+                <li>Obtain transcripts and language certificates.</li>
+                <li>Ensure documents meet requirements.</li>
               </ul>
-
-              <strong>Document Preparation:</strong>
-              <ul>
-                <li>Obtain transcripts, IELTS scores, and language certificates.</li>
-                <li>Ensure documents meet university and program requirements.</li>
-              </ul>
-
-              <strong>Contact Information:</strong>
-              <p>
-                For language proficiency requirements, contact the university's admissions office or
-                language department. Check the university's official website for detailed
-                information on ECTS, CGPA requirements, and document guidelines.
-              </p>
             </div>
           ),
         },
@@ -349,15 +388,19 @@ const germanyNodes: StudyParentNode[] = [
       label: 'Write Letter of Motivation ',
       descriptionHTML: (
         <div>
-          <p>Not all unis require it.</p>
           <p>
-            A motivation letter for studies, also known as a statement of purpose or a personal
-            statement, accompanies your application for admission to a university or academic
-            program. It's a crucial part of your application package and serves to explain your
-            motivations, aspirations, and qualifications for pursuing a particular field of study at
-            a specific institution.
+            <strong>Not all universities require it.</strong>
           </p>
-          <p>To write a motivation letter for studies:</p>
+          <p>
+            A motivation letter for studies, also known as a statement of purpose or personal
+            statement, accompanies your application for admission to a university or academic
+            program. It is a crucial part of your application package, explaining your motivations,
+            aspirations, and qualifications for pursuing a specific field of study at a particular
+            institution.
+          </p>
+          <p>
+            <strong>To write a motivation letter for studies, consider the following:</strong>
+          </p>
           <ol>
             <li>- Research and Planning</li>
             <li>- Introduction</li>
@@ -368,7 +411,7 @@ const germanyNodes: StudyParentNode[] = [
             <li>- Personal Qualities and Conclusion</li>
           </ol>
           <p>
-            Each point represents a section or a key aspect to cover when writing a motivation
+            Each point represents a section or a key aspect to cover when crafting a motivation
             letter for studies.
           </p>
         </div>
@@ -384,37 +427,38 @@ const germanyNodes: StudyParentNode[] = [
       descriptionHTML: (
         <div>
           <p>
-            A recommendation letter for a master's program is a document written by someone who can
-            speak to your qualifications, skills, academic abilities, and personal qualities. It
-            supports your application by providing insights into your capabilities and character
-            from an external perspective.
+            A recommendation letter for a master's program is a valuable document showcasing your
+            qualifications, skills, and personal qualities. It provides insights from an external
+            perspective, supporting your application.
           </p>
-          <p>To get recommendation letters for a master's program:</p>
-          <ol>
-            <li>
-              - Academic References: Professors or instructors who have taught you in relevant
-              courses or supervised your academic work.
-            </li>
-            <li>
-              - Professional References: Employers, supervisors, or colleagues who can attest to
-              your professional abilities and skills.
-            </li>
-            <li>
-              - Personal References (if applicable): Mentors or community leaders who can speak to
-              your character and personal qualities.
-            </li>
-          </ol>
-          <br />
-          <p>When requesting recommendation letters:</p>
+          <p>
+            <strong>To secure recommendation letters:</strong>
+          </p>
           <ul>
             <li>
-              - Choose individuals who know you well and can provide specific examples highlighting
-              your strengths.
+              <strong>Academic References:</strong> Professors or instructors with knowledge of your
+              relevant courses or academic work.
             </li>
-            <li> - Request letters well in advance of your application deadlines.</li>
             <li>
-              - Provide your references with information about the program you're applying for and
-              any relevant details.
+              <strong>Professional References:</strong> Employers, supervisors, or colleagues
+              familiar with your professional abilities.
+            </li>
+            <li>
+              <strong>Personal References (if applicable):</strong> Mentors or community leaders
+              highlighting your character and personal qualities.
+            </li>
+          </ul>
+          <p>
+            <strong>When requesting letters:</strong>
+          </p>
+          <ul>
+            <li>
+              Choose individuals who know you well and can provide specific examples of your
+              strengths.
+            </li>
+            <li>Request letters well in advance of application deadlines.</li>
+            <li>
+              Provide your references with information about the program and relevant details.
             </li>
           </ul>
         </div>
@@ -427,6 +471,28 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Start applying as soon as admissions open',
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>
+              <strong>Increased Chances:</strong> Applying early enhances your chances, especially
+              in competitive programs.
+            </li>
+            <li>
+              <strong>Deadline Awareness:</strong> Be aware of application deadlines and submit
+              materials well in advance.
+            </li>
+            <li>
+              <strong>Prepare Documents:</strong> Gather transcripts, recommendation letters, and
+              required documents early in the process.
+            </li>
+            <li>
+              <strong>Stay Informed:</strong> Regularly check university websites for updates and
+              changes in application procedures.
+            </li>
+          </ul>
+        </div>
+      ),
     },
     position: { x: 0, y: 620 },
     children: [
@@ -438,59 +504,49 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Uni-assist</strong> short for University Application Service for
-                International Students, is a centralized organization in Germany that streamlining
-                the application process. Here's a quick overview:
+                <strong>Uni-assist Overview:</strong>
+                Centralized organization for evaluating academic documents for German university
+                admission standards.
               </p>
-              <br />
 
               <ul>
                 <li>
-                  <strong>Purpose:</strong> Evaluates academic documents for German university
-                  admission standards, demonstrating equivalence.
-                </li>
-                <br />
-                <li>
-                  <strong>Process:</strong> Submit applications and documents through the
-                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                  <strong>Process:</strong> Submit applications via the
+                  <a class="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
                     &nbsp;Uni-assist portal
                   </a>
-                  . Uni-assist assesses and forwards evaluations to chosen German universities.
+                  .
                 </li>
-                <br />
+
                 <li>
-                  <strong>Fees:</strong> Charges fees for services, varying based on the number of
-                  universities and evaluation complexity.
+                  <strong>Fees:</strong> Charges fees based on universities and evaluation
+                  complexity.
                 </li>
-                <br />
+
                 <li>
-                  <strong>Participating Universities:</strong> Not all require Uni-assist; check
-                  specific requirements of chosen universities.
+                  <strong>Universities:</strong> Check if chosen universities require Uni-assist.
                 </li>
-                <br />
+
                 <li>
-                  <strong>Deadlines:</strong> Specific application deadlines for each semester;
-                  adhere to ensure timely processing.
+                  <strong>Deadlines:</strong> Adhere to specific semester deadlines.
                 </li>
-                <br />
+
                 <li>
-                  <strong>Language Requirements:</strong> Proficiency in German or English (via
-                  tests like IELTS or TOEFL) may be required.
+                  <strong>Language:</strong> Proficiency in German or English may be required.
                 </li>
-                <br />
+
                 <li>
-                  <strong>Contact:</strong> For inquiries, visit the
-                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                  <strong>Contact:</strong> Visit
+                  <a class="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
                     &nbsp;Uni-assist website
                   </a>{' '}
-                  or contact your chosen universities.
+                  or contact universities.
                 </li>
-                <br />
               </ul>
 
               <p>
-                Navigating the Uni-assist Application is crucial for international students aspiring
-                to study in Germany. Follow instructions and deadlines for a successful application.
+                Navigating Uni-assist is crucial for successful applications to German universities.
+                Follow instructions and deadlines.
               </p>
             </div>
           ),
@@ -505,61 +561,50 @@ const germanyNodes: StudyParentNode[] = [
           label: 'upload the VPD & apply through uni portal',
           descriptionHTML: (
             <div>
+              <p>
+                Centralized organization for evaluating academic documents for German university
+                admission standards.
+              </p>
+
               <ul>
-                <p>
-                  VPD, or Vorprüfungsdokumentation, is a Preliminary Document Review provided by
-                  uni-assist. It assesses the equivalence of your foreign qualifications to German
-                  education standards.
-                </p>
-                <br />
+                <li>
+                  <strong>Process:</strong> Submit applications via the
+                  <a class="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                    &nbsp;Uni-assist portal
+                  </a>
+                  .
+                </li>
 
                 <li>
-                  <strong>Obtaining VPD:</strong>
-                  <p>
-                    Complete the preliminary review process with uni-assist to receive your VPD.
-                  </p>
+                  <strong>Fees:</strong> Charges fees based on universities and evaluation
+                  complexity.
                 </li>
-                <br />
 
                 <li>
-                  <strong>University's Online Portal:</strong>
-                  <p>Log in to the official portal of the German university you are applying to.</p>
+                  <strong>Universities:</strong> Check if chosen universities require Uni-assist.
                 </li>
-                <br />
 
                 <li>
-                  <strong>Upload VPD:</strong>
-                  <p>
-                    Follow the portal instructions to upload your VPD. Ensure that your document
-                    adheres to specified format and size guidelines.
-                  </p>
+                  <strong>Deadlines:</strong> Adhere to specific semester deadlines.
                 </li>
-                <br />
 
                 <li>
-                  <strong>Application Form:</strong>
-                  <p>
-                    Complete the university's application form within the portal. Provide accurate
-                    personal information, academic history, and any additional required documents.
-                  </p>
+                  <strong>Language:</strong> Proficiency in German or English may be required.
                 </li>
-                <br />
 
                 <li>
-                  <strong>Check Requirements:</strong>
-                  <p>
-                    Verify and fulfill any additional requirements specified by the university for
-                    the application process.
-                  </p>
+                  <strong>Contact:</strong> Visit
+                  <a class="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
+                    &nbsp;Uni-assist website
+                  </a>{' '}
+                  or contact universities.
                 </li>
-                <br />
-
-                <li>
-                  <strong>Submission:</strong>
-                  <p>Submit your application through the university portal.</p>
-                </li>
-                <br />
               </ul>
+
+              <p>
+                Navigating Uni-assist is crucial for successful applications to German universities.
+                Follow instructions and deadlines.
+              </p>
             </div>
           ),
         },
@@ -574,24 +619,18 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                In the context of uni-assist, "VPD" stands for "Vorprüfungsdokumentation," which
-                translates to "Preliminary Document Review" in English.
-                <br />
-                <br />
-                The VPD is a service provided by uni-assist for international students applying to
-                universities in Germany. It involves the assessment and evaluation of educational
-                certificates and documents submitted by applicants.
-                <br />
-                <br />
-                Upon receiving the required documents, uni-assist conducts a preliminary review
-                (VPD) to determine the equivalency of foreign qualifications to the German education
-                system. This review helps applicants understand if their qualifications meet the
-                minimum requirements for admission to German universities.
-                <br />
-                <br />
-                The VPD doesn't guarantee admission but serves as an initial assessment to guide
-                applicants in the application process, informing them whether their educational
-                background meets the standards set by the German universities.
+                <strong>VPD (Vorprüfungsdokumentation):</strong> Uni-assist's Preliminary Document
+                Review service for international students applying to German universities.
+              </p>
+
+              <p>
+                The VPD assesses and evaluates educational certificates to determine their
+                equivalency to the German education system.
+              </p>
+
+              <p>
+                This preliminary review helps applicants understand if their qualifications meet the
+                minimum requirements for admission, providing guidance in the application process.
               </p>
             </div>
           ),
@@ -608,75 +647,33 @@ const germanyNodes: StudyParentNode[] = [
             <div>
               <ul>
                 <li>
-                  <strong>Overview:</strong>
-                  Many German universities allow students to apply directly through their official
-                  online portals. This process bypasses the need for intermediary services like
-                  uni-assist.
+                  <strong>Direct Application:</strong> Apply to German universities through their
+                  online portals.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Procedure:</strong>
-                  Visit the official website of the German university you are interested in. Locate
-                  the admissions or application section to access the online portal.
+                  <strong>Procedure:</strong> Visit the university's website, complete the online
+                  application, and submit required documents.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Document Submission:</strong>
-                  Upload the required documents directly to the university's portal. Ensure
-                  documents meet the specified format and size requirements.
+                  <strong>Language Proficiency:</strong> Demonstrate proficiency in the required
+                  language.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Application Form:</strong>
-                  Complete the university's online application form with accurate personal and
-                  academic information.
+                  <strong>Application Fee:</strong> Check and pay any applicable fees as per
+                  university instructions.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Additional Requirements:</strong>
-                  Check for any specific requirements outlined by the university, such as letters of
-                  recommendation or a statement of purpose.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Language Proficiency:</strong>
-                  Demonstrate proficiency in the required language (German or English) as per the
-                  university's guidelines.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Application Fee:</strong>
-                  Be aware of any application fees that the university may charge. Pay attention to
-                  payment instructions.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Submission Deadline:</strong>
-                  Adhere to the application deadlines set by the university for the desired
+                  <strong>Submission Deadline:</strong> Adhere to deadlines for the desired
                   semester.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Tracking Application:</strong>
-                  Utilize the university's online tracking system to monitor the status of your
-                  application.
+                  <strong>Tracking:</strong> Monitor application status through the university's
+                  online system.
                 </li>
-                <br />
-
                 <li>
-                  <strong>Contact University:</strong>
-                  For inquiries or additional information, contact the university's admissions
-                  office directly.
+                  <strong>Contact University:</strong> Directly inquire with the admissions office
+                  for additional information.
                 </li>
-                <br />
               </ul>
             </div>
           ),
@@ -689,19 +686,127 @@ const germanyNodes: StudyParentNode[] = [
   {
     id: 'b1',
     type: 'collapsableNode',
-    data: { label: 'Did you get an admission offer?' },
+    data: {
+      label: 'Did you get an admission offer?',
+      descriptionHTML: (
+        <div>
+          <p>
+            <strong>Check Admission Status:</strong> Verify your application status on the
+            university's online portal.
+          </p>
+
+          <p>
+            <strong>Admission Offer:</strong> If accepted, review the admission offer thoroughly,
+            noting any deadlines or further instructions.
+          </p>
+
+          <p>
+            <strong>Next Steps:</strong> Follow the outlined steps in the admission offer for
+            enrollment and registration.
+          </p>
+
+          <p>
+            <strong>No Admission Offer:</strong> If not accepted, check for any specific feedback or
+            instructions provided in the rejection notice.
+          </p>
+
+          <p>
+            <strong>Contact Admission Office:</strong> If uncertain or for clarification, promptly
+            contact the admission office for guidance.
+          </p>
+
+          <p>
+            <strong>Consider Alternatives:</strong> If not admitted, explore alternative options,
+            such as reapplying, considering other universities, or seeking feedback for improvement.
+          </p>
+        </div>
+      ),
+    },
     position: { x: 0, y: 750 },
   },
   {
     id: 'c1',
     type: 'collapsableNode',
-    data: { label: 'Book your visa appointment' },
+    data: {
+      label: 'Book your visa appointment',
+      descriptionHTML: (
+        <div>
+          <p>
+            If you have received your admission letter, you are eligible to book a visa appointment.
+          </p>
+
+          <p>
+            <strong>For Punjab Residents (Germany Embassy Islamabad):</strong>
+          </p>
+          <ul>
+            <li>
+              Visit the Germany Embassy Islamabad website:{' '}
+              <a
+                className="text-blue-600"
+                href="https://pakistan.diplo.de/pk-en/vertretungen/botschaft"
+                target="_blank"
+              >
+                Germany Embassy Islamabad
+              </a>
+            </li>
+            <li>
+              Follow the instructions provided on the website to apply for a visa appointment.
+            </li>
+          </ul>
+
+          <p>
+            <strong>For Other Regions (German Consulate Karachi):</strong>
+          </p>
+          <ul>
+            <li>
+              Visit the German Consulate Karachi website:{' '}
+              <a
+                className="text-blue-600"
+                href="https://service2.diplo.de/rktermin/extern/choose_realmList.do?locationCode=kara&request_locale=en"
+                target="_blank"
+              >
+                German Consulate Karachi
+              </a>
+            </li>
+            <li>Book your visa appointment through the online appointment system.</li>
+            <li>
+              Additional information regarding the visa application process can be found on the
+              provided links.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
     position: { x: 0, y: 850 },
   },
   {
     id: 'c2',
     type: 'collapsableNode',
-    data: { label: 'Apply for hostel accommodations' },
+    data: {
+      label: 'Apply for hostel accommodations',
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>
+              <strong>Early Application:</strong> Apply for accommodation as soon as possible to
+              secure preferred options.
+            </li>
+            <li>
+              <strong>University Housing:</strong> Check if the university offers on-campus housing
+              or guidance for off-campus options.
+            </li>
+            <li>
+              <strong>Private Options:</strong> Explore private accommodation options through
+              university Facebook groups and housing apps.
+            </li>
+            <li>
+              <strong>Application Deadlines:</strong> Be aware of accommodation application
+              deadlines provided by the university.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
     position: { x: 0, y: 920 },
   },
   {
@@ -709,6 +814,42 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Open blocked account and remit blocked amount',
+      descriptionHTML: (
+        <div>
+          <p>A blocked account is required for student/language visa applications in Germany.</p>
+
+          <p>
+            <strong>Amount for 2024:</strong> €11,208 or €934 per month for up to 12 months.
+          </p>
+
+          <p>
+            <strong>Provider:</strong> Choose reputable options like{' '}
+            <a
+              className="text-blue-600"
+              href="https://fintiba.com/solutions/companion/?utm_term=&utm_campaign=GLOBAL-EN%7CGEN%7CPMAX%7CGermany&utm_source=adwords&utm_medium=ppc&hsa_acc=6727771700&hsa_cam=20380752431&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiA1-6sBhAoEiwArqlGPvjm3YhOmQqwS34dAnpY-YF_2t0Z9S7so3eZzsVP0jb0M4-MaekG6xoC5cQQAvD_BwE"
+              target="_blank"
+            >
+              Fintiba
+            </a>{' '}
+            or Expatrio.
+          </p>
+
+          <p>
+            <strong>Fees:</strong> Pay attention to opening and maintenance fees, and check for
+            cashback or bundle options.
+          </p>
+
+          <p>
+            <strong>Documents:</strong> Usually, only your passport is required; providers like
+            Fintiba & Expatrio offer confirmation within 24 hours.
+          </p>
+
+          <p>
+            <strong>Refund:</strong> Providers, including Expatrio & Fintiba, usually refund if your
+            visa application is rejected.
+          </p>
+        </div>
+      ),
     },
     position: { x: 0, y: 1000 },
   },
@@ -717,27 +858,118 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Appear for visa interview',
+      descriptionHTML: (
+        <div>
+          <p>
+            Appear for the visa interview at the German Embassy/Consulate. Ensure you bring all
+            required documents as specified on the official visa application website.
+          </p>
+        </div>
+      ),
     },
     position: { x: 0, y: 1070 },
     children: [
       {
         id: 'c5_1',
         type: 'collapsableNode',
-        data: { label: 'Visa Documents and fee' },
+        data: {
+          label: 'Visa Documents and fee',
+          descriptionHTML: (
+            <div>
+              <p>
+                Refer to the German Embassy in Islamabad's official website for the most accurate
+                and up-to-date information regarding visa fees and the list of required application
+                documents:
+                <a
+                  href="https://pakistan.diplo.de/pk-en/service/-/2208622"
+                  target="_blank"
+                  className="text-blue-600"
+                >
+                  German Embassy Islamabad
+                </a>
+                .
+              </p>
+
+              <p>
+                Similarly, for residents in Karachi, check the German Consulate's website for
+                detailed information on visa application fees and the list of required documents:
+                <a
+                  className="text-blue-600"
+                  href="https://pakistan.diplo.de/pk-en/service/-/2208622"
+                  target="_blank"
+                >
+                  German Consulate Karachi
+                </a>
+                .
+              </p>
+            </div>
+          ),
+        },
         position: { x: 400, y: 950 },
         targetPosition: Position.Left,
       },
       {
         id: 'c5_2',
         type: 'collapsableNode',
-        data: { label: 'Visa CV' },
+        data: {
+          label: 'Visa CV',
+          descriptionHTML: (
+            <div>
+              <p>
+                When preparing a visa application for Germany, it is crucial to ensure that the
+                curriculum vitae (CV) is comprehensive, including essential details such as personal
+                information, educational background, work experience, and relevant skills or
+                achievements.
+              </p>
+
+              <p>
+                Applicants may use the same CV submitted for university applications, but it should
+                provide a clear overview of qualifications and support the visa application.
+              </p>
+            </div>
+          ),
+        },
         position: { x: 400, y: 1020 },
         targetPosition: Position.Left,
       },
       {
         id: 'c5_3',
         type: 'collapsableNode',
-        data: { label: 'Motivation Letter' },
+        data: {
+          label: 'Motivation Letter',
+          descriptionHTML: (
+            <div>
+              <ul>
+                <li>Submit focused Motivation Letter (LOM/SOP).</li>
+                <li>Align with academic goals and course choice.</li>
+              </ul>
+              <ul>
+                <li>
+                  <strong>Introduction:</strong> Name, course, and university.
+                </li>
+                <li>
+                  <strong>Educational Background:</strong> Highlight relevant qualifications.
+                </li>
+                <li>
+                  <strong>Reasons for Choosing Germany:</strong> Academic reputation and program
+                  fit.
+                </li>
+                <li>
+                  <strong>Personal Motivation:</strong> Link course choice to passions and goals.
+                </li>
+                <li>
+                  <strong>Language Proficiency:</strong> Proficiency in the language of instruction.
+                </li>
+                <li>
+                  <strong>Financial Capability:</strong> Assure financial coverage.
+                </li>
+                <li>
+                  <strong>Return Intentions:</strong> Commitment to return after studies.
+                </li>
+              </ul>
+            </div>
+          ),
+        },
         position: { x: 400, y: 1080 },
         targetPosition: Position.Left,
       },
@@ -748,6 +980,14 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Did you receive your visa?',
+      descriptionHTML: (
+        <div>
+          <p>
+            If you have received your visa, proceed to the next step in the roadmap. If not, check
+            the application status, and in case of any uncertainty, contact the visa authorities.
+          </p>
+        </div>
+      ),
     },
     position: { x: 0, y: 1130 },
   },
@@ -756,6 +996,44 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Book flight (student discount)',
+      descriptionHTML: (
+        <div>
+          <p>
+            <strong>Student Discounts:</strong>
+          </p>
+          <p>
+            Explore student discounts from airlines like{' '}
+            <a className="text-blue-600" href="https://www.turkishairlines.com/" target="_blank">
+              Turkish Airlines
+            </a>{' '}
+            and{' '}
+            <a className="text-blue-600" href="https://www.qatarairways.com/" target="_blank">
+              Qatar Airways
+            </a>
+            .
+          </p>
+
+          <p>
+            <strong>Verify Eligibility:</strong>
+          </p>
+          <p>
+            Ensure you meet criteria for student discounts and extra perks, such as additional
+            luggage allowances.
+          </p>
+
+          <p>
+            <strong>Compare and Book:</strong>
+          </p>
+          <p>
+            Use platforms like{' '}
+            <a className="text-blue-600" href="https://www.skyscanner.net/" target="_blank">
+              Skyscanner
+            </a>{' '}
+            to compare prices, then apply student discounts on the airline's official website for
+            the best deal.
+          </p>
+        </div>
+      ),
     },
     position: { x: 0, y: 1190 },
   },
@@ -764,6 +1042,29 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Prepare for arrival',
+      descriptionHTML: (
+        <div>
+          <p>Once your visa is secured and flights are booked:</p>
+          <ol>
+            <li>
+              <strong>Arrange Accommodation:</strong> Confirm your accommodation arrangements,
+              whether university housing or private options.
+            </li>
+            <li>
+              <strong>Pack Essentials:</strong> Pack necessary documents, clothing, and essentials
+              for your stay.
+            </li>
+            <li>
+              <strong>Financial Preparation:</strong> Ensure you have access to funds for initial
+              expenses.
+            </li>
+            <li>
+              <strong>Learn Basic Phrases:</strong> Familiarize yourself with basic phrases in
+              German for daily communication.
+            </li>
+          </ol>
+        </div>
+      ),
     },
     position: { x: 0, y: 1280 },
     children: [
@@ -775,81 +1076,37 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Shopping List Overview:</strong>
-                Before your journey to Germany, ensure a smooth transition by preparing a concise
-                shopping list for essential items.
+                <strong>Essential Items for Your Journey:</strong> Prepare a shopping list for a
+                smooth transition to Germany.
               </p>
 
-              <p>
-                <strong>Watch the Videos:</strong>
-                Check out my YouTube videos for detailed insights on what to bring to Germany
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/zM_7f6Rv2qQ?si=TgdrQhdYww660GVZ"
-                  target="_blank"
-                >
-                  &nbsp; View Video 1
-                </a>
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/-FnhGBzof0o?si=lejG6gFDdxCcfDPi"
-                  target="_blank"
-                >
-                  &nbsp; View Video 2
-                </a>
-              </p>
               <p>
                 <strong>Key Items to Include:</strong>
               </p>
-              <br />
 
-              <p>
-                <strong>Clothing:</strong>
-                Pack suitable attire for the German climate, including jackets, comfortable shoes,
-                and versatile layers.
-              </p>
-
-              <p>
-                <strong>Personal Care Products:</strong>
-                Bring preferred personal care items; local stores offer a variety of brands.
-              </p>
-
-              <p>
-                <strong>Documentation:</strong>
-                Ensure necessary documents like passport, visa, and permits. Carry printed copies.
-              </p>
-
-              <p>
-                <strong>Electronics:</strong>
-                Pack essentials like a laptop, phone, and chargers. Consider a power adapter.
-              </p>
-
-              <p>
-                <strong>Kitchen Essentials:</strong>
-                For independent living, bring basic kitchen items; supplement locally as needed.
-              </p>
-
-              <p>
-                <strong>Medications:</strong>
-                Carry a supply of prescription medications; familiarize yourself with local
-                pharmacies.
-              </p>
-
-              <p>
-                <strong>Banking and Finances:</strong>
-                Inform your bank; set up online banking for easy access to funds.
-              </p>
-
-              <p>
-                <strong>Language Learning Materials:</strong>
-                Enhance German skills with language learning resources like dictionaries or apps.
-              </p>
-
-              <p>
-                <strong>Adapters and Converters:</strong>
-                Ensure compatibility with German outlets for electronic devices. Purchase adapters
-                if necessary.
-              </p>
+              <ul>
+                <li>
+                  <strong>Clothing:</strong> Pack suitable attire for the German climate.
+                </li>
+                <li>
+                  <strong>Documentation:</strong> Bring necessary documents like passport, visa, and
+                  permits.
+                </li>
+                <li>
+                  <strong>Electronics:</strong> Pack essentials like a laptop, phone, and chargers.
+                </li>
+                <li>
+                  <strong>Kitchen Essentials:</strong> For independent living, bring basic kitchen
+                  items
+                </li>
+                <li>
+                  <strong>Medications:</strong> Carry a supply of prescription medications
+                </li>
+                <li>
+                  <strong>Language Learning Materials:</strong> Enhance German skills with
+                  dictionaries or apps.
+                </li>
+              </ul>
             </div>
           ),
         },
@@ -864,52 +1121,20 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Overview:</strong>
-                Join the Pakistani Student Association (PSA) and Indian Student Association (ISA) to
-                enhance your German student experience. These communities provide support,
-                connections, and a sense of belonging.
+                <strong>Join Student Associations:</strong> Connect with the Pakistani Student
+                Association (PSA) and Indian Student Association (ISA) for a supportive student
+                experience in Germany.
               </p>
 
               <p>
-                <strong>Purpose:</strong>
-                PSA and ISA assist students from Pakistan and India, offering help in finding
-                accommodation, sharing local insights, and organizing events for community building.
+                <strong>Purpose:</strong> PSA and ISA assist students from Pakistan and India,
+                providing help in finding accommodation, sharing local insights, and organizing
+                community-building events.
               </p>
 
               <p>
-                <strong>City-wise Presence:</strong>
-                With chapters across Germany, PSA and ISA provide localized support and engagement
-                opportunities for students in various cities.
-              </p>
-
-              <p>
-                <strong>Watch the Video:</strong>
-                Explore the activities and benefits of PSA and ISA in my YouTube video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/tcIPiG1pX5M?si=ja8_5a908gsURqRx"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
-
-              <p>
-                <strong>Getting Involved:</strong>
-                New students are encouraged to connect with these associations, attend events, and
-                actively participate in community activities for a vibrant student experience.
-              </p>
-
-              <p>
-                <strong>Contact Information:</strong>
-                For more details or to get involved, visit the PSA and ISA chapters in your city or
-                check their online platforms.
-              </p>
-
-              <p>
-                Connecting with PSA and ISA opens doors to a supportive community, fostering
-                friendships and enriching your study abroad journey in Germany.
+                <strong>City-wise Presence:</strong> With chapters across Germany, PSA and ISA offer
+                localized support and engagement opportunities for students in various cities.
               </p>
             </div>
           ),
@@ -928,58 +1153,33 @@ const germanyNodes: StudyParentNode[] = [
                 <strong>How to Book:</strong>
               </p>
 
-              <p>
-                <strong>Download the DB App:</strong>
-                Install the Deutsche Bahn app on your smartphone. It's available for both Android
-                and iOS devices.
-              </p>
-
-              <p>
-                <strong>Create an Account:</strong>
-                Register for an account within the app, providing necessary details.
-              </p>
-
-              <p>
-                <strong>Plan Your Journey:</strong>
-                Enter your departure and arrival stations, along with the desired date and time of
-                travel.
-              </p>
-
-              <p>
-                <strong>Select Your Train:</strong>
-                Browse through available train options and choose the one that suits your schedule.
-              </p>
-
-              <p>
-                <strong>Choose Ticket Type:</strong>
-                Select the type of ticket you need, whether it's a one-way, round-trip, or any
-                special fare.
-              </p>
-
-              <p>
-                <strong>Payment:</strong>
-                Complete the payment process securely within the app.
-              </p>
-
-              <p>
-                <strong>Receive E-Ticket:</strong>
-                Your electronic ticket will be generated and stored in the app. Show this E-ticket
-                during your journey.
-              </p>
-
-              <p>
-                <strong>Watch the Video:</strong>
-                For a step-by-step guide on booking train tickets with the DB app, watch my YouTube
-                video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/8W1kFp68SGY?si=BJRhmQyCVFbKOnv6"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
+              <ul>
+                <li>
+                  <strong>Download the DB App:</strong> Install the Deutsche Bahn app on your
+                  smartphone (Android/iOS).
+                </li>
+                <li>
+                  <strong>Create an Account:</strong> Register within the app with necessary
+                  details.
+                </li>
+                <li>
+                  <strong>Plan Your Journey:</strong> Enter departure/arrival stations, date, and
+                  time.
+                </li>
+                <li>
+                  <strong>Select Your Train:</strong> Choose from available options.
+                </li>
+                <li>
+                  <strong>Choose Ticket Type:</strong> Select one-way, round-trip, or special fare.
+                </li>
+                <li>
+                  <strong>Payment:</strong> Complete secure payment within the app.
+                </li>
+                <li>
+                  <strong>Receive E-Ticket:</strong> Your electronic ticket will be stored in the
+                  app for the journey.
+                </li>
+              </ul>
             </div>
           ),
         },
@@ -993,82 +1193,25 @@ const germanyNodes: StudyParentNode[] = [
           label: 'Important Mobile Apps',
           descriptionHTML: (
             <div>
-              <p>
-                Streamline your student life in Germany with must-have mobile apps spanning various
-                categories, including transportation, language learning, accommodation, finance,
-                health, and communication.
-              </p>
+              <p>Essential mobile apps for student life in Germany:</p>
 
-              <p>
-                <strong>Transportation:</strong>
-                <ul>
-                  <li>
-                    <strong>DB Navigator:</strong> Official Deutsche Bahn app for train schedules
-                    and tickets.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Language Learning:</strong>
-                <ul>
-                  <li>
-                    <strong>Duolingo:</strong> User-friendly language learning for improving German
-                    skills.
-                  </li>
-                  <li>
-                    <strong>Babbel:</strong> Tailored language courses focusing on practical
-                    communication.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Accommodation:</strong>
-                <ul>
-                  <li>
-                    <strong>WG-Gesucht:</strong> Popular app for finding shared accommodation.
-                  </li>
-                  <li>
-                    <strong>Immobilienscout24:</strong> Explore a wide range of rental properties
-                    and apartments.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Finance:</strong>
-                <ul>
-                  <li>
-                    <strong>Revolut:</strong> Mobile banking with a focus on international students.
-                  </li>
-                  <li>
-                    <strong>TransferWise:</strong> Convenient for international money transfers.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Health and Well-being:</strong>
-                <ul>
-                  <li>
-                    <strong>TK-App:</strong> Provided by Techniker Krankenkasse, offering health
-                    insurance services.
-                  </li>
-                </ul>
-              </p>
-              <p>
-                <strong>Watch the Video:</strong>
-                Explore detailed usage tips in my YouTube video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/4xdHEWCiNW4?si=JSBcNwnniS9cHdwm"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
+              <ul>
+                <li>
+                  <strong>Transportation:</strong> DB Navigator app for train schedules and tickets.
+                </li>
+                <li>
+                  <strong>Language Learning:</strong> Duolingo and Babbel for German skills.
+                </li>
+                <li>
+                  <strong>Accommodation:</strong> WG-Gesucht and Immobilienscout24 for housing.
+                </li>
+                <li>
+                  <strong>Finance:</strong> Revolut and TransferWise for banking and transfers.
+                </li>
+                <li>
+                  <strong>Health:</strong> TK-App for health insurance services.
+                </li>
+              </ul>
             </div>
           ),
         },
@@ -1083,94 +1226,28 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Acquiring a Driving License in Germany:</strong>
-                Acquiring a driving license in Germany can significantly enhance your mobility.
-                Here's what you need to know as a student:
+                <strong>Driving License in Germany:</strong>
+                Obtain a German license after six months.
               </p>
 
               <p>
-                <strong>Eligibility:</strong>
-                <ul>
-                  <li>
-                    International students can use their home country's driving license for the
-                    first six months in Germany.
-                  </li>
-                  <li>
-                    After six months, you'll need to obtain a German driving license if you plan to
-                    continue driving.
-                  </li>
-                </ul>
+                <strong>Conversion:</strong>
+                Check for direct conversion or required tests.
               </p>
 
               <p>
-                <strong>Conversion Process:</strong>
-                <ul>
-                  <li>
-                    Some countries have agreements with Germany for direct license conversion, while
-                    others may require tests.
-                  </li>
-                  <li>Check the specific requirements based on your country of origin.</li>
-                </ul>
+                <strong>Requirements:</strong>
+                Meet residence permit, photo, and course completion criteria.
               </p>
 
               <p>
-                <strong>Requirements for Conversion:</strong>
-                <ul>
-                  <li>Valid residence permit.</li>
-                  <li>Passport-sized photos.</li>
-                  <li>Proof of completion of a first aid course.</li>
-                  <li>Certificate of eye test.</li>
-                </ul>
+                <strong>Testing:</strong>
+                Undergo theoretical/practical exams or direct conversion.
               </p>
 
               <p>
-                <strong>Testing Process:</strong>
-                <ul>
-                  <li>
-                    If direct conversion isn't possible, you might need to take theoretical and
-                    practical exams.
-                  </li>
-                  <li>The theoretical exam typically covers traffic rules and road signs.</li>
-                  <li>
-                    The practical exam involves driving with an examiner to demonstrate your skills.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Language Proficiency:</strong>
-                <ul>
-                  <li>Ensure you have a good understanding of German road signs and rules.</li>
-                  <li>Consider taking driving lessons in German to prepare for the exams.</li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Watch the Video:</strong>
-                For a comprehensive guide and insights into the driving license process, watch my
-                YouTube video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/3T7c66BppLs?si=zeOyAGDsgYnHTPx_"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
-
-              <p>
-                <strong>Post-License Considerations:</strong>
-                <ul>
-                  <li>Familiarize yourself with German traffic regulations and parking rules.</li>
-                  <li>Understand the implications of traffic violations on your driving record.</li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Contact Information:</strong>
-                For specific information and inquiries, contact the local driver's license office or
-                check their online resources.
+                <strong>Language:</strong>
+                Understand German road rules; consider lessons.
               </p>
             </div>
           ),
@@ -1185,6 +1262,38 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Land in Germany',
+      descriptionHTML: (
+        <div>
+          <p>After landing in Germany, here are the essential steps for students:</p>
+          <ul>
+            <li>
+              <strong>- Buy SIM Card</strong>
+            </li>
+            <li>
+              <strong>- Check-In at Accommodation</strong>
+            </li>
+            <li>
+              <strong>- Get Student ID from University</strong>
+            </li>
+            <li>
+              <strong>- City Registration</strong>
+            </li>
+            <li>
+              <strong>- Get Social Security Number</strong>
+            </li>
+            <li>
+              <strong>- Open Bank Account</strong>
+            </li>
+            <li>
+              <strong>- Apply for Health Insurance Card</strong>
+            </li>
+          </ul>
+          <p>
+            These steps will help you navigate essential aspects of settling into life as a student
+            in Germany.
+          </p>
+        </div>
+      ),
     },
     position: { x: 0, y: 1400 },
   },
