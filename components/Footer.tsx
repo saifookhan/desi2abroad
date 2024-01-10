@@ -1,6 +1,7 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from 'components/social-icons'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -26,8 +27,11 @@ export default function Footer() {
             Follow on insta for latest updates
           </Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://roadmap.sh">Inspired from roadmap.sh</Link>
+        </div>
+        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+          <Image src="/static/images/d2A.png" width={150} height={70} alt="logo" />
         </div>
       </div>
     </footer>

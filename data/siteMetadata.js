@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://desi2abroad.com',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/d2A.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'saifooexplores@gmail.com',
   github: 'https://github.com/saifookhan',
