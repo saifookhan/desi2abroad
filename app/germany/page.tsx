@@ -2,6 +2,7 @@ import { genPageMetadata } from 'app/seo'
 import SectionContainer from 'components/SectionContainer'
 import Flow from 'components/germany/Roadmap'
 import DisqusComments from 'components/general/Disqus/disqus'
+import VideoCarousal from '@/components/general/VideoCarousal/VideoCarousal'
 
 //TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })
@@ -302,9 +303,12 @@ export default function BlogPage() {
       <SectionContainer backgroundStyle={'lightGrey'}>
         <Flow />
         <div className="mb-8 text-black">
-          Credits: Iraj Anwar, Saifoo Khan, Yalnaz Baig, Zubair Khan
+          Credits: Hamza, Iraj Anwar, Saifoo Khan, Sidra Nasir, Yumna Iqbal, Zubair Khan
         </div>
       </SectionContainer>
+      {/* <SectionContainer backgroundStyle={'lightGrey'}>
+        <VideoCarousal />
+      </SectionContainer> */}
       {/* <SectionContainer backgroundStyle={'white'}>
         <DisqusComments post={{ id: 1, title: 'germany' }} />
       </SectionContainer> */}
