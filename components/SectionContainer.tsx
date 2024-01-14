@@ -1,11 +1,12 @@
 import { ReactNode } from 'react'
 
-type BackgroundStyleTypes = 'white' | 'lightGrey' | 'gradientDark'
+export type BackgroundStyleTypes = 'white' | 'lightGrey' | 'gradientDark' | 'transparent'
 
 const backgroundStyles = {
   white: 'bg-white',
   lightGrey: 'bg-gray-50',
   gradientDark: 'bg-gradient-to-b from-slate-900 to-black',
+  transparent: '',
 }
 
 interface Props {
