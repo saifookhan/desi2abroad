@@ -28,38 +28,12 @@ const germanyNodes: StudyParentNode[] = [
             <div>
               <p>Get your equivalency made from Inter Board / FSC to send it to HEC</p>
               <ol>
-                <li>
-                  <strong>Document Submission:</strong> Submit the original certificates of your O/A
-                  Levels along with their copies to the IBCC office.
-                </li>
-
-                <li>
-                  <strong>Application Form:</strong> Fill out the IBCC equivalence application form.
-                  Provide personal details, information about the foreign institution, subjects
-                  studied, and grades obtained in O/A Levels.
-                </li>
-
-                <li>
-                  <strong>Verification:</strong> IBCC verifies the authenticity of your O/A Levels
-                  certificates from the respective examination board or institution abroad.
-                </li>
-
-                <li>
-                  <strong>Evaluation:</strong> IBCC assesses the O/A Levels qualifications to
-                  determine their equivalence with the Pakistani education system. This includes
-                  reviewing subjects studied, grades obtained, and the level of education in
-                  comparison to local standards.
-                </li>
-
-                <li>
-                  <strong>Equivalency Certificate:</strong> Upon successful evaluation, IBCC issues
-                  an equivalency certificate specifying the equivalence of your O/A Levels
-                  qualifications to the Pakistani education system.
-                </li>
-
-                <li>
-                  <strong>Fee Payment:</strong> Pay the prescribed fee for the equivalency process.
-                </li>
+                <li>Submit equivalency for Inter Board/FSC to HEC.</li>
+                <li>Submit original O/A Levels certificates and copies to IBCC.</li>
+                <li>Fill IBCC equivalence form with personal details</li>
+                <li>IBCC evaluates and verifies O/A Levels for equivalence.</li>
+                <li>IBCC issues Equivalency certificate</li>
+                <li>Pay the prescribed fee for the equivalency process.</li>
               </ol>
               <a
                 className="text-blue-600"
@@ -80,26 +54,14 @@ const germanyNodes: StudyParentNode[] = [
     id: 'a3',
     type: 'collapsableNode',
     data: {
-      label: 'Equivalency from HEC',
+      label: 'Attestation from HEC',
       descriptionHTML: (
         <div>
           <ol>
-            <li>
-              <strong>Submission of Documents:</strong> Submit the original degree along with copies
-              to the HEC office.
-            </li>
-            <li>
-              <strong>Application Form:</strong> Fill out the HEC attestation application form and
-              attach it with the required documents.
-            </li>
-            <li>
-              <strong>Verification:</strong> HEC verifies the degree's authenticity with the
-              respective educational institution.
-            </li>
-            <li>
-              <strong>Attestation:</strong> Once verified, HEC attests or stamps the original
-              degree, confirming its authenticity.
-            </li>
+            <li>- Provide original degree and copies to HEC.</li>
+            <li>- Fill HEC attestation form, attach documents.</li>
+            <li>- HEC verifies degree authenticity with the institution.</li>
+            <li>- HEC attests original degree after verification.</li>
           </ol>
           <a
             className="text-blue-600"
@@ -121,8 +83,8 @@ const germanyNodes: StudyParentNode[] = [
       descriptionHTML: (
         <div>
           <p>
-            Score a 6.5 or above in your IELTS exam. This is a mandatory test that you have to take
-            to avoid any future problems.
+            Achieve a score of 6.5 or higher in the mandatory IELTS exam to prevent potential future
+            complications.
           </p>
         </div>
       ),
@@ -145,22 +107,12 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                "FH" typically refers to "Fachhochschule" in German, which translates to "University
-                of Applied Sciences" in English. These institutions focus on providing practical and
-                job-oriented education in various fields like engineering, business, social work,
-                and more. They often collaborate closely with industries, offering programs that
-                equip students with skills directly applicable in the workforce.
+                FH (Fachhochschule) refers to institutions that provide practical, job oriented
+                education in fields like engineering and business.
                 <br />
                 <br />
-                "Universität" refers to a traditional university in German-speaking countries. These
-                institutions offer a broader range of academic disciplines and degrees, including
-                liberal arts, natural sciences, social sciences, and professional studies.
-                Universities generally emphasize theoretical knowledge, research, and academic
-                exploration, providing a comprehensive education that often includes specialized and
-                theoretical aspects of a field. <br /> <br />
-                While both FHs and universities offer higher education, their focus, teaching
-                methodologies, and academic emphases might differ, catering to different educational
-                preferences and career aspirations.
+                Universität refers to traditional universities with a broader academic scope,
+                emphasizing theoretical knowledge and research across various disciplines.
               </p>
             </div>
           ),
@@ -176,30 +128,14 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Uni-assist:</strong> This is an organization that evaluates international
-                applicants' credentials on behalf of many German universities. If you're applying to
-                a university that requires applications to go through Uni-assist, you'll submit your
-                documents (transcripts, certificates, etc.) to Uni-assist. They verify the documents
-                and ensure they meet the university's requirements before forwarding them to the
-                respective universities for further assessment. Some universities in Germany require
-                international applicants to use Uni-assist for their applications.
+                There are two ways to apply for universities depending on the university requirement
               </p>
 
-              <p>
-                <strong>Direct Application:</strong> With direct application, you apply directly to
-                the university of your choice. You submit your application materials (transcripts,
-                certificates, etc.) directly to the university's admissions office according to
-                their specific requirements and guidelines. Not all universities in Germany use
-                Uni-assist; some allow international students to apply directly to them without
-                involving an intermediary organization.
-              </p>
-
-              <p>
-                Both methods have their advantages and specific requirements depending on the
-                university and the country from which you're applying. It's essential to check the
-                specific application procedures and requirements of the universities you're
-                interested in to determine which method to use.
-              </p>
+              <ol>
+                <li>1. Direct Application</li>
+                <li>2. Uni- assist</li>
+              </ol>
+              <p>Check the university's website for the specific application requirements.</p>
             </div>
           ),
         },
@@ -213,35 +149,15 @@ const germanyNodes: StudyParentNode[] = [
           label: 'How to choose cities vs states?',
           descriptionHTML: (
             <div>
+              While choosing your city, keep in mind the following factors:
               <ol>
-                <li>
-                  <strong>Academic Institutions:</strong> Research universities or programs of
-                  interest and choose a city hosting the desired course or program.
-                </li>
-                <li>
-                  <strong>Cost of Living:</strong> Consider living expenses; cities like Munich are
-                  pricier compared to Leipzig or Dresden.
-                </li>
-                <li>
-                  <strong>Quality of Life:</strong> Explore atmosphere, job opportunities,
-                  recreation, and cultural offerings.
-                </li>
-                <li>
-                  <strong>Job Opportunities:</strong> Certain cities offer better prospects in
-                  specific industries; for instance, tech in Berlin or finance in Frankfurt.
-                </li>
-                <li>
-                  <strong>Climate and Environment:</strong> Regions have varying climates; consider
-                  preferences for weather and seasons.
-                </li>
-                <li>
-                  <strong>Transportation:</strong> Check connectivity for travel within Germany or
-                  neighboring countries.
-                </li>
-                <li>
-                  <strong>Cultural and Social Aspects:</strong> Explore unique cultures, traditions,
-                  and social scenes of different cities.
-                </li>
+                <li>Academic Institution’s location</li>
+                <li>Cost of living</li>
+                <li>Quality of life</li>
+                <li>Job opportunities</li>
+                <li>Climate and environment</li>
+                <li>Transportation</li>
+                <li>Cultural and social aspects</li>
               </ol>
             </div>
           ),
@@ -349,28 +265,23 @@ const germanyNodes: StudyParentNode[] = [
       label: 'Write Letter of Motivation ',
       descriptionHTML: (
         <div>
-          <p>Not all unis require it.</p>
+          <p>It is also known as a statement of purpose or personal statement.</p>
+          <p>It is not required by all universities.</p>
           <p>
-            A motivation letter for studies, also known as a statement of purpose or a personal
-            statement, accompanies your application for admission to a university or academic
-            program. It's a crucial part of your application package and serves to explain your
-            motivations, aspirations, and qualifications for pursuing a particular field of study at
-            a specific institution.
+            It explains your aspirations and qualifications for your chosen field at a particular
+            institution.
           </p>
-          <p>To write a motivation letter for studies:</p>
+          <p>The letter includes the following sections:</p>
           <ol>
-            <li>- Research and Planning</li>
             <li>- Introduction</li>
             <li>- Academic Background and Achievements</li>
             <li>- Motivation and Goals</li>
             <li>- Relevant Experiences and Skills</li>
             <li>- Connection to the Program/Institution</li>
             <li>- Personal Qualities and Conclusion</li>
+            <li>- Personal Qualities</li>
+            <li>- Conclusion</li>
           </ol>
-          <p>
-            Each point represents a section or a key aspect to cover when writing a motivation
-            letter for studies.
-          </p>
         </div>
       ),
     },
@@ -384,39 +295,18 @@ const germanyNodes: StudyParentNode[] = [
       descriptionHTML: (
         <div>
           <p>
-            A recommendation letter for a master's program is a document written by someone who can
-            speak to your qualifications, skills, academic abilities, and personal qualities. It
-            supports your application by providing insights into your capabilities and character
-            from an external perspective.
+            It is a document written by someone who can provide insights into your qualifications,
+            skills and academic achievements.
           </p>
-          <p>To get recommendation letters for a master's program:</p>
+          <p>Choose individuals who know you well:</p>
           <ol>
-            <li>
-              - Academic References: Professors or instructors who have taught you in relevant
-              courses or supervised your academic work.
-            </li>
-            <li>
-              - Professional References: Employers, supervisors, or colleagues who can attest to
-              your professional abilities and skills.
-            </li>
-            <li>
-              - Personal References (if applicable): Mentors or community leaders who can speak to
-              your character and personal qualities.
-            </li>
+            <li>- Professors or instructors in relevant courses.</li>
+            <li>- Employers, supervisors, or colleagues.</li>
+            <li>- Mentors or community leaders (if applicable)</li>
           </ol>
           <br />
-          <p>When requesting recommendation letters:</p>
-          <ul>
-            <li>
-              - Choose individuals who know you well and can provide specific examples highlighting
-              your strengths.
-            </li>
-            <li> - Request letters well in advance of your application deadlines.</li>
-            <li>
-              - Provide your references with information about the program you're applying for and
-              any relevant details.
-            </li>
-          </ul>
+          <p>Request well in advance of application deadlines.</p>
+          <p>Provide program details for a comprehensive recommendation.</p>
         </div>
       ),
     },
@@ -438,59 +328,18 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Uni-assist</strong> short for University Application Service for
-                International Students, is a centralized organization in Germany that streamlining
-                the application process. Here's a quick overview:
+                It is an organization that evaluates international applicants' credentials for many
+                German universities depending on the university requirement.
               </p>
               <br />
-
-              <ul>
-                <li>
-                  <strong>Purpose:</strong> Evaluates academic documents for German university
-                  admission standards, demonstrating equivalence.
-                </li>
-                <br />
-                <li>
-                  <strong>Process:</strong> Submit applications and documents through the
-                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
-                    &nbsp;Uni-assist portal
-                  </a>
-                  . Uni-assist assesses and forwards evaluations to chosen German universities.
-                </li>
-                <br />
-                <li>
-                  <strong>Fees:</strong> Charges fees for services, varying based on the number of
-                  universities and evaluation complexity.
-                </li>
-                <br />
-                <li>
-                  <strong>Participating Universities:</strong> Not all require Uni-assist; check
-                  specific requirements of chosen universities.
-                </li>
-                <br />
-                <li>
-                  <strong>Deadlines:</strong> Specific application deadlines for each semester;
-                  adhere to ensure timely processing.
-                </li>
-                <br />
-                <li>
-                  <strong>Language Requirements:</strong> Proficiency in German or English (via
-                  tests like IELTS or TOEFL) may be required.
-                </li>
-                <br />
-                <li>
-                  <strong>Contact:</strong> For inquiries, visit the
-                  <a className="text-blue-600" href="https://www.uni-assist.de/en/" target="_blank">
-                    &nbsp;Uni-assist website
-                  </a>{' '}
-                  or contact your chosen universities.
-                </li>
-                <br />
-              </ul>
-
               <p>
-                Navigating the Uni-assist Application is crucial for international students aspiring
-                to study in Germany. Follow instructions and deadlines for a successful application.
+                Applicants will have to submit their documents to Uni-assist which will verify and
+                forward it to the respective universities.
+              </p>
+              <br />
+              <p>
+                Applicants will have to submit their documents to Uni-assist which will verify and
+                forward it to the respective universities.
               </p>
             </div>
           ),
@@ -512,7 +361,6 @@ const germanyNodes: StudyParentNode[] = [
                   education standards.
                 </p>
                 <br />
-
                 <li>
                   <strong>Obtaining VPD:</strong>
                   <p>
@@ -520,13 +368,11 @@ const germanyNodes: StudyParentNode[] = [
                   </p>
                 </li>
                 <br />
-
                 <li>
                   <strong>University's Online Portal:</strong>
                   <p>Log in to the official portal of the German university you are applying to.</p>
                 </li>
                 <br />
-
                 <li>
                   <strong>Upload VPD:</strong>
                   <p>
@@ -535,7 +381,6 @@ const germanyNodes: StudyParentNode[] = [
                   </p>
                 </li>
                 <br />
-
                 <li>
                   <strong>Application Form:</strong>
                   <p>
@@ -544,7 +389,6 @@ const germanyNodes: StudyParentNode[] = [
                   </p>
                 </li>
                 <br />
-
                 <li>
                   <strong>Check Requirements:</strong>
                   <p>
@@ -553,7 +397,6 @@ const germanyNodes: StudyParentNode[] = [
                   </p>
                 </li>
                 <br />
-
                 <li>
                   <strong>Submission:</strong>
                   <p>Submit your application through the university portal.</p>
@@ -574,24 +417,9 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                In the context of uni-assist, "VPD" stands for "Vorprüfungsdokumentation," which
-                translates to "Preliminary Document Review" in English.
-                <br />
-                <br />
-                The VPD is a service provided by uni-assist for international students applying to
-                universities in Germany. It involves the assessment and evaluation of educational
-                certificates and documents submitted by applicants.
-                <br />
-                <br />
-                Upon receiving the required documents, uni-assist conducts a preliminary review
-                (VPD) to determine the equivalency of foreign qualifications to the German education
-                system. This review helps applicants understand if their qualifications meet the
-                minimum requirements for admission to German universities.
-                <br />
-                <br />
-                The VPD doesn't guarantee admission but serves as an initial assessment to guide
-                applicants in the application process, informing them whether their educational
-                background meets the standards set by the German universities.
+                It is a service offered by uni-assist that assesses the equivalency of foreign
+                qualifications to the German education system for international students applying to
+                German universities.
               </p>
             </div>
           ),
@@ -606,78 +434,8 @@ const germanyNodes: StudyParentNode[] = [
           label: 'Direct Application on uni portal',
           descriptionHTML: (
             <div>
-              <ul>
-                <li>
-                  <strong>Overview:</strong>
-                  Many German universities allow students to apply directly through their official
-                  online portals. This process bypasses the need for intermediary services like
-                  uni-assist.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Procedure:</strong>
-                  Visit the official website of the German university you are interested in. Locate
-                  the admissions or application section to access the online portal.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Document Submission:</strong>
-                  Upload the required documents directly to the university's portal. Ensure
-                  documents meet the specified format and size requirements.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Application Form:</strong>
-                  Complete the university's online application form with accurate personal and
-                  academic information.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Additional Requirements:</strong>
-                  Check for any specific requirements outlined by the university, such as letters of
-                  recommendation or a statement of purpose.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Language Proficiency:</strong>
-                  Demonstrate proficiency in the required language (German or English) as per the
-                  university's guidelines.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Application Fee:</strong>
-                  Be aware of any application fees that the university may charge. Pay attention to
-                  payment instructions.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Submission Deadline:</strong>
-                  Adhere to the application deadlines set by the university for the desired
-                  semester.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Tracking Application:</strong>
-                  Utilize the university's online tracking system to monitor the status of your
-                  application.
-                </li>
-                <br />
-
-                <li>
-                  <strong>Contact University:</strong>
-                  For inquiries or additional information, contact the university's admissions
-                  office directly.
-                </li>
-                <br />
-              </ul>
+              <p>You can directly apply through the university’s online portal.</p>
+              <p>Visit the official website of the university</p>
             </div>
           ),
         },
@@ -723,7 +481,24 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c5_1',
         type: 'collapsableNode',
-        data: { label: 'Visa Documents and fee' },
+        data: {
+          label: 'Visa Documents and fee',
+          descriptionHTML: (
+            <div>
+              <p>Find the documents list on the Embassy’s website</p>
+              <ol>
+                <li>
+                  <p>
+                    Pakistan: https://pakistan.diplo.de/pk-en/service/2-study-visa-seite/1676104
+                  </p>
+                  <p>Fee: https://pakistan.diplo.de/pk-en/service/-/2208622</p>
+                </li>
+                <li>India: https://india.diplo.de/in-en/service/-/2552164</li>
+                <li>Bangladesh: https://dhaka.diplo.de/bd-en/service/visa-einreise/-/1976508</li>
+              </ol>
+            </div>
+          ),
+        },
         position: { x: 400, y: 950 },
         targetPosition: Position.Left,
       },
@@ -779,7 +554,6 @@ const germanyNodes: StudyParentNode[] = [
                 Before your journey to Germany, ensure a smooth transition by preparing a concise
                 shopping list for essential items.
               </p>
-
               <p>
                 <strong>Watch the Videos:</strong>
                 Check out my YouTube videos for detailed insights on what to bring to Germany
@@ -802,28 +576,23 @@ const germanyNodes: StudyParentNode[] = [
                 <strong>Key Items to Include:</strong>
               </p>
               <br />
-
               <p>
                 <strong>Clothing:</strong>
                 Pack suitable attire for the German climate, including jackets, comfortable shoes,
                 and versatile layers.
               </p>
-
               <p>
                 <strong>Personal Care Products:</strong>
                 Bring preferred personal care items; local stores offer a variety of brands.
               </p>
-
               <p>
                 <strong>Documentation:</strong>
                 Ensure necessary documents like passport, visa, and permits. Carry printed copies.
               </p>
-
               <p>
                 <strong>Electronics:</strong>
                 Pack essentials like a laptop, phone, and chargers. Consider a power adapter.
               </p>
-
               <p>
                 <strong>Kitchen Essentials:</strong>
                 For independent living, bring basic kitchen items; supplement locally as needed.
