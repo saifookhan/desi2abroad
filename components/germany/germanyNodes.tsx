@@ -174,24 +174,15 @@ const germanyNodes: StudyParentNode[] = [
             <div>
               <ol>
                 <li>
-                  <strong>Entry Test:</strong> Some universities or programs require applicants to
-                  take an entry test or examination as part of the admission process. This test
-                  assesses various skills, knowledge, or suitability for a specific program.
+                  Entry Test: Some universities or programs may require applicants to take an
+                  admission test.
                 </li>
 
-                <li>
-                  <strong>NC (Numerus Clausus):</strong> NC refers to a restricted number of
-                  available spots in a particular program. Students compete for these spots based on
-                  criteria such as grades, test scores, or other qualifications. It sets a maximum
-                  number of students who can enroll in the program.
-                </li>
+                <li>NC: It refers to a limited number of spots in a program</li>
 
                 <li>
-                  <strong>NC-Free:</strong> When a program is labeled as "NC-free," it means there's
-                  no restricted number of available spots. Admission is not based on a predefined
-                  quota or limited number of students. Instead, eligible applicants who meet the
-                  minimum requirements are typically admitted without facing competition due to
-                  limited spots.
+                  NC-Free: It signifies that the program has no restricted spots and admission isn't
+                  based on a set quota.
                 </li>
               </ol>
             </div>
@@ -489,12 +480,46 @@ const germanyNodes: StudyParentNode[] = [
               <ol>
                 <li>
                   <p>
-                    Pakistan: https://pakistan.diplo.de/pk-en/service/2-study-visa-seite/1676104
+                    Pakistan:{' '}
+                    <a
+                      className="text-blue-600"
+                      target="_blank"
+                      href="https://pakistan.diplo.de/pk-en/service/2-study-visa-seite/1676104"
+                    >
+                      Click here
+                    </a>
                   </p>
-                  <p>Fee: https://pakistan.diplo.de/pk-en/service/-/2208622</p>
+                  <p>
+                    Fee:{' '}
+                    <a
+                      className="text-blue-600"
+                      target="_blank"
+                      href="https://pakistan.diplo.de/pk-en/service/-/2208622"
+                    >
+                      Click here
+                    </a>
+                  </p>
                 </li>
-                <li>India: https://india.diplo.de/in-en/service/-/2552164</li>
-                <li>Bangladesh: https://dhaka.diplo.de/bd-en/service/visa-einreise/-/1976508</li>
+                <li>
+                  India:{' '}
+                  <a
+                    className="text-blue-600"
+                    target="_blank"
+                    href="https://india.diplo.de/in-en/service/-/2552164"
+                  >
+                    Click here
+                  </a>
+                </li>
+                <li>
+                  Bangladesh:{' '}
+                  <a
+                    className="text-blue-600"
+                    target="_blank"
+                    href="https://dhaka.diplo.de/bd-en/service/visa-einreise/-/1976508"
+                  >
+                    Click here
+                  </a>
+                </li>
               </ol>
             </div>
           ),
@@ -512,7 +537,18 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c5_3',
         type: 'collapsableNode',
-        data: { label: 'Motivation Letter' },
+        data: {
+          label: 'Motivation Letter',
+          descriptionHTML: (
+            <div>
+              <p>Sometimes the visa officer asks you to write a letter in front of them.</p>
+              <p>
+                It's better to print a copy of the motivation letter you submitted to the university
+                and have it with you during the visa interview.
+              </p>
+            </div>
+          ),
+        },
         position: { x: 400, y: 1080 },
         targetPosition: Position.Left,
       },
@@ -549,76 +585,17 @@ const germanyNodes: StudyParentNode[] = [
           label: 'Shopping List',
           descriptionHTML: (
             <div>
-              <p>
-                <strong>Shopping List Overview:</strong>
-                Before your journey to Germany, ensure a smooth transition by preparing a concise
-                shopping list for essential items.
-              </p>
-              <p>
-                <strong>Watch the Videos:</strong>
-                Check out my YouTube videos for detailed insights on what to bring to Germany
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/zM_7f6Rv2qQ?si=TgdrQhdYww660GVZ"
-                  target="_blank"
-                >
-                  &nbsp; View Video 1
-                </a>
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/-FnhGBzof0o?si=lejG6gFDdxCcfDPi"
-                  target="_blank"
-                >
-                  &nbsp; View Video 2
-                </a>
-              </p>
-              <p>
-                <strong>Key Items to Include:</strong>
-              </p>
-              <br />
-              <p>
-                <strong>Clothing:</strong>
-                Pack suitable attire for the German climate, including jackets, comfortable shoes,
-                and versatile layers.
-              </p>
-              <p>
-                <strong>Personal Care Products:</strong>
-                Bring preferred personal care items; local stores offer a variety of brands.
-              </p>
-              <p>
-                <strong>Documentation:</strong>
-                Ensure necessary documents like passport, visa, and permits. Carry printed copies.
-              </p>
-              <p>
-                <strong>Electronics:</strong>
-                Pack essentials like a laptop, phone, and chargers. Consider a power adapter.
-              </p>
-              <p>
-                <strong>Kitchen Essentials:</strong>
-                For independent living, bring basic kitchen items; supplement locally as needed.
-              </p>
-
-              <p>
-                <strong>Medications:</strong>
-                Carry a supply of prescription medications; familiarize yourself with local
-                pharmacies.
-              </p>
-
-              <p>
-                <strong>Banking and Finances:</strong>
-                Inform your bank; set up online banking for easy access to funds.
-              </p>
-
-              <p>
-                <strong>Language Learning Materials:</strong>
-                Enhance German skills with language learning resources like dictionaries or apps.
-              </p>
-
-              <p>
-                <strong>Adapters and Converters:</strong>
-                Ensure compatibility with German outlets for electronic devices. Purchase adapters
-                if necessary.
-              </p>
+              <ul>
+                <li>Clothing</li>
+                <li>Personal Care Products</li>
+                <li>Documentation</li>
+                <li>Electronics</li>
+                <li>Kitchen Essentials</li>
+                <li>Medications</li>
+                <li>Banking and Finances</li>
+                <li>Language Learning Materials</li>
+                <li>Adapters and Converters</li>
+              </ul>
             </div>
           ),
         },
@@ -852,72 +829,12 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Acquiring a Driving License in Germany:</strong>
-                Acquiring a driving license in Germany can significantly enhance your mobility.
-                Here's what you need to know as a student:
-              </p>
-
-              <p>
-                <strong>Eligibility:</strong>
-                <ul>
-                  <li>
-                    International students can use their home country's driving license for the
-                    first six months in Germany.
-                  </li>
-                  <li>
-                    After six months, you'll need to obtain a German driving license if you plan to
-                    continue driving.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Conversion Process:</strong>
-                <ul>
-                  <li>
-                    Some countries have agreements with Germany for direct license conversion, while
-                    others may require tests.
-                  </li>
-                  <li>Check the specific requirements based on your country of origin.</li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Requirements for Conversion:</strong>
-                <ul>
-                  <li>Valid residence permit.</li>
-                  <li>Passport-sized photos.</li>
-                  <li>Proof of completion of a first aid course.</li>
-                  <li>Certificate of eye test.</li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Testing Process:</strong>
-                <ul>
-                  <li>
-                    If direct conversion isn't possible, you might need to take theoretical and
-                    practical exams.
-                  </li>
-                  <li>The theoretical exam typically covers traffic rules and road signs.</li>
-                  <li>
-                    The practical exam involves driving with an examiner to demonstrate your skills.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Language Proficiency:</strong>
-                <ul>
-                  <li>Ensure you have a good understanding of German road signs and rules.</li>
-                  <li>Consider taking driving lessons in German to prepare for the exams.</li>
-                </ul>
+                Obtaining your German driver's license from your home country would be a more
+                cost-effective option for you.
               </p>
 
               <p>
                 <strong>Watch the Video:</strong>
-                For a comprehensive guide and insights into the driving license process, watch my
-                YouTube video
                 <a
                   className="text-blue-600"
                   href="https://youtu.be/3T7c66BppLs?si=zeOyAGDsgYnHTPx_"
@@ -926,20 +843,6 @@ const germanyNodes: StudyParentNode[] = [
                   &nbsp; here
                 </a>
                 .
-              </p>
-
-              <p>
-                <strong>Post-License Considerations:</strong>
-                <ul>
-                  <li>Familiarize yourself with German traffic regulations and parking rules.</li>
-                  <li>Understand the implications of traffic violations on your driving record.</li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Contact Information:</strong>
-                For specific information and inquiries, contact the local driver's license office or
-                check their online resources.
               </p>
             </div>
           ),
