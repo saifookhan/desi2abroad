@@ -7,6 +7,8 @@ import ReactFlow, {
   addEdge,
   Controls,
   ReactFlowProvider,
+  Background,
+  BackgroundVariant,
 } from 'reactflow'
 
 import 'reactflow/dist/base.css'
@@ -71,7 +73,7 @@ const Flow = () => {
         nodeTypes={nodeTypes}
         fitView
         snapToGrid
-        className="bg-grey-100"
+        className="bg-grey-500"
         nodesDraggable={false}
         // defaultViewport={zoom: }
         minZoom={0.35}
@@ -81,6 +83,13 @@ const Flow = () => {
         ]}
       >
         <Controls />
+        <Background
+          color="#e5e5e5"
+          variant={BackgroundVariant.Dots}
+          size={2.5}
+          gap={15}
+          className="bg-purple-50"
+        />
       </ReactFlow>
     </div>
   )
