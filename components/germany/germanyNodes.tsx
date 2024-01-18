@@ -450,7 +450,16 @@ const germanyNodes: StudyParentNode[] = [
   {
     id: 'c2',
     type: 'collapsableNode',
-    data: { label: 'Apply for hostel accommodations' },
+    data: { label: 'Apply for hostel accommodations',descriptionHTML: (
+      <div>
+       <ul>
+        <li>Studierendenwerk: Studierendenwerk Website</li>
+        <li>eBay Kleinanzeigen: eBay Kleinanzeigen</li>
+        <li>Facebook Marketplace: Facebook Marketplace</li>
+        <li>Reach out to friends.</li>
+    </ul>
+      </div>
+    ), },
     position: { x: 0, y: 920 },
   },
   {
