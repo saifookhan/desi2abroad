@@ -560,14 +560,16 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c5_2',
         type: 'collapsableNode',
-        data: { label: 'Visa CV' },
-        descriptionHTML: (
-          <div>
-            <ul>
-              <li>Submit the CV that you provided as part of your university application.</li>
-            </ul>
-          </div>
-        ),
+        data: {
+          label: 'Visa CV',
+          descriptionHTML: (
+            <div>
+              <ul>
+                <li>Submit the CV that you provided as part of your university application.</li>
+              </ul>
+            </div>
+          ),
+        },
 
         position: { x: 400, y: 1020 },
         targetPosition: Position.Left,
