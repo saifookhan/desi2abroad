@@ -1,5 +1,5 @@
 import { Position, MarkerType } from 'reactflow'
-import { StudyParentNode } from 'src/types/types'
+import { StudyParentNode, NodeBackgroundColors } from 'src/types/types'
 
 const germanyNodes: StudyParentNode[] = [
   {
@@ -7,7 +7,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Start',
-      style: { alignContent: 'center', backgroundColor: 'blue' },
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.yellow300 },
     },
     position: { x: 0, y: 0 },
   },
@@ -16,6 +16,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'O/A Levels?',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.amber100 },
     },
     targetPosition: Position.Left,
     position: { x: 0, y: 100 },
@@ -45,6 +46,7 @@ const germanyNodes: StudyParentNode[] = [
               </a>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 100 },
@@ -73,6 +75,7 @@ const germanyNodes: StudyParentNode[] = [
           </a>
         </div>
       ),
+      style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 200 },
   },
@@ -89,6 +92,7 @@ const germanyNodes: StudyParentNode[] = [
           </p>
         </div>
       ),
+      style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 300 },
   },
@@ -97,6 +101,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Shortlist universities',
+      style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 350 },
     children: [
@@ -117,6 +122,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 300 },
@@ -139,6 +145,7 @@ const germanyNodes: StudyParentNode[] = [
               <p>Check the university's website for the specific application requirements.</p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 310 },
@@ -162,6 +169,7 @@ const germanyNodes: StudyParentNode[] = [
               </ol>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 380 },
@@ -188,6 +196,7 @@ const germanyNodes: StudyParentNode[] = [
               </ol>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 380 },
@@ -244,6 +253,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
         position: { x: 400, y: 450 },
@@ -276,6 +286,7 @@ const germanyNodes: StudyParentNode[] = [
           </ol>
         </div>
       ),
+      style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 420 },
   },
@@ -301,6 +312,7 @@ const germanyNodes: StudyParentNode[] = [
           <p>Provide program details for a comprehensive recommendation.</p>
         </div>
       ),
+      style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 500 },
   },
@@ -309,6 +321,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Start applying as soon as admissions open',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 620 },
     children: [
@@ -335,6 +348,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Right,
         position: { x: -400, y: 500 },
@@ -397,6 +411,7 @@ const germanyNodes: StudyParentNode[] = [
               </ul>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Right,
         position: { x: -400, y: 570 },
@@ -415,6 +430,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Right,
         position: { x: -400, y: 640 },
@@ -430,6 +446,7 @@ const germanyNodes: StudyParentNode[] = [
               <p>Visit the official website of the university</p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         position: { x: -400, y: 710 },
         targetPosition: Position.Right,
@@ -439,19 +456,28 @@ const germanyNodes: StudyParentNode[] = [
   {
     id: 'b1',
     type: 'collapsableNode',
-    data: { label: 'Did you get an admission offer?' },
+    data: {
+      label: 'Did you get an admission offer?',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green300 },
+    },
     position: { x: 0, y: 750 },
   },
   {
     id: 'c1',
     type: 'collapsableNode',
-    data: { label: 'Book your visa appointment' },
+    data: {
+      label: 'Book your visa appointment',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+    },
     position: { x: 0, y: 850 },
   },
   {
     id: 'c2',
     type: 'collapsableNode',
-    data: { label: 'Apply for hostel accommodations' },
+    data: {
+      label: 'Apply for hostel accommodations',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+    },
     position: { x: 0, y: 920 },
   },
   {
@@ -459,6 +485,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Open blocked account and remit blocked amount',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
     },
     position: { x: 0, y: 1000 },
   },
@@ -467,6 +494,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Appear for visa interview',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
     },
     position: { x: 0, y: 1070 },
     children: [
@@ -524,6 +552,7 @@ const germanyNodes: StudyParentNode[] = [
               </ol>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.green50 },
         },
         position: { x: 400, y: 950 },
         targetPosition: Position.Left,
@@ -531,7 +560,7 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c5_2',
         type: 'collapsableNode',
-        data: { label: 'Visa CV' },
+        data: { label: 'Visa CV', style: { backgroundColor: NodeBackgroundColors.green50 } },
         position: { x: 400, y: 1020 },
         targetPosition: Position.Left,
       },
@@ -549,6 +578,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.green50 },
         },
         position: { x: 400, y: 1080 },
         targetPosition: Position.Left,
@@ -560,6 +590,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Did you receive your visa?',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia300 },
     },
     position: { x: 0, y: 1130 },
   },
@@ -568,6 +599,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Book flight (student discount)',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia100 },
     },
     position: { x: 0, y: 1190 },
   },
@@ -576,6 +608,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Prepare for arrival',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia100 },
     },
     position: { x: 0, y: 1280 },
     children: [
@@ -599,6 +632,7 @@ const germanyNodes: StudyParentNode[] = [
               </ul>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1200 },
         targetPosition: Position.Right,
@@ -660,6 +694,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1250 },
         targetPosition: Position.Right,
@@ -729,6 +764,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1320 },
         targetPosition: Position.Right,
@@ -818,6 +854,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1370 },
         targetPosition: Position.Right,
@@ -847,6 +884,7 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1420 },
         targetPosition: Position.Right,
@@ -858,6 +896,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Land in Germany',
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia300 },
     },
     position: { x: 0, y: 1400 },
   },

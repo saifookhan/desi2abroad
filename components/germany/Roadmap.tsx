@@ -87,7 +87,7 @@ const Flow = () => {
           variant={BackgroundVariant.Dots}
           size={2.5}
           gap={15}
-          className="bg-purple-50"
+          className="bg-orange-50"
         />
       </ReactFlow>
     </div>

@@ -1,11 +1,24 @@
 import { ReactElement } from 'react'
 import { NodeProps } from 'reactflow'
+import { amber, fuchsia, green, lime, orange, purple, teal, yellow } from 'tailwindcss/colors'
+
+export const NodeBackgroundColors = {
+  yellow300: yellow[300],
+  amber100: amber[100],
+  amber50: amber[50],
+  green300: green[300],
+  green100: green[100],
+  green50: green[50],
+  fuchsia300: fuchsia[300],
+  fuchsia100: fuchsia[100],
+  fuchsia50: fuchsia[50],
+}
 
 export type WrapperCollapsableStudyNode = NodeProps & {
   data: {
     label: string
     descriptionHTML?: ReactElement<any, any>
-    style?: { alignContent?: 'center'; backgroundColor?: string }
+    style?: { alignContent?: 'center'; backgroundColor?: NodeBackgroundColors }
   }
   position: { x: number; y: number }
 }
