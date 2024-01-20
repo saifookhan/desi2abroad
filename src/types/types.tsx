@@ -1,28 +1,31 @@
 import { ReactElement } from 'react'
-import { Node, Position } from 'reactflow'
+import { NodeProps } from 'reactflow'
 
-export interface StudyNode extends Node {
-  id: string
-  type: string
+export type WrapperCollapsableStudyNode = NodeProps & {
   data: {
     label: string
-    descriptionHTML?: Element | ReactElement<any, any>
+    descriptionHTML?: ReactElement<any, any>
+    style?: { alignContent?: 'center'; backgroundColor?: string }
   }
   position: { x: number; y: number }
-  targetPosition?: Position
 }
 
-export interface StudyParentNode extends StudyNode {
-  children?: StudyNode[]
+export type CollapsableStudyNode = Pick<
+  WrapperCollapsableStudyNode,
+  'id' | 'type' | 'targetPosition' | 'data' | 'position'
+>
+
+export type StudyParentNode = CollapsableStudyNode & {
+  children?: CollapsableStudyNode[]
 }
 
-export interface HomepageCateogries {
+export type HomepageCateogries = {
   chapter: string
   subChapters: HomepageCateogriesCategories[]
   subChaptersTwo?: HomepageCateogriesCategories[]
 }
 
-export interface HomepageCateogriesCategories {
+export type HomepageCateogriesCategories = {
   title: string
   path: string
 }

@@ -7,6 +7,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Start',
+      style: { alignContent: 'center', backgroundColor: 'blue' },
     },
     position: { x: 0, y: 0 },
   },

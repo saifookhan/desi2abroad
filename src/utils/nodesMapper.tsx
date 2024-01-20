@@ -1,7 +1,7 @@
-import { StudyNode, StudyParentNode } from '../types/types'
+import { CollapsableStudyNode, StudyParentNode } from '../types/types'
 import { Node } from 'reactflow'
 
-function positionCalculator(nodes: StudyParentNode[] | StudyNode[]) {
+function positionCalculator(nodes: StudyParentNode[] | CollapsableStudyNode[]) {
   const initialNode = nodes[0]
   const calculatedNodes = nodes.map((node, index) => {
     node.position.y = initialNode.position.y + 100 * index - (node.data.label.length > 30 ? 10 : 0)
@@ -14,7 +14,7 @@ export function nodesMapper(nodes: StudyParentNode[]): Node<any, string | undefi
   const parentNodes = positionCalculator(nodes)
 
   const childNodes = parentNodes.map((node) => {
-    let x = [] as StudyNode[]
+    let x = [] as CollapsableStudyNode[]
     if (node.children) {
       x = positionCalculator(node.children)
     }

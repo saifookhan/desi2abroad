@@ -1,15 +1,11 @@
-import React, { memo, useEffect, useState } from 'react'
-import { Handle, Position, useEdges } from 'reactflow'
+import React, { memo } from 'react'
+import { Handle, Position } from 'reactflow'
 import { Collapse } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import store from 'src/store'
+import { CollapsableStudyNode, WrapperCollapsableStudyNode } from 'src/types/types'
 
-type CollapsableNode = {
-  data: { label: string }
-  targetPosition: 'top' | 'right' | 'bottom' | 'left'
-}
-
-function CollapsableNode(props) {
+function CollapsableNode(props: WrapperCollapsableStudyNode) {
   const { currentExpanded, setCurrentExpanded } = store()
 
   const onChange = (key: string | string[]) => {
@@ -57,6 +53,7 @@ function CollapsableNode(props) {
       />
       <Collapse
         items={newData}
+        style={{ textAlign: 'center' }}
         onChange={onChange}
         expandIcon={({ isActive }) =>
           newData[0].description && <RightOutlined rotate={isActive ? 90 : 0} />

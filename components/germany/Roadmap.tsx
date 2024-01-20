@@ -12,7 +12,6 @@ import ReactFlow, {
 } from 'reactflow'
 
 import 'reactflow/dist/base.css'
-// import 'reactflow/dist/style.css'
 
 import CollapsableNode from '../general/CollapsableNode'
 import useScreenSize from 'src/utils/useScreenSize'
