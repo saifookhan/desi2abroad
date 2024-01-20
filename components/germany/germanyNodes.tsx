@@ -1,6 +1,31 @@
 import { Position, MarkerType } from 'reactflow'
 import { StudyParentNode, NodeBackgroundColors } from 'src/types/types'
 
+const extraGermanyNodes: StudyParentNode[] = [
+  {
+    id: 'z1',
+    type: 'detachedNode',
+    data: {
+      label: (
+        <div>
+          <p>
+            Admission semesters: <br />
+            Only 2: Summers & Winters
+          </p>
+          <br />
+          <p>
+            Deadlines: <br />
+            Summer: 15th Dec, Jan <br />
+            Winter: 15th July, Aug
+          </p>
+        </div>
+      ),
+      style: { backgroundColor: NodeBackgroundColors.amber50 },
+    },
+    position: { x: -400, y: 100 },
+  },
+]
+
 const germanyNodes: StudyParentNode[] = [
   {
     id: 'a1',
@@ -1102,4 +1127,4 @@ const germanyEdges = [
     sourceHandle: 'd',
   },
 ]
-export { germanyNodes, germanyEdges }
+export { germanyNodes, germanyEdges, extraGermanyNodes }

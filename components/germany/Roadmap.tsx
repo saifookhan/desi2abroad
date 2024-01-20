@@ -16,11 +16,13 @@ import 'reactflow/dist/base.css'
 import CollapsableNode from '../general/CollapsableNode'
 import useScreenSize from 'src/utils/useScreenSize'
 import { nodesMapper } from 'src/utils/nodesMapper'
-import { germanyNodes, germanyEdges } from './germanyNodes'
+import { germanyNodes, germanyEdges, extraGermanyNodes } from './germanyNodes'
 import store from 'src/store'
+import DetachedNode from '../general/DetachedNode'
 
 const nodeTypes = {
   collapsableNode: CollapsableNode,
+  detachedNode: DetachedNode,
 }
 
 const Flow = () => {
@@ -64,7 +66,7 @@ const Flow = () => {
   return (
     <div style={{ height: displaySize.minViewHeight }}>
       <ReactFlow
-        nodes={myNodes}
+        nodes={myNodes?.concat(extraGermanyNodes)}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
