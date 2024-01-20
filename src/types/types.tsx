@@ -18,7 +18,7 @@ export type WrapperCollapsableStudyNode = NodeProps & {
   data: {
     label: string
     descriptionHTML?: ReactElement<any, any>
-    style?: { alignContent?: 'center'; backgroundColor?: NodeBackgroundColors }
+    style?: { alignContent?: 'center'; backgroundColor?: typeof NodeBackgroundColors }
   }
   position: { x: number; y: number }
 }
