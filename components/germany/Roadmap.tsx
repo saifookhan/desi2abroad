@@ -45,7 +45,7 @@ const Flow = () => {
       return { ...xNode }
     })
     setMyNodes(zIndex)
-  }, [currentExpanded, myNodes])
+  }, [currentExpanded])
 
   const screenSize = useScreenSize()
   if (screenSize.mobileView === undefined) {
