@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import { NodeProps } from 'reactflow'
-import { amber, fuchsia, green, lime, orange, purple, teal, yellow } from 'tailwindcss/colors'
+import { amber, fuchsia, green, yellow } from 'tailwindcss/colors'
 
 export const NodeBackgroundColors = {
   yellow300: yellow[300],
