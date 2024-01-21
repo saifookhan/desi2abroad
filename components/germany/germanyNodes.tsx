@@ -501,7 +501,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Apply for hostel accommodations',
-      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+      style: { backgroundColor: NodeBackgroundColors.green100 },
       descriptionHTML: (
         <div>
           <ul>
@@ -520,7 +520,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Open blocked account and remit blocked amount',
-      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+      style: { backgroundColor: NodeBackgroundColors.green100 },
       descriptionHTML: (
         <div>
           <ul>
@@ -556,6 +556,7 @@ const germanyNodes: StudyParentNode[] = [
         type: 'collapsableNode',
         data: {
           label: 'Visa Documents and fee',
+          alignContent: 'left',
           descriptionHTML: (
             <div>
               <p>Find the documents list on the Embassy’s website</p>
@@ -662,7 +663,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Book flight (student discount)',
-      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia100 },
+      style: { backgroundColor: NodeBackgroundColors.fuchsia100 },
       descriptionHTML: (
         <div>
           <ul>
