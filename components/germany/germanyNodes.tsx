@@ -921,7 +921,7 @@ const germanyNodes: StudyParentNode[] = [
     type: 'collapsableNode',
     data: {
       label: 'Land in Germany',
-      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia300 },
+      style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.yellow300 },
     },
     position: { x: 0, y: 1400 },
   },
