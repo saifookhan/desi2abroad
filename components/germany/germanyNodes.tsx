@@ -502,6 +502,16 @@ const germanyNodes: StudyParentNode[] = [
     data: {
       label: 'Apply for hostel accommodations',
       style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>Studierendenwerk: Studierendenwerk Website</li>
+            <li>eBay Kleinanzeigen: eBay Kleinanzeigen</li>
+            <li>Facebook Marketplace: Facebook Marketplace</li>
+            <li>Reach out to friends.</li>
+          </ul>
+        </div>
+      ),
     },
     position: { x: 0, y: 920 },
   },
@@ -511,6 +521,24 @@ const germanyNodes: StudyParentNode[] = [
     data: {
       label: 'Open blocked account and remit blocked amount',
       style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.green100 },
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>
+              Students must establish a blocked account with a minimum deposit of around €11,200 for
+              living expenses in Germany.
+            </li>
+            <li>
+              Open a blocked account in Germany and use your home country’s bank or assistance from
+              relatives to transfer the required amount.
+            </li>
+            <li>
+              Amount can be sent in installments with the help of a website called Coracle before
+              the deadline.
+            </li>
+          </ul>
+        </div>
+      ),
     },
     position: { x: 0, y: 1000 },
   },
@@ -585,7 +613,17 @@ const germanyNodes: StudyParentNode[] = [
       {
         id: 'c5_2',
         type: 'collapsableNode',
-        data: { label: 'Visa CV', style: { backgroundColor: NodeBackgroundColors.green50 } },
+        data: {
+          label: 'Visa CV',
+          style: { backgroundColor: NodeBackgroundColors.green50 },
+          descriptionHTML: (
+            <div>
+              <ul>
+                <li>Submit the CV that you provided as part of your university application.</li>
+              </ul>
+            </div>
+          ),
+        },
         position: { x: 400, y: 1020 },
         targetPosition: Position.Left,
       },
@@ -625,6 +663,21 @@ const germanyNodes: StudyParentNode[] = [
     data: {
       label: 'Book flight (student discount)',
       style: { alignContent: 'center', backgroundColor: NodeBackgroundColors.fuchsia100 },
+      descriptionHTML: (
+        <div>
+          <ul>
+            <li>
+              Turkish Airlines frequently provides student discounts, allowing registered students
+              to increase their baggage allowance from 30kgs to 40kgs.
+            </li>
+            <li>Pegasus Airlines is an economical alternative but restricts baggage to 20kgs.</li>
+            <li>
+              Qatar Airways and Emirates may offer discounts based on booking timing and specific
+              routes.
+            </li>
+          </ul>
+        </div>
+      ),
     },
     position: { x: 0, y: 1190 },
   },
