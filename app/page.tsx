@@ -12,18 +12,20 @@ const categories: HomepageCateogries[] = [
     chapter: 'Germany 🇩🇪',
     subChapters: [
       {
-        title: 'Germany (Masters)',
+        title: 'Study: Germany (Masters)',
         path: '/germany',
+        status: 'new',
       },
       {
-        title: 'Germany (Bachelors)',
+        title: 'Germany (Bachelors) [Coming soon]',
         path: '/germany-bachelors',
+        disabled: true,
       },
     ],
     subChaptersTwo: [
       {
-        title: 'Germany (Work)',
-        path: '/germany-work',
+        title: 'Work: Germany Tech Jobs',
+        path: '/germany/it-jobs',
       },
     ],
   },
@@ -31,8 +33,9 @@ const categories: HomepageCateogries[] = [
     chapter: 'Italy 🇮🇹',
     subChapters: [
       {
-        title: 'Italy ',
+        title: 'Italy [Coming soon]',
         path: '/italy',
+        disabled: true,
       },
     ],
   },
@@ -40,8 +43,9 @@ const categories: HomepageCateogries[] = [
     chapter: 'America 🇺🇸',
     subChapters: [
       {
-        title: 'America',
+        title: 'America [Coming soon]',
         path: '/america',
+        disabled: true,
       },
     ],
   },
