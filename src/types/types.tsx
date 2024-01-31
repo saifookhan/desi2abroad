@@ -41,4 +41,6 @@ export type HomepageCateogries = {
 export type HomepageCateogriesCategories = {
   title: string
   path: string
+  status?: 'new'
+  disabled?: boolean
 }
