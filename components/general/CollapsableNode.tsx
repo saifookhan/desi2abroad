@@ -5,6 +5,7 @@ import { RightOutlined } from '@ant-design/icons'
 import store from 'src/store'
 import { CollapsableStudyNode, WrapperCollapsableStudyNode } from 'src/types/types'
 import { orange, teal, yellow } from 'tailwindcss/colors'
+import YouTube from '../mdx/YouTube'
 
 function CollapsableNode(props: WrapperCollapsableStudyNode) {
   const { currentExpanded, setCurrentExpanded } = store()
@@ -17,12 +18,21 @@ function CollapsableNode(props: WrapperCollapsableStudyNode) {
     }
   }
 
+  const hasVideos = props.data.videos?.length > 0
+  let videosContainer = undefined
+  if (hasVideos) {
+    videosContainer = props.data.videos.map((video) => {
+      const embedId = video.embedId
+      return <YouTube key={embedId} id={embedId} />
+    })
+  }
+
   const newData = [
     {
       key: props.id,
       label: props.data.label,
       description: props.data.descriptionHTML,
-      children: props.data.descriptionHTML,
+      children: [props.data.descriptionHTML, videosContainer],
     },
   ]
 

@@ -19,6 +19,7 @@ export type WrapperCollapsableStudyNode = NodeProps & {
     label: string
     descriptionHTML?: ReactElement<any, any>
     style?: { alignContent?: 'center'; backgroundColor?: typeof NodeBackgroundColors }
+    videos?: { embedId: 'string' }[]
   }
   position: { x: number; y: number }
 }

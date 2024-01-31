@@ -147,6 +147,11 @@ const germanyNodes: StudyParentNode[] = [
               </p>
             </div>
           ),
+          videos: [
+            {
+              embedId: 'YWU5dhJbYDc',
+            },
+          ],
           style: { backgroundColor: NodeBackgroundColors.amber50 },
         },
         targetPosition: Position.Left,
