@@ -11,6 +11,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { Analytics as NextAnalytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeProviders>
         <NextAnalytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-3HPZNBC47V" />
       </body>
     </html>
   )
