@@ -43,9 +43,8 @@ const categories: HomepageCateogries[] = [
     chapter: 'America 🇺🇸',
     subChapters: [
       {
-        title: 'America [Coming soon]',
+        title: 'America (Study+Work) 🎥',
         path: '/america',
-        disabled: true,
       },
     ],
   },
