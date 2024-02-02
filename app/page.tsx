@@ -3,7 +3,7 @@
 import React from 'react'
 import { ConfigProvider } from 'antd'
 import theme from '../css/themeConfig'
-import SectionContainer from 'components/SectionContainer'
+import SectionContainer, { backgroundStyles } from 'components/SectionContainer'
 import BubbleList from '@/components/general/BubbleList/BubbleList'
 import { HomepageCateogries } from 'src/types/types'
 
@@ -12,7 +12,7 @@ const categories: HomepageCateogries[] = [
     chapter: 'Germany 🇩🇪',
     subChapters: [
       {
-        title: 'Study: Germany (Masters)',
+        title: 'Study Flow: (Masters)',
         path: '/germany',
         status: 'new',
       },
@@ -44,6 +44,15 @@ const categories: HomepageCateogries[] = [
       {
         title: 'America (Study+Work) 🎥',
         path: '/america',
+      },
+    ],
+  },
+  {
+    chapter: 'Finland 🇫🇮',
+    subChapters: [
+      {
+        title: 'Finland 🎥',
+        path: '/finland',
       },
     ],
   },
@@ -112,6 +121,9 @@ const HomePage = () => (
         )
       })}
     </SectionContainer>
+    {/* <SectionContainer backgroundStyle={backgroundStyles.gradientDark}>
+      <h1>asd</h1>
+    </SectionContainer> */}
   </ConfigProvider>
 )
 

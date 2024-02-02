@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
-export type BackgroundStyleTypes = 'white' | 'lightGrey' | 'gradientDark' | 'transparent'
+export type BackgroundStyleTypes = 'white' | 'lightGrey' | 'gradientDark' | 'transparent' | string
 
-const backgroundStyles = {
+export const backgroundStyles = {
   white: 'bg-white',
   lightGrey: 'bg-gray-50',
   gradientDark: 'bg-gradient-to-b from-slate-900 to-black',
