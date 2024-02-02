@@ -1,5 +1,6 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
+  { href: '/blog', title: 'Articles' },
   { href: '/germany', title: 'Germany' },
   { href: 'https://saifookhan.com/germany', title: 'Join Whatsapp' },
   // { href: '/tags', title: 'Tags' },
