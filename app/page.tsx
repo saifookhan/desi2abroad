@@ -24,7 +24,7 @@ const categories: HomepageCateogries[] = [
     ],
     subChaptersTwo: [
       {
-        title: 'Work: Germany Tech Jobs',
+        title: 'Work: Germany Tech Jobs 🎥',
         path: '/germany/it-jobs',
       },
     ],
@@ -33,9 +33,8 @@ const categories: HomepageCateogries[] = [
     chapter: 'Italy 🇮🇹',
     subChapters: [
       {
-        title: 'Italy [Coming soon]',
+        title: 'Italy 🎥',
         path: '/italy',
-        disabled: true,
       },
     ],
   },

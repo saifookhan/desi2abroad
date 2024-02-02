@@ -261,10 +261,7 @@ export default function BlogPage() {
                 </div>{' '}
               </div>{' '}
               <div className="relative hidden border-t text-sm font-medium sm:block">
-                <h2
-                  className="z-50 flex cursor-pointer items-center px-2 py-2.5 text-base font-medium"
-                  aria-expanded="false"
-                >
+                <h2 className="z-50 flex cursor-pointer items-center px-2 py-2.5 text-base font-medium">
                   <span className="flex flex-grow items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
