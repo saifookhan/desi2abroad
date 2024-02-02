@@ -7,16 +7,8 @@ import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
 
 const videosList = [
   {
-    name: 'US: Engineering Jobs + Pathway',
-    embedId: 'Ev23oQpGiVs',
-  },
-  {
-    name: 'ACCA/CA: Auditing Jobs Directly',
-    embedId: 'T0BL9FV-QMw',
-  },
-  {
-    name: '100% Fulbright Scholarship',
-    embedId: 'c2UlcVBifvc',
+    name: 'Application Steps: Vienna University',
+    embedId: 'vncun_wUwf4',
   },
 ]
 
@@ -24,7 +16,7 @@ export default function BlogPage() {
   return (
     <>
       <PageHeader
-        headerTitle="America: Study Route + Jobs 🇺🇸"
+        headerTitle="Austria: Study Route"
         headerDescription="Watch category-wise study + job prospects"
         headerColor="white"
       />

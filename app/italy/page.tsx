@@ -7,12 +7,12 @@ import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
 
 const videosList = [
   {
-    name: 'Frontend Developer Jobs',
-    embedId: 'IqYDJD3rosU',
+    name: 'Live Q&A: Study + Work in Italy',
+    embedId: 'vga2LondNRQ',
   },
   {
-    name: 'Backend Developer Jobs',
-    embedId: '',
+    name: 'Student Problems in Italy',
+    embedId: '1ZcjSlzQEDs',
   },
 ]
 

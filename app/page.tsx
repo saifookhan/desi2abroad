@@ -56,6 +56,15 @@ const categories: HomepageCateogries[] = [
       },
     ],
   },
+  {
+    chapter: 'Austria 🇦🇹',
+    subChapters: [
+      {
+        title: 'Austria 🎥',
+        path: '/austria',
+      },
+    ],
+  },
 ]
 
 const HomePage = () => (
@@ -103,7 +112,7 @@ const HomePage = () => (
         return (
           <div key={category.chapter}>
             {' '}
-            <div className="relative border-b border-b-[#1e293c] py-10 sm:py-14">
+            <div className="relative border-b border-b-[#1e293c] py-10 sm:py-14 xs:pb-20">
               {' '}
               <div className="container">
                 {' '}

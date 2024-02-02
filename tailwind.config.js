@@ -66,6 +66,13 @@ module.exports = {
         },
       }),
     },
+    screens: {
+      xs: '380px',
+      sm: '540px',
+      md: '720px',
+      lg: '920px',
+      xl: '1040px',
+    },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }
