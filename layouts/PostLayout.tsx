@@ -99,7 +99,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   Join our Whatsapp community
                 </Link>
                 {` • `}
-                <Link href={editUrl(filePath)}>View on GitHub</Link>
+                {/* <Link href={editUrl(filePath)}>View on GitHub</Link> */}
               </div>
               {siteMetadata.comments && (
                 <div
