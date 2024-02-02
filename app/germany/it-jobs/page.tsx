@@ -12,6 +12,22 @@ const videosList = [
   },
   {
     name: 'Backend Developer Jobs',
+    embedId: 'mAgyBaMGfJc',
+  },
+  {
+    name: 'Data Science / Analytics',
+    embedId: 'wF03gI5BzXA',
+  },
+  {
+    name: 'Quality Assurance',
+    embedId: 'NVRccjNNfKc',
+  },
+  {
+    name: 'Mobile / Hybrid Apps',
+    embedId: 'EKsGHp8Xki8',
+  },
+  {
+    name: 'Devops',
     embedId: '',
   },
 ]
