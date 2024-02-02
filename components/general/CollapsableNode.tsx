@@ -32,7 +32,7 @@ function CollapsableNode(props: WrapperCollapsableStudyNode) {
       key: props.id,
       label: props.data.label,
       description: props.data.descriptionHTML,
-      children: [props.data.descriptionHTML, videosContainer],
+      children: [props.data.descriptionHTML, <div key="">{videosContainer}</div>],
     },
   ]
 
