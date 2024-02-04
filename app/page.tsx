@@ -7,6 +7,7 @@ import theme from '../css/themeConfig'
 import SectionContainer, { backgroundStyles } from 'components/SectionContainer'
 import BubbleList from '@/components/general/BubbleList/BubbleList'
 import { HomepageCateogries } from 'src/types/types'
+import ArticlesList from '@/components/general/blog/ArticlesList'
 
 const categories: HomepageCateogries[] = [
   {

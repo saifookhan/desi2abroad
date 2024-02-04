@@ -1,3 +1,4 @@
+import ArticlesList from '@/components/general/blog/ArticlesList'
 import { genPageMetadata } from 'app/seo'
 import SectionContainer from 'components/SectionContainer'
 import DisqusComments from 'components/general/Disqus/disqus'

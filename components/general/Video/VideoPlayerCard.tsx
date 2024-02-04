@@ -4,7 +4,7 @@ import FacebookEmbed from '@/components/mdx/FacebookEmbed'
 import YouTube from '@/components/mdx/YouTube'
 import React, { memo } from 'react'
 
-function VideoPlayerCard({ embedId, name, playerSite }) {
+function VideoPlayerCard({ embedId, name, playerSite = 'youtube' }) {
   return (
     <div className="mt-4 mb-4 rounded-md flex items-center justify-center">
       <div className="flex-1 mr-1">
