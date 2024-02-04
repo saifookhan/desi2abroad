@@ -1,14 +1,15 @@
 'use client'
 
+import FacebookEmbed from '@/components/mdx/FacebookEmbed'
 import YouTube from '@/components/mdx/YouTube'
 import React, { memo } from 'react'
 
-function VideoPlayerCard({ embedId, name }) {
+function VideoPlayerCard({ embedId, name, playerSite }) {
   return (
     <div className="mt-4 mb-4 rounded-md flex items-center justify-center">
       <div className="flex-1 mr-1">
         <div className="w-full">
-          <YouTube id={embedId} />
+          {playerSite === 'facebook' ? <FacebookEmbed id={embedId} /> : <YouTube id={embedId} />}
         </div>
         <div>
           <h4 className="text-lg font-medium text-black">{name}</h4>

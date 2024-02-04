@@ -7,6 +7,11 @@ import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
 
 const videosList = [
   {
+    name: 'US: How to choose your degree?',
+    embedId: '2601394883357551',
+    playerSite: 'facebook',
+  },
+  {
     name: 'US: Engineering Jobs + Pathway',
     embedId: 'Ev23oQpGiVs',
   },
@@ -38,7 +43,11 @@ export default function BlogPage() {
                   className="bg-slate-200	rounded-md flex items-center justify-center"
                   key={vid.name}
                 >
-                  <VideoPlayerCard embedId={vid.embedId} name={vid.name} />
+                  <VideoPlayerCard
+                    embedId={vid.embedId}
+                    name={vid.name}
+                    playerSite={vid.playerSite}
+                  />
                 </div>
               )
             })}
