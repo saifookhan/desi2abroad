@@ -5,6 +5,7 @@ export type BackgroundStyleTypes = 'white' | 'lightGrey' | 'gradientDark' | 'tra
 export const backgroundStyles = {
   white: 'bg-white',
   lightGrey: 'bg-gray-50',
+  mediumGrey: 'bg-slate-200',
   gradientDark: 'bg-gradient-to-b from-slate-900 to-black',
   transparent: '',
 }

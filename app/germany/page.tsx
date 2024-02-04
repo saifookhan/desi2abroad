@@ -1,13 +1,14 @@
 import { genPageMetadata } from 'app/seo'
 import SectionContainer from 'components/SectionContainer'
 import DisqusComments from 'components/general/Disqus/disqus'
-import VideoCarousal from '@/components/general/VideoCarousal/VideoCarousal'
 import dynamic from 'next/dynamic'
 
 //TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default function BlogPage() {
+  // const posts = allCoreContent(sortPosts(allBlogs))
+
   const Flow = dynamic(() => import('components/germany/Roadmap'), {
     ssr: false,
   })
@@ -306,6 +307,9 @@ export default function BlogPage() {
         <div className="mb-8 text-black">
           Credits: Hamza, Iraj A., Mariah M. Saifoo Khan, Sidra N., Yumna I., Zubair K.
         </div>
+      </SectionContainer>
+      <SectionContainer backgroundStyle={'mediumGrey'}>
+        <ArticlesList articleType="all" />
       </SectionContainer>
       {/* <SectionContainer backgroundStyle={'lightGrey'}>
         <VideoCarousal />
