@@ -249,49 +249,32 @@ const germanyNodes: StudyParentNode[] = [
           label: 'IELTS / German language / ECTS / CGPA',
           descriptionHTML: (
             <div>
-              <p>
-                <strong>Language Proficiency:</strong>
-                Essential for studying in Germany, language proficiency is demonstrated through
-                IELTS or German language exams.
-              </p>
-
-              <strong>IELTS:</strong>
               <ul>
-                <li>May be required for programs with English instruction.</li>
-                <li>Aim for a score aligned with program requirements.</li>
-                <li>Prepare through practice tests and language exercises.</li>
+                <li>
+                  <strong>IELTS:</strong>
+                  <br />
+                  Maybe required for programs with English instruction.
+                  <br />
+                  6.5+ IELTS score required.
+                </li>
+                <li>
+                  <strong>German Language:</strong>
+                  <br />
+                  Needed if your course is in German.
+                </li>
+                <li>
+                  <strong>ECTS:</strong>
+                  <br />
+                  Convert your credit points into ECTS.
+                </li>
+                <li>
+                  <strong>CGPA:</strong>
+                  <br />
+                  2.7+ German CGPA is required.
+                  <br />
+                  3+ Pakistani, 7+ Indian
+                </li>
               </ul>
-
-              <strong>German Language:</strong>
-              <ul>
-                <li>Needed if your course is in German.</li>
-                <li>Check language requirements and consider language courses.</li>
-              </ul>
-
-              <strong>ECTS:</strong>
-              <ul>
-                <li>Standard for comparing student progress in Europe.</li>
-                <li>Understand ECTS credits and their alignment with your academic system.</li>
-              </ul>
-
-              <strong>CGPA:</strong>
-              <ul>
-                <li>Considered during the application process.</li>
-                <li>Ensure your CGPA meets or exceeds university criteria.</li>
-              </ul>
-
-              <strong>Document Preparation:</strong>
-              <ul>
-                <li>Obtain transcripts, IELTS scores, and language certificates.</li>
-                <li>Ensure documents meet university and program requirements.</li>
-              </ul>
-
-              <strong>Contact Information:</strong>
-              <p>
-                For language proficiency requirements, contact the university's admissions office or
-                language department. Check the university's official website for detailed
-                information on ECTS, CGPA requirements, and document guidelines.
-              </p>
             </div>
           ),
           videos: [
@@ -313,25 +296,27 @@ const germanyNodes: StudyParentNode[] = [
       label: 'Write Letter of Motivation ',
       descriptionHTML: (
         <div>
-          <p>It is also known as a statement of purpose or personal statement.</p>
           <p>It is not required by all universities.</p>
-          <p>
-            It explains your aspirations and qualifications for your chosen field at a particular
-            institution.
-          </p>
-          <p>The letter includes the following sections:</p>
+
+          <p>Example sections:</p>
           <ol>
             <li>- Introduction</li>
-            <li>- Academic Background and Achievements</li>
-            <li>- Motivation and Goals</li>
-            <li>- Relevant Experiences and Skills</li>
-            <li>- Connection to the Program/Institution</li>
-            <li>- Personal Qualities and Conclusion</li>
+            <li>- Academic Background</li>
+            <li>- Academic Achievements</li>
+            <li>- Motivation+Goals</li>
+            <li>- Relevant ExperiencesSkills</li>
+            <li>- Why this Program/Institution</li>
+            <li>- Personal Qualities</li>
             <li>- Personal Qualities</li>
             <li>- Conclusion</li>
           </ol>
         </div>
       ),
+      videos: [
+        {
+          embedId: 'Ec8tGmW-KnU',
+        },
+      ],
       style: { backgroundColor: NodeBackgroundColors.amber100 },
     },
     position: { x: 0, y: 420 },
@@ -796,53 +781,10 @@ const germanyNodes: StudyParentNode[] = [
           descriptionHTML: (
             <div>
               <p>
-                <strong>Overview:</strong>
-                Join the Pakistani Student Association (PSA) and Indian Student Association (ISA) to
-                enhance your German student experience. These communities provide support,
-                connections, and a sense of belonging.
+                Pakistani Student Association (PSA) and Indian Student Association (ISA) are
+                communities that help desis in Germany.
               </p>
-
-              <p>
-                <strong>Purpose:</strong>
-                PSA and ISA assist students from Pakistan and India, offering help in finding
-                accommodation, sharing local insights, and organizing events for community building.
-              </p>
-
-              <p>
-                <strong>City-wise Presence:</strong>
-                With chapters across Germany, PSA and ISA provide localized support and engagement
-                opportunities for students in various cities.
-              </p>
-
-              <p>
-                <strong>Watch the Video:</strong>
-                Explore the activities and benefits of PSA and ISA in my YouTube video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/tcIPiG1pX5M?si=ja8_5a908gsURqRx"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
-
-              <p>
-                <strong>Getting Involved:</strong>
-                New students are encouraged to connect with these associations, attend events, and
-                actively participate in community activities for a vibrant student experience.
-              </p>
-
-              <p>
-                <strong>Contact Information:</strong>
-                For more details or to get involved, visit the PSA and ISA chapters in your city or
-                check their online platforms.
-              </p>
-
-              <p>
-                Connecting with PSA and ISA opens doors to a supportive community, fostering
-                friendships and enriching your study abroad journey in Germany.
-              </p>
+              <p>Find facebook groups with their city names.</p>
             </div>
           ),
           videos: [
@@ -860,66 +802,7 @@ const germanyNodes: StudyParentNode[] = [
         type: 'collapsableNode',
         data: {
           label: 'Train Ticket Tutorial',
-          descriptionHTML: (
-            <div>
-              <p>
-                <strong>How to Book:</strong>
-              </p>
-
-              <p>
-                <strong>Download the DB App:</strong>
-                Install the Deutsche Bahn app on your smartphone. It's available for both Android
-                and iOS devices.
-              </p>
-
-              <p>
-                <strong>Create an Account:</strong>
-                Register for an account within the app, providing necessary details.
-              </p>
-
-              <p>
-                <strong>Plan Your Journey:</strong>
-                Enter your departure and arrival stations, along with the desired date and time of
-                travel.
-              </p>
-
-              <p>
-                <strong>Select Your Train:</strong>
-                Browse through available train options and choose the one that suits your schedule.
-              </p>
-
-              <p>
-                <strong>Choose Ticket Type:</strong>
-                Select the type of ticket you need, whether it's a one-way, round-trip, or any
-                special fare.
-              </p>
-
-              <p>
-                <strong>Payment:</strong>
-                Complete the payment process securely within the app.
-              </p>
-
-              <p>
-                <strong>Receive E-Ticket:</strong>
-                Your electronic ticket will be generated and stored in the app. Show this E-ticket
-                during your journey.
-              </p>
-
-              <p>
-                <strong>Watch the Video:</strong>
-                For a step-by-step guide on booking train tickets with the DB app, watch my YouTube
-                video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/8W1kFp68SGY?si=BJRhmQyCVFbKOnv6"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
-            </div>
-          ),
+          descriptionHTML: <div></div>,
           videos: [
             {
               embedId: '8W1kFp68SGY',
@@ -937,84 +820,46 @@ const germanyNodes: StudyParentNode[] = [
           label: 'Important Mobile Apps',
           descriptionHTML: (
             <div>
-              <p>
-                Streamline your student life in Germany with must-have mobile apps spanning various
-                categories, including transportation, language learning, accommodation, finance,
-                health, and communication.
-              </p>
-
-              <p>
-                <strong>Transportation:</strong>
-                <ul>
-                  <li>
-                    <strong>DB Navigator:</strong> Official Deutsche Bahn app for train schedules
-                    and tickets.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Language Learning:</strong>
-                <ul>
-                  <li>
-                    <strong>Duolingo:</strong> User-friendly language learning for improving German
-                    skills.
-                  </li>
-                  <li>
-                    <strong>Babbel:</strong> Tailored language courses focusing on practical
-                    communication.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Accommodation:</strong>
-                <ul>
-                  <li>
-                    <strong>WG-Gesucht:</strong> Popular app for finding shared accommodation.
-                  </li>
-                  <li>
-                    <strong>Immobilienscout24:</strong> Explore a wide range of rental properties
-                    and apartments.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Finance:</strong>
-                <ul>
-                  <li>
-                    <strong>Revolut:</strong> Mobile banking with a focus on international students.
-                  </li>
-                  <li>
-                    <strong>TransferWise:</strong> Convenient for international money transfers.
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                <strong>Health and Well-being:</strong>
-                <ul>
-                  <li>
-                    <strong>TK-App:</strong> Provided by Techniker Krankenkasse, offering health
-                    insurance services.
-                  </li>
-                </ul>
-              </p>
-              <p>
-                <strong>Watch the Video:</strong>
-                Explore detailed usage tips in my YouTube video
-                <a
-                  className="text-blue-600"
-                  href="https://youtu.be/4xdHEWCiNW4?si=JSBcNwnniS9cHdwm"
-                  target="_blank"
-                >
-                  &nbsp; here
-                </a>
-                .
-              </p>
+              <ul>
+                <li>
+                  <strong>Transportation:</strong>
+                  <br />
+                  DB Navigator
+                </li>
+                <li>
+                  <strong>Language Learning:</strong>
+                  <br />
+                  Duolingo
+                  <br />
+                  Babbel
+                </li>
+                <li>
+                  <strong>Accommodation:</strong>
+                  <br />
+                  WG-Gesucht
+                  <br />
+                  Immobilienscout24
+                </li>
+                <li>
+                  <strong>Finance:</strong>
+                  <br />
+                  Revolut
+                  <br />
+                  TransferWise
+                </li>
+                <li>
+                  <strong>Health and Well-being:</strong>
+                  <br />
+                  TK-App
+                </li>
+              </ul>
             </div>
           ),
+          videos: [
+            {
+              embedId: '4xdHEWCiNW4',
+            },
+          ],
           style: { backgroundColor: NodeBackgroundColors.fuchsia50 },
         },
         position: { x: -400, y: 1370 },

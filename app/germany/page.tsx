@@ -1,4 +1,6 @@
+import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
 import ArticlesList from '@/components/general/blog/ArticlesList'
+import Divider from 'antd/es/divider'
 import { genPageMetadata } from 'app/seo'
 import SectionContainer from 'components/SectionContainer'
 import DisqusComments from 'components/general/Disqus/disqus'
@@ -6,6 +8,36 @@ import dynamic from 'next/dynamic'
 
 //TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })
+
+const learnMoreVideos = [
+  {
+    name: 'Scholarships in Germany',
+    embedId: 'AJIavopylNs',
+  },
+  {
+    name: 'Convert Student to Work Visa',
+    embedId: 'BWOiL9Q5nbY',
+  },
+  {
+    name: 'Girls Life: Work + Study',
+    embedId: 'NWYiMM9K5oE',
+  },
+]
+
+const expensesVideosList = [
+  {
+    name: 'Student jobs+salaries',
+    embedId: 'vCNWVPiupkE',
+  },
+  {
+    name: 'All Expenses for Germany',
+    embedId: 'NKcG88nN0Lk',
+  },
+  {
+    name: 'Monthly Expenses breakdown',
+    embedId: 'cRBZNAaq1DI',
+  },
+]
 
 export default function BlogPage() {
   // const posts = allCoreContent(sortPosts(allBlogs))
@@ -311,6 +343,46 @@ export default function BlogPage() {
       </SectionContainer>
       <SectionContainer backgroundStyle={'mediumGrey'}>
         <ArticlesList articleType="all" />
+      </SectionContainer>
+      {/* TODO:: Create a seperate component for video row */}
+      <SectionContainer backgroundStyle={'lightGrey'}>
+        <div className="pt-8 pb-8">
+          <Divider orientation="left">
+            <span className="text-2xl	">Learn More</span>
+          </Divider>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
+            {learnMoreVideos.map((vid) => {
+              return (
+                <div
+                  className="bg-slate-200	rounded-md flex items-center justify-center"
+                  key={vid.name}
+                >
+                  <VideoPlayerCard embedId={vid.embedId} name={vid.name} />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </SectionContainer>
+      <SectionContainer backgroundStyle={'lightGrey'}>
+        <div className="pt-8 pb-8">
+          <Divider orientation="left">
+            {' '}
+            <span className="text-2xl	">Expenses Explainations:</span>
+          </Divider>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
+            {expensesVideosList.map((vid) => {
+              return (
+                <div
+                  className="bg-slate-200	rounded-md flex items-center justify-center"
+                  key={vid.name}
+                >
+                  <VideoPlayerCard embedId={vid.embedId} name={vid.name} />
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </SectionContainer>
       {/* <SectionContainer backgroundStyle={'lightGrey'}>
         <VideoCarousal />
