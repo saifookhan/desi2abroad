@@ -8,6 +8,8 @@ const { Panel } = Collapse;
 
 const App: React.FC = () => {
   const [data, setData] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true); // Added loading state
+
   const parentStyler={
     width:'60%',
     margin:'50px auto',
@@ -25,7 +27,7 @@ const App: React.FC = () => {
       try {
         const dataRef = ref(db, '1hBI5WUxiwG06kncYRV7qhQcO52GqX5qYfup_zfBtN6Q/Sheet1');
         const snapshot = await get(dataRef);
-  
+        console.log(snapshot.exists())
         if (snapshot.exists()) {
           const dataArray: any[] = [];
           snapshot.forEach((childSnapshot) => {
@@ -37,16 +39,21 @@ const App: React.FC = () => {
         } else {
           console.log('No data available');
         }
+        setLoading(false); // Mark loading as false after data retrieval
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoading(false); // Ensure loading is marked as false even if there's an error
       }
     };
-  
+    
     fetchData();
   }, []);
-  
 
-  console.log('Data:', data); // Log the final data state
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  console.log('Data:', data); 
 
   return (
     <div style={{ padding: '20px' }}>
