@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const fetchDataFromGoogleSheet = async () => {
     try {
       const response = await axios.get(GOOGLE_SHEET_URL, {
-        responseType: 'arraybuffer', // Ensure binary response
+        responseType: 'arraybuffer', 
       })
       const dataBuffer = response.data
       const workbook = XLSX.read(dataBuffer, { type: 'buffer' })
