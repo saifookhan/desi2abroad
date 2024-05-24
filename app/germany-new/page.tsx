@@ -5,6 +5,7 @@ import axios from 'axios'
 import * as XLSX from 'xlsx'
 import PageHeader from '@/components/general/page/PageHeader'
 import SectionContainer from '@/components/SectionContainer'
+import { ECTS,Calc } from '@/components/calculator'
 
 const { Panel } = Collapse
 
@@ -49,10 +50,6 @@ const App: React.FC = () => {
     }
   }
 
-  const parentStyler = {
-    margin: '50px auto',
-    color: '#fff',
-  }
   const childStyle = {
     background: '#fff',
     border: 'none',
@@ -68,23 +65,24 @@ const App: React.FC = () => {
 
   return (
     <>
-      <PageHeader
+   <div style={{background:'white'}}>
+   <PageHeader
         headerTitle="Germany Study Steps"
         headerDescription="Join our support communities"
         headerColor="white"
       />
       <br />
       <SectionContainer backgroundStyle="white">
-        <div className="">
-          <Collapse accordion style={parentStyler}>
+        <div className="flex flex-col-reverse py-6 lg:flex-row">
+          <Collapse className='w-full mt-0 py-0 lg:w-[65%]'  >
             {fileData.map((topicGroup: any[], index) => {
               console.log(topicGroup)
               if (index != 0) {
                 return (
-                  <Panel header={topicGroup[0].B} key={index} style={childStyle}>
-                    <Collapse accordion>
+                  <Panel className='py-2 w-full  ' header={topicGroup[0].B} key={index} style={childStyle}>
+                    <Collapse >
                       {topicGroup.map((topic, subIndex) => (
-                        <Panel header={topic.C} key={subIndex} style={childStyle}>
+                        <Panel className='py-2 w-full  ' header={topic.C} key={subIndex} style={childStyle}>
                           <p>
                             <strong>Answer:</strong> {topic.D}
                           </p>
@@ -109,8 +107,22 @@ const App: React.FC = () => {
               }
             })}
           </Collapse>
+          <div className='calc_container  h-auto w-full lg:w-[35%]'>
+            <Collapse defaultActiveKey={['00']} >
+            <Panel  header="GPA CALCULATOR" key='00'>
+            <div className=' min-h-[100vh] lg:min-h-0'><Calc/></div>
+            </Panel>
+            <Panel  header="ECTS CALCULATOR" key='01'>
+            <div className=' min-h-[100vh] lg:min-h-0'><ECTS/></div>
+            </Panel>
+          
+            </Collapse>
+     
+      
+          </div>
         </div>
       </SectionContainer>
+   </div>
     </>
   )
 }
