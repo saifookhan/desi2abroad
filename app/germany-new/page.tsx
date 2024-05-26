@@ -65,16 +65,16 @@ const App: React.FC = () => {
 
   return (
     <>
-   <div style={{background:'white'}}>
+   <div className='bg-white'>
    <PageHeader
         headerTitle="Germany Study Steps"
         headerDescription="Join our support communities"
         headerColor="white"
       />
       <br />
-      <SectionContainer backgroundStyle="white">
-        <div className="flex flex-col-reverse py-6 lg:flex-row">
-          <Collapse className='w-full mt-0 py-0 lg:w-[65%]'  >
+      <SectionContainer backgroundStyle="white" >
+        <div className="flex flex-col-reverse py-6 lg:flex-row ">
+          <Collapse className='w-full mt-0 py-0 lg:w-[60%] lg:mx-6'  >
             {fileData.map((topicGroup: any[], index) => {
               console.log(topicGroup)
               if (index != 0) {
@@ -107,7 +107,7 @@ const App: React.FC = () => {
               }
             })}
           </Collapse>
-          <div className='calc_container  h-auto w-full lg:w-[35%]'>
+          <div className='calc_container  h-auto w-full lg:w-[35%] mb-4 lg:mb-0'>
             <Collapse defaultActiveKey={['00']} >
             <Panel  header="GPA CALCULATOR" key='00'>
             <div className=' min-h-[100vh] lg:min-h-0'><Calc/></div>
