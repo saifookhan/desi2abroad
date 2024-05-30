@@ -7,7 +7,7 @@ const Calc = () => {
 
   const styler = {
     cover: {
-      width: '600px',
+      width: 'auto',
       height: '500px',
     },
     text: {
@@ -36,60 +36,67 @@ const Calc = () => {
   };
 
   return (
-    <div style={styler.cover}>
-        <img className='w-[40%]' src='/static/images/gps_formula.jpg'></img>
-         <table style={styler.taBle} className='40%'>
+    <div style={styler.cover} >
+  
+  <img className='w-[60%]  object-contain' src='/static/images/gps_formula.jpg'></img>
+   
+         <table style={styler.taBle} className='w-full '>
+        
       <tr style={styler.row}>
-        <td className='p-1'>German Grade</td>
-        <td className='p-1'>Percentage</td>
-        <td className='p-1'>Meaning</td>
-        <td className='p-1'>Pass or Fail</td>
+        <td className='p-1 text-xs'>German Grade</td>
+        <td className='p-1 text-xs'>Percentage</td>
+        <td className='p-1 text-xs'>Meaning</td>
+        <td className='p-1 text-xs'>Pass or Fail</td>
       </tr>
       <tr style={styler.row}>
-      <td className='p-1'>1.0-1.5</td>
-        <td className='p-1'>90-100%</td>
-        <td className='p-1'>Very Good</td>
-        <td className='p-1'>Pass</td>
+      <td className='p-1 text-xs'>1.0-1.5</td>
+        <td className='p-1 text-xs'>90-100%</td>
+        <td className='p-1 text-xs'>Very Good</td>
+        <td className='p-1 text-xs'>Pass</td>
       </tr>
       <tr style={styler.row}>
-      <td className='p-1'>1.6-2.5</td>
-        <td className='p-1'>75-89%</td>
-        <td className='p-1'>Good</td>
-        <td className='p-1'>Pass</td>
+      <td className='p-1 text-xs'>1.6-2.5</td>
+        <td className='p-1 text-xs'>75-89%</td>
+        <td className='p-1 text-xs'>Good</td>
+        <td className='p-1 text-xs'>Pass</td>
       </tr>
       <tr style={styler.row}>
-      <td className='p-1'>2.6-3.5</td>
-        <td className='p-1'>60-74%</td>
-        <td className='p-1'>Satisfactory</td>
-        <td className='p-1'>Pass</td>
+      <td className='p-1 text-xs'>2.6-3.5</td>
+        <td className='p-1 text-xs'>60-74%</td>
+        <td className='p-1 text-xs'>Satisfactory</td>
+        <td className='p-1 text-xs'>Pass</td>
       </tr>
       <tr style={styler.row}>
-      <td className='p-1'>3.6-4</td>
-        <td className='p-1'>50-59%</td>
-        <td className='p-1'>Sufficient</td>
-        <td className='p-1'>Pass</td>
+      <td className='p-1 text-xs'>3.6-4</td>
+        <td className='p-1 text-xs'>50-59%</td>
+        <td className='p-1 text-xs'>Sufficient</td>
+        <td className='p-1 text-xs'>Pass</td>
       </tr>
       <tr style={styler.row}>
-      <td className='p-1'>5.0</td>
-        <td className='p-1'>0-49%</td>
-        <td className='p-1'>Failed</td>
-        <td className='p-1'>Fail</td>
+      <td className='p-1 text-xs'>5.0</td>
+        <td className='p-1 text-xs'>0-49%</td>
+        <td className='p-1 text-xs'>Failed</td>
+        <td className='p-1 text-xs'>Fail</td>
       </tr>
       
 
     </table>
       <h1 style={styler.text}>Grade Calculator</h1>
       <Form form={form} onValuesChange={changer}>
-        <Form.Item label="Max. score that can be attained">
+        <Form.Item className='flex flex-col lg:flex'>
+          <label>Max. score that can be attained</label>
           <InputNumber size="large" min={0} max={4} defaultValue={0} name="max_gpa" />
         </Form.Item>
-        <Form.Item label="Min. score that can be attained">
+        <Form.Item >
+        <label>Min. score that can be attained</label>
           <InputNumber size="large" min={0} max={4} defaultValue={0} name="min_gpa" />
         </Form.Item>
-        <Form.Item label="Your score in the course">
+        <Form.Item className='flex flex-col lg:flex'>
+        <label>Your score in the course</label>
           <InputNumber size="large" min={0} max={4} defaultValue={0} name="c_gpa" />
         </Form.Item>
-        <Form.Item label="Here is your result">
+        <Form.Item>
+        <label>Here is your result</label>
         <Input style={styler.result} placeholder="Result" disabled value={calcData} />
         </Form.Item>
       
