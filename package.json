@@ -36,6 +36,7 @@
     "pliny": "0.1.6",
     "postcss": "^8.4.24",
     "react": "18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.4",
     "react-router-dom": "^6.23.1",

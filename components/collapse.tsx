@@ -1,0 +1,110 @@
+"use client"
+import React,{useState,useEffect} from 'react'
+import { Collapse, Typography } from 'antd'
+import * as XLSX from 'xlsx'
+import axios from 'axios'
+
+const { Panel } = Collapse
+const { Text } = Typography
+
+const CustomCollapse:React.FC = () => {
+    const [data, setData] = useState<any[]>([])
+    const [fileData, setFileData] = useState<any[]>([])
+    const [loading, setLoading] = useState(true)
+
+    // Link to Google Sheets file
+  const GOOGLE_SHEET_URL =
+  'https://docs.google.com/spreadsheets/d/1hBI5WUxiwG06kncYRV7qhQcO52GqX5qYfup_zfBtN6Q/edit#gid=0'
+
+const fetchDataFromGoogleSheet = async () => {
+    try {
+        const response = await axios.get(GOOGLE_SHEET_URL, {
+          responseType: 'arraybuffer',
+        })
+        const dataBuffer = response.data
+        const workbook = XLSX.read(dataBuffer, { type: 'buffer' })
+        const sheetName = workbook.SheetNames[0]
+        const sheet = workbook.Sheets[sheetName]
+        const parsedData = XLSX.utils.sheet_to_json(sheet)
+  
+        // Group topics by name
+        const groupedTopics: { [key: string]: any[] } = {}
+        parsedData.forEach((item) => {
+          if (item.B) {
+            if (!groupedTopics[item.B]) {
+              groupedTopics[item.B] = []
+            }
+            groupedTopics[item.B].push(item)
+          }
+        })
+  
+        // Convert object of arrays into an array of arrays
+        const groupedData = Object.values(groupedTopics)
+        setFileData(groupedData)
+        setLoading(false)
+      } catch (error) {
+        console.error('Error fetching data from Google Sheets:', error)
+        setLoading(false)
+      }
+    }
+
+    //style
+    const childStyle = {
+        border: 'none',
+      }
+   // consistently updating
+      useEffect(() => {
+        fetchDataFromGoogleSheet()
+      }, [])
+
+   
+  return (
+    <>
+    <Collapse className="w-full mt-0 py-0 lg:w-[60%]">
+    {fileData.map((topicGroup: any[], index) => {
+      console.log(topicGroup)
+      if (index != 0) {
+        return (
+          <Panel
+            className="py-2 w-full  "
+            header={topicGroup[0].B}
+            key={index}
+            style={childStyle}
+          >
+            <Collapse  size="small">
+              {topicGroup.map((topic, subIndex) => (
+                <Panel
+                  className="py-2 w-full  "
+                  header={topic.C}
+                  key={subIndex}
+                  style={childStyle}  
+                >
+                  {/* <p>
+                    <strong>Answer:</strong> {topic.D}
+                  </p> */}
+                  <div>
+                    <div dangerouslySetInnerHTML={{ __html: topic.E }} />
+                  </div>
+                  {/* <p>
+                    <strong>Topic:</strong> {topic.B}
+                  </p> */}
+                  <br />
+                  <p>
+                    <strong>Video Link:</strong>{' '}
+                    <iframe style={{ width: '560px', height: '400px' }} src={topic.E}>
+                      {topic.E}
+                    </iframe>
+                  </p>
+                </Panel>
+              ))}
+            </Collapse>
+          </Panel>
+        )
+      }
+    })}
+  </Collapse>
+    </>
+  )
+}
+
+export default CustomCollapse
