@@ -25,7 +25,7 @@ interface ListLayoutProps {
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
-  const basePath = pathname.split('/')[1]
+  const basePath = pathname?.split('/')[1]
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
 
@@ -87,7 +87,7 @@ export default function ListLayoutWithTags({
         <div className="flex sm:space-x-24">
           <div className="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-50 dark:bg-gray-900/70 shadow-md pt-5 dark:shadow-gray-800/40 rounded min-w-[280px] max-w-[280px] overflow-auto">
             <div className="py-4 px-6">
-              {pathname.startsWith('/blog') ? (
+              {pathname?.startsWith('/blog') ? (
                 <h3 className="text-primary-500 font-bold uppercase">All Posts</h3>
               ) : (
                 <Link
@@ -101,7 +101,7 @@ export default function ListLayoutWithTags({
                 {sortedTags.map((t) => {
                   return (
                     <li key={t} className="my-3">
-                      {pathname.split('/tags/')[1] === slug(t) ? (
+                      {pathname?.split('/tags/')[1] === slug(t) ? (
                         <h3 className="inline py-2 px-3 uppercase text-sm font-bold text-primary-500">
                           {`${t} (${tagCounts[t]})`}
                         </h3>
