@@ -19,11 +19,11 @@ const Calc = () => {
     text: {
       color: 'white',
     },
-    result: {
-      textAlign: 'center',
-      color: '#fff',
-      width: '16%',
-    },
+    // result: {
+    //   textAlign: 'center',
+    //   color: '#fff',
+    //   width: '16%',
+    // },
     table: {
       margin: '20px 0'
     },
@@ -52,9 +52,9 @@ const Calc = () => {
   return (
     <div style={styler.cover}>
       <h1 style={styler.text}>Grade Calculator</h1>
-      <Form form={form}>
-        <Form.Item className='flex flex-col lg:flex'>
-          <label>Max. score that can be attained</label>
+      <Form form={form} layout='vertical'>
+        <Form.Item className='flex flex-col lg:flex' label='Max. score that can be attained'>
+
           <InputNumber
             size="large"
             min={0}
@@ -65,8 +65,8 @@ const Calc = () => {
             onChange={(value) => changer(value, 'max_gpa')}
           />
         </Form.Item>
-        <Form.Item>
-          <label>Min. score that can be attained</label>
+        <Form.Item label='Min. score that can be attained'>
+
           <InputNumber
             size="large"
             min={0}
@@ -77,8 +77,8 @@ const Calc = () => {
             onChange={(value) => changer(value, 'min_gpa')}
           />
         </Form.Item>
-        <Form.Item className='flex flex-col lg:flex'>
-          <label>Your score in the course</label>
+        <Form.Item className='flex flex-col lg:flex' label='Your score in the course'>
+
           <InputNumber
             size="large"
             min={0}
@@ -89,9 +89,8 @@ const Calc = () => {
             onChange={(value) => changer(value, 'c_gpa')}
           />
         </Form.Item>
-        <Form.Item>
-          <label>Here is your result</label>
-          <Input style={styler.result} placeholder="Result" disabled value={calcData} />
+        <Form.Item label='Here is your result'>
+          <InputNumber className='text-black' placeholder="Result" disabled value={calcData} />
         </Form.Item>
       </Form>
 
@@ -146,8 +145,8 @@ const ECTS = () => {
 
   const styler = {
     cover: {
-      width: '600px',
-      height: '500px',
+      width: 'auto',
+      height: 'auto',
     },
     text: {
       color: 'white',
@@ -159,39 +158,47 @@ const ECTS = () => {
     },
   };
 
-  const ectsCalc = () => {
-    console.log('updated')
-    const { L, S, N, H } = form.getFieldsValue();
-    const W = (L + S) * N;
-    const C = W / H;
-    setEctsData(C);
- 
+  const handleChange = (name, value) => {
+    form.setFieldsValue({ [name]: value }); // Update form values
+    calculateEcts(); // Recalculate ECTS
   };
+
+  const calculateEcts = () => {
+    const { L, N, S, H } = form.getFieldsValue(); // Get form values
+    if (L && N && S && H) {
+      const W = (L + S) * N;
+      const C = W / H;
+      setEctsData(C);
+    }
+  };
+
+  useEffect(() => {
+    calculateEcts();
+  }, []); // Run once on initial render
 
   return (
     <div style={styler.cover}>
       <h1 style={styler.text}>ECTS Calculator</h1>
-      <Form form={form} onValuesChange={ectsCalc}>
-        <Form.Item label="Number of lectures per week">
-          <InputNumber size="large" min={0} name="L" placeholder='E.g 5'/>
+      <Form form={form} layout='vertical'>
+        <Form.Item label="Number of lectures per week" name="L">
+          <InputNumber size="large" min={0} onChange={(value) => handleChange("L", value)} placeholder='E.g 5'/>
         </Form.Item>
-        <Form.Item label="Hours spent in self-study per week">
-          <InputNumber size="large" min={0} name="S" placeholder='E.g 6'/>
+        <Form.Item label="Hours spent in self-study per week" name="S">
+          <InputNumber size="large" min={0} onChange={(value) => handleChange("S", value)} placeholder='E.g 6'/>
         </Form.Item>
-        <Form.Item label="Number of weeks in semester">
-          <InputNumber size="large" min={0} name="N" placeholder='E.g 10'/>
+        <Form.Item label="Number of weeks in semester" name="N">
+          <InputNumber size="large" min={0} onChange={(value) => handleChange("N", value)} placeholder='E.g 10'/>
         </Form.Item>
-        <Form.Item label="Hours per ECTS credit">
-          <InputNumber size="large" min={0} name="H" placeholder='E.g 4'/>
+        <Form.Item label="Hours per ECTS credit" name="H">
+          <InputNumber size="large" min={0} onChange={(value) => handleChange("H", value)} placeholder='E.g 4'/>
         </Form.Item>
         <Form.Item label="Here is your result">
-        <Input style={styler.result} placeholder="Result" disabled value={ectsData} />
+          <InputNumber  placeholder="Result" className='text-black' disabled value={ectsData} />
         </Form.Item>
-     
-
       </Form>
     </div>
   );
 };
+
 
 export { Calc, ECTS };

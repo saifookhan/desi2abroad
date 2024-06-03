@@ -9,6 +9,7 @@ import CustomCollapse from '@/components/collapse'
 import CalcCollapse from '@/components/calcCollapse'
 
 
+
 const { Panel } = Collapse
 const { Text } = Typography
 
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <br />
         <SectionContainer backgroundStyle="white">
           <div className="flex flex-col-reverse py-6 lg:flex-row ">
+            
             <CustomCollapse></CustomCollapse>
             <CalcCollapse></CalcCollapse>
           </div>
