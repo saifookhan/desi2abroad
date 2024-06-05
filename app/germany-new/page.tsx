@@ -7,15 +7,15 @@ import SectionContainer from '@/components/SectionContainer'
 import { ECTS, Calc } from '@/components/calculator'
 import CustomCollapse from '@/components/collapse'
 import CalcCollapse from '@/components/calcCollapse'
-
+import Data from '@/components/collapseServer'
 
 
 const { Panel } = Collapse
 const { Text } = Typography
 
-const App: React.FC = () => {
-
-
+const App: React.FC =async () => {
+var getData=await Data()
+ const data= JSON.stringify(getData)
 
 
 
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <SectionContainer backgroundStyle="white">
           <div className="flex flex-col-reverse py-6 lg:flex-row ">
             
-            <CustomCollapse></CustomCollapse>
+            <CustomCollapse newData={data}></CustomCollapse>
             <CalcCollapse></CalcCollapse>
           </div>
         </SectionContainer>

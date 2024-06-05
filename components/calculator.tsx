@@ -19,11 +19,6 @@ const Calc = () => {
     text: {
       color: 'white',
     },
-    // result: {
-    //   textAlign: 'center',
-    //   color: '#fff',
-    //   width: '16%',
-    // },
     table: {
       margin: '20px 0'
     },
@@ -53,37 +48,37 @@ const Calc = () => {
     <div style={styler.cover}>
       <h1 style={styler.text}>Grade Calculator</h1>
       <Form form={form} layout='vertical'>
-        <Form.Item className='flex flex-col lg:flex' label='Max. score that can be attained'>
+        <Form.Item className='flex flex-col lg:flex' label='Max. score that can be attained'  name="max_gpa">
 
           <InputNumber
             size="large"
             min={0}
             max={4}
-            name="max_gpa"
+           
             placeholder='eg 4.0'
             value={data.max_gpa}
             onChange={(value) => changer(value, 'max_gpa')}
           />
         </Form.Item>
-        <Form.Item label='Min. score that can be attained'>
+        <Form.Item label='Min. score that can be attained' name="min_gpa">
 
           <InputNumber
             size="large"
             min={0}
             max={4}
-            name="min_gpa"
+            
             placeholder='eg 2'
             value={data.min_gpa}
             onChange={(value) => changer(value, 'min_gpa')}
           />
         </Form.Item>
-        <Form.Item className='flex flex-col lg:flex' label='Your score in the course'>
+        <Form.Item className='flex flex-col lg:flex' label='Your score in the course'  name="c_gpa">
 
           <InputNumber
             size="large"
             min={0}
             max={4}
-            name="c_gpa"
+           
             placeholder='eg 3.0'
             value={data.c_gpa}
             onChange={(value) => changer(value, 'c_gpa')}
