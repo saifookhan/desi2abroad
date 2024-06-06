@@ -25,14 +25,14 @@ const CustomCollapse =async ({newData}) => {
       if (index != 0) {
         return (
           <Panel
-            className="py-2 w-full  "
+            className=" w-full  "
             header={topicGroup[0].B}
             key={index}
           >
             <Collapse  size="small">
               {topicGroup.map((topic, subIndex) => (
                 <Panel
-                  className="py-2 w-full  "
+                  className=" w-full  "
                   header={topic.C}
                   key={subIndex}
                 >
