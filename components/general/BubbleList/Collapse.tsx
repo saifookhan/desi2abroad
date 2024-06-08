@@ -30,7 +30,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
         })
         return convertedUrls
       } catch (e) {
-        console.log('Error converting URL:', e)
+     
       }
     }
     return [urls]
@@ -45,7 +45,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
               <Panel className={`w-full ${mainColor[index-1]}`} header={topicGroup[0].B} key={index}>
                 <Collapse size="small" >
                   {topicGroup.map((topic, subIndex) => (
-                    <Panel className={`w-full ${subColor[index-1]}` } header={topic.C} key={subIndex} >
+                    <Panel className={`w-full ${subColor[index-1]}` } header={topic.C} key={`0${subIndex}`} >
                       <div>
                         <div dangerouslySetInnerHTML={{ __html: topic.E }} />
                       </div>
@@ -53,16 +53,13 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                       <br />
                       <p>
                         <strong>Video Link:</strong>{' '}
-                        {urlConvert(topic.F).map((convertedUrl) => (
-                          <iframe
+                        {urlConvert(topic.F).map((convertedUrl,key) => (
+                          <iframe key={key}
                             src={convertedUrl}
                             sandbox="allow-scripts allow-same-origin"
                           />
                         ))}
                         
-                     
-                       
-                         
                       </p>
                     </Panel>
                   ))}
