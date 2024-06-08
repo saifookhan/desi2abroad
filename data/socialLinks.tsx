@@ -14,7 +14,7 @@ const socialChannels = [
         title: 'Study in Germany/EU 2024 🇩🇪',
         subTitle: '894 members',
         type: 'Whatsapp',
-        link: 'https://chat.whatsapp.com/BPw4HNTN90IDW5yJWVgfB6',
+        link: 'https://chat.whatsapp.com/L5PTHzY44WfEsJNfB05k9v',
       },
       {
         image: <WhatsAppOutlined style={{ fontSize: '28px' }} />,
