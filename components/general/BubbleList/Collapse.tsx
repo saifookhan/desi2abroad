@@ -73,7 +73,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         <p>
                           <strong>Video Link:</strong>{' '}
                           {youtubeUrlToEmbedUrl(topic.F).map((convertedUrl, key) => (
-                            <iframe
+                            <iframe className='bg-black w-full h-[400px] my-4'
                               key={key}
                               src={convertedUrl}
                               sandbox="allow-scripts allow-same-origin"
