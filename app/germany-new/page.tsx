@@ -18,7 +18,7 @@ const App: React.FC = async () => {
         />
         <br />
         <SectionContainer backgroundStyle="white">
-          <div className="flex flex-col-reverse py-6 lg:flex-row ">
+          <div className="flex flex-col-reverse mt-2 py-6 lg:flex-row ">
             <BubbleListCollapse stringifiedData={stringifiedData}></BubbleListCollapse>
             <CalcCollapse></CalcCollapse>
           </div>
