@@ -38,8 +38,9 @@ const GermanCgpaCalculator = () => {
     if (max_gpa && min_gpa && c_gpa) {
       const gpaDiff = max_gpa - c_gpa
       const normalDiff = gpaDiff / (max_gpa - min_gpa)
-      const val = normalDiff * 3 + 1
-      setCalcData(val)
+      const val = (normalDiff * 3 + 1)
+      const limitPrefix=val.toFixed(1);
+      setCalcData(limitPrefix)
     }
   }, [data])
 
@@ -82,7 +83,7 @@ const GermanCgpaCalculator = () => {
           />
         </Form.Item>
         <Form.Item label="Here is your result">
-          <InputNumber className="text-black" placeholder="Result" disabled value={calcData} />
+          <InputNumber className="disabled disabled:text-black" placeholder="Result"  value={calcData} />
         </Form.Item>
       </Form>
 
@@ -164,7 +165,8 @@ const GermanECTSCalculator = () => {
     if (L && N && S && H) {
       const W = (L + S) * N
       const C = W / H
-      setEctsData(C)
+      const val=C.toFixed(1);
+      setEctsData(val)
     }
   }
 
@@ -209,7 +211,7 @@ const GermanECTSCalculator = () => {
           />
         </Form.Item>
         <Form.Item label="Here is your result">
-          <InputNumber placeholder="Result" className="text-black" disabled value={ectsData} />
+          <InputNumber placeholder="Result" className="disabled disabled:text-black"   value={ectsData} />
         </Form.Item>
       </Form>
     </div>
