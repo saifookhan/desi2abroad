@@ -210,8 +210,8 @@ const GermanECTSCalculator = () => {
             placeholder="E.g 4"
           />
         </Form.Item>
-        <Form.Item label="Here is your result">
-          <InputNumber placeholder="Result" className="disabled disabled:text-black"   value={ectsData} />
+        <Form.Item label="Here is your result" >
+          <InputNumber placeholder="Result" className="disabled disabled:text-black "   value={ectsData} />
         </Form.Item>
       </Form>
     </div>
