@@ -1,4 +1,4 @@
-import { db, dbRef } from 'app/germany-new/firebaseConfig'
+import { db, dbRef } from 'app/germany/firebaseConfig'
 import { child, get, goOffline } from 'firebase/database'
 import * as XLSX from 'xlsx'
 

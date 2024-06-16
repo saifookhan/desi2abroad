@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
           </div>
 
-          <SectionContainer backgroundStyle={'gradientDark'}>
+          <SectionContainer backgroundStyle={'white'}>
             <div
               className="flex h-full flex-col justify-between font-sans"
               style={{ height: '100%' }}

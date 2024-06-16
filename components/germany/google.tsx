@@ -1,4 +1,4 @@
-import { auth } from 'app/germany-new/firebaseConfig'
+import { auth } from 'app/germany/firebaseConfig'
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'firebase/auth'
 
 export const signInWithGoogle = () => {
