@@ -17,6 +17,7 @@ export const NodeBackgroundColors = {
 export type WrapperCollapsableStudyNode = NodeProps & {
   data: {
     label: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     descriptionHTML?: ReactElement<any, any>
     style?: { alignContent?: 'center'; backgroundColor?: typeof NodeBackgroundColors }
     videos?: { embedId: 'string' }[]

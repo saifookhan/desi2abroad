@@ -45,6 +45,7 @@ const Flow = () => {
       return { ...xNode }
     })
     setMyNodes(zIndex)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentExpanded])
 
   const screenSize = useScreenSize()
