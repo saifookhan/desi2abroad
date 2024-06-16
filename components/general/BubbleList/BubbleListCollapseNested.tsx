@@ -3,7 +3,7 @@ import { Collapse } from 'antd'
 const { Panel } = Collapse
 
 const BubbleListCollapseNested = ({ studyPrograms }) => {
-  studyPrograms = Object.keys(studyPrograms).map((key) => studyPrograms[key])
+  studyPrograms = [] //Object.keys(studyPrograms).map((key) => studyPrograms[key])
 
   return (
     <>

@@ -44,7 +44,7 @@ async function getDataFromFirebaseDatabase() {
 
   const result = await get(child(dbRef, `/`)).then((snapshot) => {
     if (snapshot.exists()) {
-      goOffline(db)
+      // goOffline(db)
 
       return snapshot.val()
     } else {

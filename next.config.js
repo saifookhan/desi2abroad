@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -84,6 +84,6 @@ module.exports = (phase, { defaultConfig }) => {
   })
   return {
     ...plugins,
-    staticPageGenerationTimeout: 1000, // Timeout in seconds
+    // staticPageGenerationTimeout: 1000, // Timeout in seconds
   }
 }
