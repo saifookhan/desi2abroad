@@ -15,7 +15,7 @@ const categories: HomepageCateogries[] = [
     subChapters: [
       {
         title: 'Study Flow: (Masters)',
-        path: '/germany',
+        path: '/germany-new',
         status: 'new',
       },
       {
