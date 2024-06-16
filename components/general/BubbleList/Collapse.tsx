@@ -49,7 +49,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
 
   return (
     <>
-      <Collapse className="w-full mt-0 py-0 lg:w-[60%]" defaultActiveKey={['1']}>
+      <Collapse className="w-full mt-0 py-0" defaultActiveKey={['1']}>
         {data.map((topicGroup, index) => {
           if (index != 0) {
             return (
@@ -73,7 +73,8 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         <p>
                           <strong>Video Link:</strong>{' '}
                           {youtubeUrlToEmbedUrl(topic.F).map((convertedUrl, key) => (
-                            <iframe className='bg-black w-full h-[400px] my-4'
+                            <iframe
+                              className="bg-black w-full h-[400px] my-4"
                               key={key}
                               src={convertedUrl}
                               sandbox="allow-scripts allow-same-origin"

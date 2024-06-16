@@ -1,7 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-import { getDatabase } from 'firebase/database';
+import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import { getDatabase, ref, goOffline } from 'firebase/database'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCVwCEWiqqWeZ-MOVy4w72mD6PDxzEjvJ8',
@@ -12,12 +11,11 @@ const firebaseConfig = {
   messagingSenderId: '120248603952',
   appId: '1:120248603952:web:1a7ede86f3c13748d7e4f5',
   measurementId: 'G-8DDJZ8QDD1',
-};
+}
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
+const auth = getAuth()
+const db = getDatabase(app)
+const dbRef = ref(db)
 
-const auth = getAuth();
-const db = getDatabase(app);
-
-
-export { db, auth };
+export { db, auth, dbRef, goOffline }

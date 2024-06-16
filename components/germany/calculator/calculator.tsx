@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { InputNumber, Form } from 'antd'
+import Image from '../../Image'
 
 const GermanCgpaCalculator = () => {
   const [form] = Form.useForm()
@@ -38,9 +39,9 @@ const GermanCgpaCalculator = () => {
     if (max_gpa && min_gpa && c_gpa) {
       const gpaDiff = max_gpa - c_gpa
       const normalDiff = gpaDiff / (max_gpa - min_gpa)
-      const val = (normalDiff * 3 + 1)
-      const limitPrefix=val.toFixed(1);
-      setCalcData(limitPrefix)
+      const val = Number(normalDiff * 3 + 1)
+      const limitPrefix = val.toFixed(1)
+      setCalcData(Number(limitPrefix))
     }
   }, [data])
 
@@ -83,7 +84,11 @@ const GermanCgpaCalculator = () => {
           />
         </Form.Item>
         <Form.Item label="Here is your result">
-          <InputNumber className="disabled disabled:text-black" placeholder="Result"  value={calcData} />
+          <InputNumber
+            className="disabled disabled:text-black"
+            placeholder="Result"
+            value={calcData}
+          />
         </Form.Item>
       </Form>
 
@@ -127,10 +132,12 @@ const GermanCgpaCalculator = () => {
           </tr>
         </tbody>
       </table>
-      <img
-        className="w-[60%] object-contain"
-        src="/static/images/gps_formula.jpg"
-        alt="GPS formula"
+      <Image
+        className={'w-[60%] object-contain'}
+        src={'/static/images/gps_formula.jpg'}
+        alt={'GPS formula'}
+        width={100}
+        height={100}
       />
     </div>
   )
@@ -165,7 +172,7 @@ const GermanECTSCalculator = () => {
     if (L && N && S && H) {
       const W = (L + S) * N
       const C = W / H
-      const val=C.toFixed(1);
+      const val = Number(C.toFixed(1))
       setEctsData(val)
     }
   }
@@ -210,8 +217,12 @@ const GermanECTSCalculator = () => {
             placeholder="E.g 4"
           />
         </Form.Item>
-        <Form.Item label="Here is your result" >
-          <InputNumber placeholder="Result" className="disabled disabled:text-black "   value={ectsData} />
+        <Form.Item label="Here is your result">
+          <InputNumber
+            placeholder="Result"
+            className="disabled disabled:text-black "
+            value={ectsData}
+          />
         </Form.Item>
       </Form>
     </div>

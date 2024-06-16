@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import PageHeader from '@/components/general/page/PageHeader';
-import SectionContainer from '@/components/SectionContainer';
-import BubbleListCollapse from '@/components/general/BubbleList/Collapse';
-import CalcCollapse from '@/components/germany/calculator/calcCollapse';
-import { getGermanyDataFromExcelSheet } from '@/data/fetch/germany';
-import CollapseCover from '@/components/germany/collapseCover';
-import { db } from './firebaseConfig';
-import { getDatabase, ref, onValue } from 'firebase/database';
+import React from 'react'
+import PageHeader from '@/components/general/page/PageHeader'
+import SectionContainer from '@/components/SectionContainer'
+import CollapseCover from '@/components/germany/collapseCover'
+import {
+  GOOGLE_SHEET_ID,
+  getDataFromFirebaseDatabase,
+  getGermanyDataFromExcelSheet,
+} from '@/data/fetch/germany'
 
-const App: React.FC =async () => {
-
-
-
-  
+const App: React.FC = async () => {
   const germanyData = await getGermanyDataFromExcelSheet()
   const stringifiedData = JSON.stringify(germanyData)
 
-
+  const dataFromDatabase = await getDataFromFirebaseDatabase().then((val) => {
+    return val[GOOGLE_SHEET_ID]
+  })
 
   return (
     <>
@@ -28,12 +26,11 @@ const App: React.FC =async () => {
         />
         <br />
         <SectionContainer backgroundStyle="white">
-            
-            {/* <BubbleListCollapse stringifiedData={stringifiedData}></BubbleListCollapse>
-            <CalcCollapse></CalcCollapse> */}
-            <CollapseCover stringifiedData={stringifiedData}></CollapseCover>
-             
-        
+          <CollapseCover
+            studyPrograms={dataFromDatabase.ProgramsList}
+            resources={dataFromDatabase.Resources}
+            stringifiedData={stringifiedData}
+          ></CollapseCover>
         </SectionContainer>
       </div>
     </>

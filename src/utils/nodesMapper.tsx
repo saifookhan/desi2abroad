@@ -10,6 +10,7 @@ function positionCalculator(nodes: StudyParentNode[] | CollapsableStudyNode[]) {
   return calculatedNodes
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function nodesMapper(nodes: StudyParentNode[]): Node<any, string | undefined>[] | undefined {
   const parentNodes = positionCalculator(nodes)
 

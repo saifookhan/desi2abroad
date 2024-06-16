@@ -1,7 +1,9 @@
+import { db, dbRef } from 'app/germany-new/firebaseConfig'
+import { child, get, goOffline } from 'firebase/database'
 import * as XLSX from 'xlsx'
 
-const GOOGLE_SHEET_URL =
-  'https://docs.google.com/spreadsheets/d/1hBI5WUxiwG06kncYRV7qhQcO52GqX5qYfup_zfBtN6Q/edit#gid=0'
+export const GOOGLE_SHEET_ID = '1hBI5WUxiwG06kncYRV7qhQcO52GqX5qYfup_zfBtN6Q'
+const GOOGLE_SHEET_URL = `https://docs.google.com/spreadsheets/d/${GOOGLE_SHEET_ID}/edit#gid=0`
 
 async function getGermanyDataFromExcelSheet() {
   'use server'
@@ -37,4 +39,19 @@ async function getGermanyDataFromExcelSheet() {
   }
 }
 
-export { getGermanyDataFromExcelSheet }
+async function getDataFromFirebaseDatabase() {
+  'use server'
+
+  const result = await get(child(dbRef, `/`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      goOffline(db)
+
+      return snapshot.val()
+    } else {
+      console.log('No data available')
+    }
+  })
+  return result
+}
+
+export { getGermanyDataFromExcelSheet, getDataFromFirebaseDatabase }

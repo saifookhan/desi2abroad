@@ -25,7 +25,7 @@ const nodeTypes = {
   detachedNode: DetachedNode,
 }
 
-  const Flow = () => {
+const Flow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(germanyNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState(germanyEdges)
 
