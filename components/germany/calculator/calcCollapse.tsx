@@ -9,8 +9,8 @@ const CalcCollapse = () => {
   return (
     <>
       <div className="calc_container h-auto w-full mb-4 lg:mb-0 lg:mx-6">
-        <Collapse defaultActiveKey={['00']}>
-          <Panel header="GPA CALCULATOR" key="00">
+        <Collapse className="w-full" defaultActiveKey={['03']}>
+          <Panel header="CGPA CALCULATOR" key="00">
             <div className="h-auto">
               <GermanCgpaCalculator />
             </div>

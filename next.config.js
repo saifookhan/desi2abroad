@@ -50,7 +50,7 @@ const securityHeaders = [
 
 module.exports = (phase, { defaultConfig }) => {
   let plugins = [withContentlayer, withBundleAnalyzer]
-  plugins.reduce((acc, next) => next(acc), {
+  return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
@@ -82,8 +82,4 @@ module.exports = (phase, { defaultConfig }) => {
       return config
     },
   })
-  return {
-    ...plugins,
-    // staticPageGenerationTimeout: 1000, // Timeout in seconds
-  }
 }
