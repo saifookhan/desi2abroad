@@ -4,6 +4,7 @@ import { Collapse } from 'antd'
 const { Panel } = Collapse
 
 const BubbleListCollapse = ({ stringifiedData }) => {
+
   const data = JSON.parse(stringifiedData)
   const mainColor = [
     'bg-amber-200',
