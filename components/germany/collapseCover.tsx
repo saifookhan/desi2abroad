@@ -10,6 +10,9 @@ import Title from 'antd/es/typography/Title'
 import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNested'
 
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
+ if(studyPrograms){
+  console.log(studyPrograms)
+ }
   return (
     <>
       <div className="flex flex-col-reverse mt-2 py-6 lg:flex-row">
@@ -17,7 +20,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
           click
         </button> */}
 
-        <div className="grid grid-flow-row">
+        <div className="grid grid-flow-row w-full lg:w-[70%]">
           <div className="pt-5">
             <Title level={3}>List of Field-wise Programs and Unis</Title>
             <BubbleListCollapseNested studyPrograms={studyPrograms} />
@@ -31,7 +34,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
             <BubbleListCollapseFlat data={resources} />
           </div>
         </div>
-        <div>
+        <div className='w-full lg:w-[30%]'>
           <CalcCollapse />
         </div>
         {/* <Switch onChange={changer} /> */}

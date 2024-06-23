@@ -24,6 +24,14 @@ const socialChannels = [
         type: 'Whatsapp',
         link: 'https://chat.whatsapp.com/J6WeoQ4kSlF4k6WoYcm81w',
       },
+      {
+        image: whatsappIcon,
+        imageAlt: 'Learn Daily German 🇩🇪',
+        title: 'Learn Daily German 🇩🇪',
+        subTitle: '510 members',
+        type: 'Whatsapp',
+        link: 'https://chat.whatsapp.com/Cmq0jMYcLLEI9DrfEmTPGc',
+      },
     ],
   },
   {
