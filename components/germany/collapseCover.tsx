@@ -13,6 +13,7 @@ import dynamic from 'next/dynamic'
 
 
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
+<<<<<<< HEAD
   const [toggle,setToggle]=useState(false)
 
 
@@ -22,6 +23,10 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
 
   var changer=()=>{
     setToggle(!toggle)
+=======
+  if (studyPrograms) {
+    console.log(studyPrograms)
+>>>>>>> fa7b80523435bff69bd8aeb9d0d0de4333d95d8b
   }
   return (
     <>
@@ -51,7 +56,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
             <BubbleListCollapseFlat data={resources} />
           </div>
         </div>
-        <div className='w-full lg:w-[30%]'>
+        <div className="w-full lg:w-[30%]">
           <CalcCollapse />
         </div>
         {/* <Switch onChange={changer} /> */}
