@@ -22,6 +22,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
 
   var changer=()=>{
     setToggle(!toggle)
+  }
   if (studyPrograms) {
     console.log(studyPrograms)
   }
