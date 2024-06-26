@@ -2,17 +2,27 @@
 
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import CalcCollapse from './calculator/calcCollapse'
 import BubbleListCollapse from '../general/BubbleList/Collapse'
 import BubbleListCollapseFlat from '../general/BubbleList/BubbleListCollapseFlat'
 import Title from 'antd/es/typography/Title'
 import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNested'
+import { Switch } from 'antd'
+import dynamic from 'next/dynamic'
+
 
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
- if(studyPrograms){
-  console.log(studyPrograms)
- }
+  const [toggle,setToggle]=useState(false)
+
+
+  const Flow = dynamic(() => import('./Roadmap'), {
+    ssr: false,
+  })
+
+  var changer=()=>{
+    setToggle(!toggle)
+  }
   return (
     <>
       <div className="flex flex-col-reverse mt-2 py-6 lg:flex-row">
@@ -22,8 +32,15 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
 
         <div className="grid grid-flow-row w-full lg:w-[70%]">
           <div className="pt-5">
-            <Title level={3}>List of Field-wise Programs and Unis</Title>
-            <BubbleListCollapseNested studyPrograms={studyPrograms} />
+            <div className='flex flex-row justify-between '>
+            <Title level={3}>{toggle===false?"List of Field-wise Programs and Unis":"RoadMap"}</Title>
+            <Switch onChange={changer}/>
+            </div>
+            {
+              toggle===false? <BubbleListCollapseNested studyPrograms={studyPrograms} />:  <Flow/>
+            }
+           
+          
           </div>
           <div className="pt-5">
             <Title level={3}>Detailed Steps</Title>
