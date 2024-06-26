@@ -11,16 +11,14 @@ import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNe
 import { Switch } from 'antd'
 import dynamic from 'next/dynamic'
 
-
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
-  const [toggle,setToggle]=useState(false)
-
+  const [toggle, setToggle] = useState(false)
 
   const Flow = dynamic(() => import('./Roadmap'), {
     ssr: false,
   })
 
-  var changer=()=>{
+  var changer = () => {
     setToggle(!toggle)
   }
   if (studyPrograms) {
@@ -34,16 +32,18 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
         </button> */}
 
         <div className="grid grid-flow-row w-full lg:w-[70%]">
-          <div className="pt-5">
-            <div className='flex flex-row justify-between '>
-            <Title level={3}>{toggle===false?"List of Field-wise Programs and Unis":"RoadMap"}</Title>
-            <Switch onChange={changer}/>
+          <div className="pt-5 w-[95%] lg:w-full">
+            <div className="flex flex-row justify-between ">
+              <Title level={3} className="w-[80%]">
+                {toggle === false ? 'List of Field-wise Programs and Unis' : 'RoadMap'}
+              </Title>
+              <Switch onChange={changer} />
             </div>
-            {
-              toggle===false? <BubbleListCollapseNested studyPrograms={studyPrograms} />:  <Flow/>
-            }
-           
-          
+            {toggle === false ? (
+              <BubbleListCollapseNested studyPrograms={studyPrograms} />
+            ) : (
+              <Flow />
+            )}
           </div>
           <div className="pt-5">
             <Title level={3}>Detailed Steps</Title>
