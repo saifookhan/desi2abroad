@@ -5,6 +5,7 @@ const { Panel } = Collapse
 
 const BubbleListCollapse = ({ stringifiedData }) => {
   const data = JSON.parse(stringifiedData)
+  const activeKey=['1','2','3','4','5','6']
   const mainColor = [
     'bg-amber-200',
     'bg-amber-200',
@@ -49,16 +50,27 @@ const BubbleListCollapse = ({ stringifiedData }) => {
 
   return (
     <>
-      <Collapse className="w-full mt-0 py-0" defaultActiveKey={['1']}>
+      <Collapse className="w-full mt-0 py-0" defaultActiveKey={activeKey}>
         {data.map((topicGroup, index) => {
+      
+      
+          const spliter=topicGroup[0].B.split(' ');
+          const id =spliter.join('-')
+      
+      
+     
+      console.log(id)
+      
           if (index != 0) {
             return (
               <Panel
                 className={`w-full ${mainColor[index - 1]}`}
                 header={topicGroup[0].B}
                 key={index}
+                id={id}
+             
               >
-                <Collapse size="small">
+                <Collapse size="small" >
                   {topicGroup.map((topic, subIndex) => (
                     <Panel
                       className={`w-full ${subColor[index - 1]}`}

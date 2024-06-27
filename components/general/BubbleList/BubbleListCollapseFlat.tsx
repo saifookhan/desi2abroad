@@ -8,7 +8,7 @@ const BubbleListCollapseFlat = ({ data }) => {
 
   return (
     <>
-      <Collapse className="w-full mt-0 py-0"  defaultActiveKey={['1']}>
+      <Collapse className="w-full mt-0 py-0" >
         <Panel header="Resources By Group Members" key="1">
           <List
             size="small"
