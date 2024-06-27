@@ -26,7 +26,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
   }
   return (
     <>
-      <div className="flex flex-col-reverse py-8 justify-between lg:flex-row">
+      <div className="flex flex-col-reverse py-8 justify-around w-full lg:flex-row">
         {/* <button className="border-4 text-black h-[10%]" onClick={login}>
           click
         </button> */}
@@ -34,7 +34,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
         <div className=" w-full lg:w-[65%]">
           <div className="pt-5 w-[95%] lg:w-full">
 
-              <Title level={3} className="w-[80%]">
+              <Title level={3}>
              List of Field-wise Programs and Unis
               </Title>
    
