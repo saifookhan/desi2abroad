@@ -11,6 +11,7 @@ import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNe
 import { Switch } from 'antd'
 import dynamic from 'next/dynamic'
 
+
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
   const [toggle, setToggle] = useState(false)
 
