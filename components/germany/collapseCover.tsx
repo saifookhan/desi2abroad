@@ -11,6 +11,7 @@ import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNe
 import { Switch } from 'antd'
 import dynamic from 'next/dynamic'
 
+
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
   const [toggle, setToggle] = useState(false)
 
@@ -26,30 +27,38 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
   }
   return (
     <>
-      <div className="flex flex-col-reverse mt-2 py-6 lg:flex-row">
+      <div className="flex flex-col-reverse py-8 justify-around w-full lg:flex-row">
         {/* <button className="border-4 text-black h-[10%]" onClick={login}>
           click
         </button> */}
 
-        <div className="grid grid-flow-row w-full lg:w-[70%]">
+        <div className=" w-full lg:w-[65%]">
           <div className="pt-5 w-[95%] lg:w-full">
-            <div className="flex flex-row justify-between ">
+
+              <Title level={3}>
+             List of Field-wise Programs and Unis
+              </Title>
+   
+         
+              <BubbleListCollapseNested studyPrograms={studyPrograms} />
+          
+          </div>
+          <div className="pt-5" >
+          <div className="flex flex-row justify-between ">
               <Title level={3} className="w-[80%]">
-                {toggle === false ? 'List of Field-wise Programs and Unis' : 'RoadMap'}
+                {toggle === false ? 'Detailed Steps' : 'RoadMap'}
               </Title>
               <Switch onChange={changer} />
             </div>
+            {/* <Title level={3}>Detailed Steps</Title> */}
+            {/* <BubbleListCollapse stringifiedData={stringifiedData} /> */}
             {toggle === false ? (
-              <BubbleListCollapseNested studyPrograms={studyPrograms} />
+  <BubbleListCollapse stringifiedData={stringifiedData} />
             ) : (
               <Flow />
             )}
           </div>
-          <div className="pt-5">
-            <Title level={3}>Detailed Steps</Title>
-            <BubbleListCollapse stringifiedData={stringifiedData} />
-          </div>
-          <div className="pt-5">
+          <div className="pt-5" id='aashir'>
             <Title level={3}>Resources</Title>
             <BubbleListCollapseFlat data={resources} />
           </div>
