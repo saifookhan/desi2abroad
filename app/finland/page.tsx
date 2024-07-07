@@ -1,6 +1,9 @@
+'use client'
+
 import SectionContainer from 'components/SectionContainer'
 import PageHeader from '@/components/general/page/PageHeader'
 import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
+import { signInWithGoogle } from '@/components/germany/google'
 
 //TODO:: fill meta
 // export const metadata = genPageMetadata({ title: 'Blog' })
@@ -21,6 +24,9 @@ export default function BlogPage() {
         headerColor="white"
       />
       <br />
+      <button className="border-4 text-white h-[10%]" onClick={signInWithGoogle}>
+        click
+      </button>
       <SectionContainer backgroundStyle="lightGrey">
         <div className="pt-8 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
