@@ -6,6 +6,7 @@ import Image from 'next/image'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import { message } from 'antd'
 
 const Header = () => {
   return (

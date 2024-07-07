@@ -39,12 +39,13 @@ async function getGermanyDataFromExcelSheet() {
   }
 }
 
+//TODO:: Remove the comments
 async function getDataFromFirebaseDatabase() {
-  'use server'
+  // 'use server'
 
   const result = await get(child(dbRef, `/`)).then((snapshot) => {
     if (snapshot.exists()) {
-      setTimeout(() => goOffline(db), 300)
+      //setTimeout(() => goOffline(db), 300)
 
       return snapshot.val()
     } else {
