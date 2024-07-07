@@ -1,7 +1,6 @@
 import { auth } from 'app/germany/firebaseConfig'
 import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged } from 'firebase/auth'
 
-
 export const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider()
   signInWithRedirect(auth, provider)

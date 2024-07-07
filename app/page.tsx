@@ -8,8 +8,8 @@ import SectionContainer, { backgroundStyles } from 'components/SectionContainer'
 import BubbleList from '@/components/general/BubbleList/BubbleList'
 import { HomepageCateogries } from 'src/types/types'
 import ArticlesList from '@/components/general/blog/ArticlesList'
-import { getToken } from 'firebase/messaging'
-import { messaging } from './germany/firebaseConfig'
+// import { getToken } from 'firebase/messaging'
+// import { messaging } from './germany/firebaseConfig'
 
 const categories: HomepageCateogries[] = [
   {
@@ -71,32 +71,29 @@ const categories: HomepageCateogries[] = [
   },
 ]
 
-
-
 function HomePage() {
-     const vapidKey =
-       'BM30735VL-jSroyNpu1VBTbDHj9al14_-LJgNqQyhxiO2fpk8gD0asFUuces7rHy9fuphRa7xolVYp0WKT8vMAU'
+  // TODO:: Aashir commented for build
+  // const vapidKey =
+  //   'BM30735VL-jSroyNpu1VBTbDHj9al14_-LJgNqQyhxiO2fpk8gD0asFUuces7rHy9fuphRa7xolVYp0WKT8vMAU'
 
-     useEffect(() => {
-     
-
-       async function permit() {
-         const permission = await Notification.requestPermission()
-         if (permission !== 'granted') {
-           message.warning('You have denied the permissions')
-           return
-         }
-         try {
-           const token = await getToken(messaging, {
-             vapidKey: vapidKey,
-           })
-           console.log('FCM Token:', token)
-         } catch (error) {
-           console.error('Error getting FCM token:', error)
-         }
-       }
-       permit()
-     }, [])
+  // useEffect(() => {
+  //   async function permit() {
+  //     const permission = await Notification.requestPermission()
+  //     if (permission !== 'granted') {
+  //       message.warning('You have denied the permissions')
+  //       return
+  //     }
+  //     try {
+  //       const token = await getToken(messaging, {
+  //         vapidKey: vapidKey,
+  //       })
+  //       console.log('FCM Token:', token)
+  //     } catch (error) {
+  //       console.error('Error getting FCM token:', error)
+  //     }
+  //   }
+  //   permit()
+  // }, [])
   return (
     <ConfigProvider theme={theme}>
       <SectionContainer backgroundStyle={'lightGrey'}>

@@ -47,6 +47,10 @@ const Flow = () => {
     setMyNodes(zIndex)
   }, [currentExpanded])
 
+  const memoizedNodes = useMemo(
+    () => myNodes?.concat(extraGermanyNodes),
+    [myNodes, extraGermanyNodes]
+  )
   const screenSize = useScreenSize()
   if (screenSize.mobileView === undefined) {
     return null
@@ -59,11 +63,6 @@ const Flow = () => {
     : {
         minViewHeight: 1200,
       }
-
-  const memoizedNodes = useMemo(
-    () => myNodes?.concat(extraGermanyNodes),
-    [myNodes, extraGermanyNodes]
-  )
 
   return (
     <div style={{ height: displaySize.minViewHeight }}>
