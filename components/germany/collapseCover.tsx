@@ -11,7 +11,6 @@ import BubbleListCollapseNested from '../general/BubbleList/BubbleListCollapseNe
 import { Switch } from 'antd'
 import dynamic from 'next/dynamic'
 
-
 const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
   const [toggle, setToggle] = useState(false)
 
@@ -23,7 +22,7 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
     setToggle(!toggle)
   }
   if (studyPrograms) {
-    console.log(studyPrograms)
+    // console.log(studyPrograms)
   }
   return (
     <>
@@ -34,17 +33,12 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
 
         <div className=" w-full lg:w-[65%]">
           <div className="pt-5 w-[95%] lg:w-full">
+            <Title level={3}>List of Field-wise Programs and Unis</Title>
 
-              <Title level={3}>
-             List of Field-wise Programs and Unis
-              </Title>
-   
-         
-              <BubbleListCollapseNested studyPrograms={studyPrograms} />
-          
+            <BubbleListCollapseNested studyPrograms={studyPrograms} />
           </div>
-          <div className="pt-5" >
-          <div className="flex flex-row justify-between ">
+          <div className="pt-5">
+            <div className="flex flex-row justify-between ">
               <Title level={3} className="w-[80%]">
                 {toggle === false ? 'Detailed Steps' : 'RoadMap'}
               </Title>
@@ -52,13 +46,9 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
             </div>
             {/* <Title level={3}>Detailed Steps</Title> */}
             {/* <BubbleListCollapse stringifiedData={stringifiedData} /> */}
-            {toggle === false ? (
-  <BubbleListCollapse stringifiedData={stringifiedData} />
-            ) : (
-              <Flow />
-            )}
+            {toggle === false ? <BubbleListCollapse stringifiedData={stringifiedData} /> : <Flow />}
           </div>
-          <div className="pt-5" id='aashir'>
+          <div className="pt-5" id="aashir">
             <Title level={3}>Resources</Title>
             <BubbleListCollapseFlat data={resources} />
           </div>

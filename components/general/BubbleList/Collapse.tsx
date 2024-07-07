@@ -1,15 +1,13 @@
 'use client'
-import { Collapse, message,Button } from 'antd'
-import { useEffect } from 'react';
-import { TiArrowForward } from "react-icons/ti";
-import { Alert } from 'antd'
+import { Collapse, message, Button } from 'antd'
+import { TiArrowForward } from 'react-icons/ti'
 
 const { Panel } = Collapse
 
 const BubbleListCollapse = ({ stringifiedData }) => {
   const data = JSON.parse(stringifiedData)
-   const [messageApi, contextHolder] = message.useMessage()
-  const activeKey=['1','2','3','4','5','6']
+  const [messageApi, contextHolder] = message.useMessage()
+  const activeKey = ['1', '2', '3', '4', '5', '6']
   const mainColor = [
     'bg-amber-200',
     'bg-amber-200',
@@ -52,8 +50,6 @@ const BubbleListCollapse = ({ stringifiedData }) => {
     return [urls]
   }
 
-
-
   return (
     <>
       <Collapse className="w-full mt-0 py-0" defaultActiveKey={activeKey}>
@@ -64,27 +60,18 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                 className={`w-full ${mainColor[index - 1]}`}
                 header={topicGroup[0].B}
                 key={index}
-             
               >
-                <Collapse size="small" >
+                <Collapse size="small">
                   {topicGroup.map((topic, subIndex) => {
-
-                      const spliter=topic.C.split(' ');
-                      const id =spliter.join('-')
-                      const copyLink=()=>{
-                     var clipboard=   navigator.clipboard
-                          .writeText(`https://desi2abroad.com/germany/#${id}`)
-                          .then(
-                           
-                          ()=>{     
-                                message.success("Coppied SuccessFully")
-                          }
-                            
-                          )
-                      }
-                  
-                 
-                  console.log(id)
+                    const spliter = topic.C.split(' ')
+                    const id = spliter.join('-')
+                    const copyLink = () => {
+                      navigator.clipboard
+                        .writeText(`https://desi2abroad.com/germany/#${id}`)
+                        .then(() => {
+                          message.success('Copied SuccessFully')
+                        })
+                    }
                     const headerData = (
                       <div className="w-full flex justify-between">
                         {topic.C} {topic.F ? '🎥' : ''}{' '}
@@ -100,7 +87,6 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         key={`0${subIndex}`}
                         id={id}
                       >
-
                         <div>
                           <div dangerouslySetInnerHTML={{ __html: topic.E }} />
                         </div>
