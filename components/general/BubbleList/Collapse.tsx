@@ -94,6 +94,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                     const copyLink = (e) => {
                       e.stopPropagation()
                       navigator.clipboard
+                        // TODO:: Asashir will fix this
                         .writeText(`http://localhost:3000/germany/#${id}`)
                         .then(() => {
                           message.success('Copied Successfully')

@@ -18,6 +18,6 @@ const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 const db = getDatabase(app)
 const dbRef = ref(db)
-const messaging = getMessaging(app)
+// const messaging = getMessaging(app)
 
-export { db, auth, dbRef, goOffline, messaging }
+export { db, auth, dbRef, goOffline }
