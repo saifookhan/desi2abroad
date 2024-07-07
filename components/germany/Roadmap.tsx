@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState, useMemo } from 'react'
 import ReactFlow, {
   useNodesState,
   useEdgesState,
@@ -45,7 +45,6 @@ const Flow = () => {
       return { ...xNode }
     })
     setMyNodes(zIndex)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentExpanded])
 
   const screenSize = useScreenSize()
@@ -53,8 +52,6 @@ const Flow = () => {
     return null
   }
 
-  //TODO:: fix the server vs client size issue
-  //TODO:: Hide reactflow stamp
   const displaySize = screenSize.mobileView
     ? {
         minViewHeight: 500,
@@ -62,12 +59,16 @@ const Flow = () => {
     : {
         minViewHeight: 1200,
       }
-  nodesMapper(germanyNodes)
+
+  const memoizedNodes = useMemo(
+    () => myNodes?.concat(extraGermanyNodes),
+    [myNodes, extraGermanyNodes]
+  )
 
   return (
     <div style={{ height: displaySize.minViewHeight }}>
       <ReactFlow
-        nodes={myNodes?.concat(extraGermanyNodes)}
+        nodes={memoizedNodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
@@ -77,7 +78,6 @@ const Flow = () => {
         snapToGrid
         className="bg-grey-500"
         nodesDraggable={false}
-        // defaultViewport={zoom: }
         minZoom={0.35}
         translateExtent={[
           [-800, -300],

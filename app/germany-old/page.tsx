@@ -5,6 +5,7 @@ import { genPageMetadata } from 'app/seo'
 import SectionContainer from 'components/SectionContainer'
 import DisqusComments from 'components/general/Disqus/disqus'
 import dynamic from 'next/dynamic'
+import FlowWithProvider from 'components/germany/Roadmap'
 
 //TODO:: fill meta
 export const metadata = genPageMetadata({ title: 'Blog' })
