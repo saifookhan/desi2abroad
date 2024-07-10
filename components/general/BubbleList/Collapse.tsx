@@ -95,7 +95,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                       e.stopPropagation()
                       navigator.clipboard
                         // TODO:: Asashir will fix this
-                        .writeText(`http://localhost:3000/germany/#${id}`)
+                        .writeText(`https://desi2abroad.com/germany#${id}`)
                         .then(() => {
                           message.success('Copied Successfully')
                         })

@@ -6,13 +6,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval'  https://www.googletagmanager.com https://va.vercel-scripts.com https://www.clarity.ms;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com va.vercel-scripts.com www.clarity.ms apis.google.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app www.youtube.com www.facebook.com;
+  frame-src giscus.app www.youtube.com www.facebook.com www.desi2abroad-com.firebaseapp.com/;
 `
 
 const securityHeaders = [
