@@ -1,10 +1,10 @@
 import { auth } from 'app/germany/firebaseConfig'
-import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged } from 'firebase/auth'
+import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged, signInWithPopup } from 'firebase/auth'
 
 
 export const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider()
-  signInWithRedirect(auth, provider)
+  signInWithPopup(auth, provider)
     .then((result) => {
       console.log('sign inned')
       console.log(result)
