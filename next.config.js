@@ -6,7 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com va.vercel-scripts.com www.clarity.ms apis.google.com;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com api.google.com va.vercel-scripts.com www.clarity.ms apis.google.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
