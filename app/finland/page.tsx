@@ -14,6 +14,9 @@ const videosList = [
     embedId: 'cw_NLA_DXXM',
   },
 ]
+if(process.env.test){
+  console.log(process.env.test || 'faflse')
+}
 
 export default function BlogPage() {
   return (
