@@ -1,7 +1,9 @@
+'use client'
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getDatabase, ref, goOffline } from 'firebase/database'
 import { getMessaging } from 'firebase/messaging'
+import { getFirestore } from 'firebase/firestore'
 
 
 const firebaseConfig = {
@@ -17,8 +19,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
+const firestoreDB=getFirestore(app);
 const db = getDatabase(app)
 const dbRef = ref(db)
 // const messaging = getMessaging(app)
 
-export { db, auth, dbRef, goOffline }
+export { db, auth, dbRef, goOffline,firestoreDB }
