@@ -45,6 +45,11 @@ const Header = () => {
         {/* <ThemeSwitch /> */}
         <MobileNav />
       </div>
+      <div>
+        <button className="bg-white text-[#0F172A] hover:ring hover:ring-white hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
+          Buy Course Now
+        </button>
+      </div>
     </header>
   )
 }
