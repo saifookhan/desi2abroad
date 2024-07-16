@@ -6,15 +6,17 @@ import { getMessaging } from 'firebase/messaging'
 import { getFirestore } from 'firebase/firestore'
 
 
+
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_Key,
-  authDomain:  process.env.NEXT_PUBLIC_authDomain,
+  authDomain: process.env.NEXT_PUBLIC_authDomain,
   databaseURL: process.env.NEXT_PUBLIC_db_Url,
   projectId: process.env.NEXT_PUBLIC_project_Id,
-  storageBucket:process.env.NEXT_PUBLIC_storage_Bucket,
+  storageBucket: process.env.NEXT_PUBLIC_storage_Bucket,
   messagingSenderId: process.env.NEXT_PUBLIC_sender_Id,
   appId: process.env.NEXT_PUBLIC_app_Id,
   measurementId: process.env.NEXT_PUBLIC_measurement_Id,
+  signInFlow: 'popup',
 }
 
 const app = initializeApp(firebaseConfig)

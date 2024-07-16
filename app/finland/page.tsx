@@ -3,7 +3,7 @@
 import SectionContainer from 'components/SectionContainer'
 import PageHeader from '@/components/general/page/PageHeader'
 import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
-import { signInWithGoogle } from '@/components/germany/google'
+import Comment from '@/components/comment'
 
 
 //TODO:: fill meta
@@ -18,6 +18,9 @@ const videosList = [
 
 
 export default function BlogPage() {
+  
+ 
+  
   return (
     <>
       <PageHeader

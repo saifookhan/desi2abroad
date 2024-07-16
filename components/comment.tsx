@@ -1,79 +1,101 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Avatar, List, Button, Input } from 'antd'
-import { addDoc, collection, doc } from 'firebase/firestore'
+import { collection, addDoc, Timestamp, query, orderBy, onSnapshot } from 'firebase/firestore'
 import { firestoreDB } from 'app/germany/firebaseConfig'
+import { onAuthStateChanged ,signInWithPopup,GoogleAuthProvider} from 'firebase/auth'
+import { auth } from 'app/germany/firebaseConfig'
+
 
 const { Meta } = Card
 
 const Comment = () => {
-  const [inputValue, setInputValue] = useState({
-    title:'',
-    img:'',
-    desc:''
-  }) 
-
-  const data = [
-    { title: 'Ant Design Title 1' },
-    { title: 'Ant Design Title 2' },
-    { title: 'Ant Design Title 3' },
-    { title: 'Ant Design Title 4' },
-  ]
+  const [inputValue, setInputValue] = useState('')
+  const [comments, setComments] = useState([])
+  const [User,setUser]=useState({})
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setInputValue((prev) => ({ ...prev, [name]: value }))
+    const { value } = e.target
+    setInputValue(value)
   }
 
-  const db = async (title, img, text) => {
-    await addDoc(collection(firestoreDB, 'comment'), {
-      name: 'hamza',
-      img: 'https://api.dicebear.com/7.x/miniavs/svg?seed=1',
-      desc: text,
-    })
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if(User){
+      try {
+        await addDoc(collection(firestoreDB, 'comments'), {
+          name: User.displayName,
+          image: User.photoURL,
+          comment: inputValue,
+          completed: true,
+          created: Timestamp.now(),
+        })
+        setInputValue('')
+      } catch (err) {
+        alert(err)
+      }
+    }
+    else{
+          const provider= new GoogleAuthProvider()
+          signInWithPopup(auth,provider)
+    }
   }
- const handleSubmit = async () => {
-   try {
-     await db(inputValue.title, inputValue.img, inputValue.desc)
-     setInputValue({
-       title: '',
-       img: '',
-       desc: '',
-     })
-   } catch (err) {
-     console.error('Error adding document: ', err)
-   }
- }
+
+  useEffect(() => {
+    const q = query(collection(firestoreDB, 'comments'), orderBy('created', 'desc'))
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const data = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+      setComments(data)
+    })
+
+   
+    return () => unsubscribe()
+  }, [inputValue])
+
+  useEffect(
+    ()=>{
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setUser(user)         
+          
+        } else {
+          
+          console.log('User is signed out')
+        }
+      })
+    }
+  )
 
   return (
     <>
-      <Card className="w-full m-auto">
+      <Card className="w-full m-auto mt-8">
         <Meta
           className="flex"
-          avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
-          title="hamza"
+          avatar={<Avatar src={User.photoURL} />}
+          title={User.displayName}
         />
         <Input
           type="textarea"
           className="my-3"
           name="desc"
-          value={inputValue.desc}
+          value={inputValue}
           onChange={handleChange}
-        />{' '}
+        />
         <Button onClick={handleSubmit}>Submit</Button>
       </Card>
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={(item, index) => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={<Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`} />}
-              title={<a href="https://ant.design">{item.title}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+      <List itemLayout="horizontal" className='my-8'>
+        {comments.map((comment) => (
+          <List.Item key={comment.id}>
+            <Meta
+              avatar={<Avatar src={comment.image} />}
+              title={comment.name}
+              description={comment.comment}
             />
           </List.Item>
-        )}
-      />
+        ))}
+      </List>
     </>
   )
 }

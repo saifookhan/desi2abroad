@@ -1,13 +1,10 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 
-const Flow = () => {
-       const Flow = dynamic(() => import('../../../components/germany/Roadmap'), {
-         ssr: false,
-       })
+const FlowCover = () => {
+      
   return (
-    <Flow/>
+    <h1 className='text-center'>hello</h1>
   )
 }
 
-export default Flow
+export default FlowCover
