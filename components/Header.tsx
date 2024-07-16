@@ -11,7 +11,7 @@ import { message } from 'antd'
 const Header = () => {
 
   return (
-    <header className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex items-center justify-between py-10">
+    <header className="mx-auto  px-4 sm:px-6 flex bg-white items-center justify-around py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
@@ -20,7 +20,7 @@ const Header = () => {
               <Image src="/static/images/logo.png" height={30} width={30} alt="some" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="h-6 text-xl font-semibold sm:text-2xl text-white">
+              <div className="h-6 text-xl font-semibold sm:text-2xl text-black">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
@@ -36,7 +36,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100"
+              className="hidden sm:block font-medium text-gray-500 dark:text-gray-100"
             >
               {link.title}
             </Link>
@@ -46,7 +46,7 @@ const Header = () => {
         <MobileNav />
       </div>
       <div>
-        <button className="bg-white text-[#0F172A] hover:ring hover:ring-white hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
+        <button className="bg-[#FF7E84] text-white hover:ring hover:ring-[#FF7E84] hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent hidden lg:inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
           Buy Course Now
         </button>
       </div>
