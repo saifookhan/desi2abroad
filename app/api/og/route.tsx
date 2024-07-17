@@ -7,26 +7,28 @@ export const config = {
 }
 
 export async function GET(req: NextRequest) {
+  const {searchParams}=new URL(req.url)
+
+  const hasTitle = searchParams.has('title')
+  const hasDesc = searchParams.has('desc')
+  const hasImage = searchParams.has('image')
+  const title = hasTitle ? searchParams.get('title')?.slice(0, 100) : 'Frontend'
+  const desc = hasDesc
+    ? searchParams.get('desc')?.slice(0, 100)
+    : 'this is a dummy description thanks for reading'
+  const Image = hasImage
+    ? searchParams.get('image')?.slice(0, 100)
+    : 'https://desi2abroad.com/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&w=384&q=75'
   return new ImageResponse(
     (
-      <div
-        tw="flex w-full h-full flex-col justify-end bg-slate-200 items-stretch"
-        style={{
-          display:'flex',
-          backgroundImage:
-            'url(https://scastiel.dev/_next/image?url=%2Fposts%2Fcreate-og-images-for-your-blog-with-nextjs%2Fog-result-01.png&w=3840&q=75)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '1280 700',
-        }}
-      >
-        <div>
-          <img
-            src="https://desi2abroad.com/_next/image?url=%2Fstatic%2Fimages%2Flogo.png&w=64&q=75"
-            style={{ width: '100' }}
-          ></img>
+      <div tw="flex w-full h-[100vh] bg-white flex-col justify-end items-stretch">
+        <div tw="flex flex-col h-[30%] px-4">
+          <h1>{title}</h1>
+          <p>{desc}</p>
         </div>
-        <h1 style={{ position: 'absolute', top: '0' }}>hello</h1>
+        <div tw="flex h-[70%] overflow-hidden">
+          <img tw='h-full w-full ' src={Image}></img>
+        </div>
       </div>
     ),
     { width: 1200, height: 628 }
