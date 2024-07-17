@@ -20,7 +20,9 @@ const Banner = () => {
             For The Future
           </h1>
           <div className="text-xl leading-9 font-medium text-gray-700 leading-[30px]">
-            It is long established fact that reader distracted by the readable content.
+            <span className='text-black'>desi2abroad.com</span> is a collaborative platform for students and professionals
+            from the sub-continent to join forces, exchange knowledge, and navigate pathways for
+            studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </div>
           <div className="bg-white md:flex rounded-md shadow-lg hover:shadow-xl items-center py-[10px] relative lg:pr-[10px] lg:pl-[38px] pl-4 pr-4">
             <div className="flex-1 flex items-center lg:mb-0 mb-2">

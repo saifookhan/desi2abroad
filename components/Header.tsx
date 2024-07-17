@@ -11,7 +11,7 @@ import { message } from 'antd'
 const Header = () => {
 
   return (
-    <header className="mx-auto bg-gradient-to-r from-[#E1F5F3] px-4 sm:px-6 flex bg-white items-center justify-around py-10">
+    <header className="mx-auto bg-gradient-to-r from-[#EBF9F7] px-4 sm:px-6 flex bg-white items-center justify-around py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
