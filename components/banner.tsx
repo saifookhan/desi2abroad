@@ -8,21 +8,21 @@ const Banner = () => {
     >
       <div className="w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px] relative flex flex-col lg:flex-row justify-around">
         <div className="w-full lg:w-[50%] xl:pt-[297px] md:pt-20 md:pb-20 pt-28 pb-14 xl:pb-40 space-y-8">
-          <h1 className="text-3xl lg:text-4xl font-[1000]">
+          <h1 className="text-4xl font-[1000]">
             {' '}
-            Study/Work{' '}
+            Study/Work <br />
             <span
-              className=" inline-block text-6xl lg:text-8xl  bg-no-repeat bg-bottom text-[#30BEAD]"
+              className=" inline-block text-7xl md:text-8xl  bg-no-repeat bg-bottom text-[#30BEAD]"
               style={{ backgroundImage: 'url(../images/banner/shape.svg)' }}
             >
               Roadmaps
             </span>{' '}
-            For The Future
+            <br /> RoadMaps
           </h1>
           <div className="text-xl leading-9 font-medium text-gray-700 leading-[30px]">
-            <span className='text-black'>desi2abroad.com</span> is a collaborative platform for students and professionals
-            from the sub-continent to join forces, exchange knowledge, and navigate pathways for
-            studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
+            <b className="text-black">desi2abroad.com</b> is a collaborative platform for
+            students and professionals from the sub-continent to join forces, exchange knowledge,
+            and navigate pathways for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </div>
           <div className="bg-white md:flex rounded-md shadow-lg hover:shadow-xl items-center py-[10px] relative lg:pr-[10px] lg:pl-[38px] pl-4 pr-4">
             <div className="flex-1 flex items-center lg:mb-0 mb-2">
