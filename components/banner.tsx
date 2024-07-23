@@ -12,36 +12,25 @@ const Banner = () => {
             {' '}
             Study/Work <br />
             <span
-              className=" inline-block text-7xl md:text-8xl  bg-no-repeat bg-bottom text-[#30BEAD]"
-              style={{ backgroundImage: 'url(../images/banner/shape.svg)' }}
-            >
+              className=" inline-block text-7xl md:text-8xl  bg-no-repeat bg-bottom text-[#30BEAD]"            >
               Roadmaps
             </span>{' '}
             <br /> RoadMaps
           </h1>
           <div className="text-xl leading-9 font-medium text-gray-700 leading-[30px]">
-            <b className="text-black">desi2abroad.com</b> is a collaborative platform for
-            students and professionals from the sub-continent to join forces, exchange knowledge,
-            and navigate pathways for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
+            <b className="text-black">desi2abroad.com</b> is a collaborative platform for students
+            and professionals from the sub-continent to join forces, exchange knowledge, and
+            navigate pathways for studying and working abroad. 🇮🇳🇵🇰🇧🇩🇱🇰🇳🇵
           </div>
-          <div className="bg-white md:flex rounded-md shadow-lg hover:shadow-xl items-center py-[10px] relative lg:pr-[10px] lg:pl-[38px] pl-4 pr-4">
-            <div className="flex-1 flex items-center lg:mb-0 mb-2">
-              <div className="flex-none">
-                <span className=" ">
-                  <CiMail />
-                </span>
-              </div>
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Enter your mail"
-                  className="border-none focus:ring-0"
-                />
-              </div>
+          <div className="w-full flex flex-col  md:flex-row mx-auto md:justify-between">
+            <div className="flex-none">
+              <button className="bg-[rgb(255,126,132)] my-2 text-white hover:ring hover:ring-[rgb(255,126,132)] w-72 md:w-60 hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
+                Get Started Now
+              </button>
             </div>
             <div className="flex-none">
-              <button className="bg-[rgb(255,126,132)] text-white hover:ring hover:ring-[rgb(255,126,132)] hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
-                Get Started Now
+              <button className="bg-black text-white my-2 hover:ring hover:ring-black hover:ring-opacity-100 w-72 md:w-60 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
+                Buy Now
               </button>
             </div>
           </div>

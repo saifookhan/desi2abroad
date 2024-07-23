@@ -12,6 +12,7 @@ import { getToken } from 'firebase/messaging'
 import Topics from '@/components/topic'
 import About from '@/components/about'
 import Banner from '@/components/banner'
+import Blogs from '@/components/general/blog/blogs'
 
 
 
@@ -24,6 +25,7 @@ function HomePage() {
         <Banner></Banner>
         <About></About>
         <Topics></Topics>
+        <Blogs></Blogs>
       </div>
       <SectionContainer backgroundStyle={'mediumGrey'}>
         <ArticlesList articleType={'all'} />
