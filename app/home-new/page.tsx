@@ -13,6 +13,7 @@ import Topics from '@/components/topic'
 import About from '@/components/about'
 import Banner from '@/components/banner'
 import Blogs from '@/components/general/blog/blogs'
+import Comments from '@/components/Comments'
 
 
 
@@ -26,6 +27,7 @@ function HomePage() {
         <About></About>
         <Topics></Topics>
         <Blogs></Blogs>
+        <Comments slug='this is the first'></Comments>
       </div>
       <SectionContainer backgroundStyle={'mediumGrey'}>
         <ArticlesList articleType={'all'} />

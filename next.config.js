@@ -6,13 +6,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com api.google.com va.vercel-scripts.com www.clarity.ms apis.google.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app www.youtube.com www.facebook.com analytics.umami.is www.clarity.ms www.googletagmanager.com desi2abroad.disqus.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app www.youtube.com www.facebook.com www.desi2abroad-com.firebaseapp.com/;
+  frame-src giscus.app www.youtube.com www.facebook.com www.desi2abroad-com.firebaseapp.com/ disqus.com;
 `
 
 const securityHeaders = [
