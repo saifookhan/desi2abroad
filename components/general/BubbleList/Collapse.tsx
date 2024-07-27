@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Collapse, message, Button } from 'antd'
 import { TiArrowForward } from 'react-icons/ti'
+import { ConsoleSqlOutlined } from '@ant-design/icons'
 
 const { Panel } = Collapse
 
@@ -64,6 +65,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
     const positionIndex = windowLocation.indexOf(searchIndex)
     const positionId = windowLocation.indexOf(searchId)
 
+
     if (positionIndex !== -1) {
       resultIndex = windowLocation.substring(positionIndex + searchIndex.length).trim()
       resultId = windowLocation.substring(positionId + searchId.length).trim()
@@ -94,8 +96,8 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                     const copyLink = (e) => {
                       e.stopPropagation()
                       navigator.clipboard
-                        // TODO:: Asashir will fix this
-                        .writeText(`http://localhost:3000/germany/#${id}`)
+                       
+                        .writeText(`https://desi2abroad.com/germany/#${id}`)
                         .then(() => {
                           message.success('Copied Successfully')
                         })
