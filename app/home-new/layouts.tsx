@@ -76,10 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white 	">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <div className="bg-gradient-to-r from-cyan-100 w-screen ">
-            {' '}
             <Header />
-          </div>
+        
 
           <SectionContainer backgroundStyle={'gradientDark'}>
             <div
