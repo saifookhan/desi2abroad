@@ -64,7 +64,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
       resultId = windowLocation.substring(positionId + searchId.length).trim()
     }
 
-    console.log('Extracted resultId:', resultId)
+
     setActiveSubPanel(resultId)
   }, [])
 
