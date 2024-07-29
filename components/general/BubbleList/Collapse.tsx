@@ -7,9 +7,10 @@ const { Panel } = Collapse
 
 const BubbleListCollapse = ({ stringifiedData }) => {
   const data = JSON.parse(stringifiedData)
-  const [orgId, setId] = useState('01')
+  const [activeSubPanel, setActiveSubPanel] = useState<string>('00')
   const [messageApi, contextHolder] = message.useMessage()
   const activeKey = ['1', '2', '3', '4', '5', '6']
+
   const mainColor = [
     'bg-amber-200',
     'bg-amber-200',
@@ -52,24 +53,18 @@ const BubbleListCollapse = ({ stringifiedData }) => {
     return [urls]
   }
 
-  const [location, setLocation] = useState({ resultIndex: '', resultId: '' })
-
   useEffect(() => {
     const windowLocation = window.location.href
-    const searchIndex = '&&index='
     const searchId = '#'
-    let resultIndex = ''
     let resultId = ''
 
-    const positionIndex = windowLocation.indexOf(searchIndex)
     const positionId = windowLocation.indexOf(searchId)
 
-    if (positionIndex !== -1) {
-      resultIndex = windowLocation.substring(positionIndex + searchIndex.length).trim()
+    if (positionId !== -1) {
       resultId = windowLocation.substring(positionId + searchId.length).trim()
     }
 
-    setLocation({ resultIndex, resultId })
+    setActiveSubPanel(resultId)
   }, [])
 
   return (
@@ -84,30 +79,31 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                 header={topicGroup[0].B}
                 key={index}
               >
-                <Collapse
-                  size="small"
-                  defaultActiveKey={location.resultId === orgId ? location.resultIndex : '0'}
-                >
+                <Collapse size="small" activeKey={activeSubPanel}>
                   {topicGroup.map((topic, subIndex) => {
                     const spliter = topic.C.split(' ')
-                    const id = spliter.join('-') + `&&index=0${subIndex}`
+                    const id = spliter.join('-') + `&&index=0${subIndex}${spliter[0]}`
                     const copyLink = (e) => {
                       e.stopPropagation()
                       navigator.clipboard
-                        // TODO:: Asashir will fix this
-                        .writeText(`https://desi2abroad.com/germany#${id}`)
+                        .writeText(`https://desi2abroad.com/germany/#${id}`)
                         .then(() => {
                           message.success('Copied Successfully')
                         })
-                      setId(id)
+                      setActiveSubPanel(id)
                     }
 
                     const headerData = (
                       <div className="w-full flex justify-between">
                         {topic.C} {topic.F ? '🎥' : ''}{' '}
-                        <Button onClick={copyLink}>
-                          <TiArrowForward />
-                        </Button>
+                        <div>
+                          <Button onClick={copyLink}>
+                            <TiArrowForward />
+                          </Button>
+                          <Button onClick={copyLink}>
+                            <TiArrowForward />
+                          </Button>
+                        </div>
                       </div>
                     )
 
@@ -115,7 +111,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                       <Panel
                         className={`w-full ${subColor[index - 1]}`}
                         header={headerData}
-                        key={`0${subIndex}`}
+                        key={id}
                         id={id}
                       >
                         <div>
@@ -123,18 +119,20 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         </div>
                         <br />
                         {topic.F?.length > 0 && (
-                          <p>
-                            <strong>Video Link:</strong>{' '}
-                            {youtubeUrlToEmbedUrl(topic.F).map((convertedUrl, key) => (
-                              <iframe
-                                className="bg-black w-full h-[400px] my-4"
-                                key={key}
-                                src={convertedUrl}
-                                sandbox="allow-scripts allow-same-origin"
-                                title={topic.C}
-                              />
-                            ))}
-                          </p>
+                          <>
+                            <p>
+                              <strong>Video Link:</strong>{' '}
+                              {youtubeUrlToEmbedUrl(topic.F).map((convertedUrl, key) => (
+                                <iframe
+                                  className="bg-black w-full h-[400px] my-4"
+                                  key={key}
+                                  src={convertedUrl}
+                                  sandbox="allow-scripts allow-same-origin"
+                                  title={topic.C}
+                                />
+                              ))}
+                            </p>
+                          </>
                         )}
                       </Panel>
                     )
