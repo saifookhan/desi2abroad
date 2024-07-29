@@ -14,9 +14,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
           <div>
             <img
-              src="https://media-mct1-1.cdn.whatsapp.net/v/t61.24694-24/418056690_457980823668024_763461523323691991_n.jpg?ccb=11-4&oh=01_Q5AaIOMPmLYzr27668TjUCtBY2qX_nW62-pCPxFWlpgE7MLx&oe=669E00BC&_nc_sid=e6ed6c&_nc_cat=110"
+              src="/static/images/saif.jpg"
               alt="aboutOne"
-              className=" mx-auto"
+              className=" mx-auto w-full"
             />
           </div>
           <div>

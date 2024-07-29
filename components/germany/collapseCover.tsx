@@ -39,8 +39,6 @@ const CollapseCover = ({ studyPrograms, resources, stringifiedData }) => {
               </Title>
               <Switch onChange={changer} />
             </div>
-            {/* <Title level={3}>Detailed Steps</Title> */}
-            {/* <BubbleListCollapse stringifiedData={stringifiedData} /> */}
             {toggle === false ? <BubbleListCollapse stringifiedData={stringifiedData} /> : <Flow />}
           </div>
           <div className="pt-5" id="aashir">
