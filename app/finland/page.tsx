@@ -3,7 +3,6 @@
 import SectionContainer from 'components/SectionContainer'
 import PageHeader from '@/components/general/page/PageHeader'
 import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
-import Comment from '@/components/comment'
 
 
 //TODO:: fill meta
