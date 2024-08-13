@@ -4,9 +4,6 @@ import { allBlogs } from 'contentlayer/generated'
 import { SlCalender } from 'react-icons/sl'
 import { FaUser } from 'react-icons/fa'
 
-
-
-
 const Blogs = () => {
   return (
     <div className=" w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
@@ -34,8 +31,9 @@ const Blogs = () => {
               key={index}
             >
               <div className="course-thumb h-[260px] rounded-t-[8px]  relative">
+                {/* TODO:: For aashir to take a look */}
                 <img
-                  src={blog.images}
+                  src={blog.images && blog.images[0]}
                   alt=""
                   className=" w-full h-full object-cover rounded-t-[8px]"
                 />

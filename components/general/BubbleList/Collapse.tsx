@@ -82,6 +82,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
   }, [])
   useEffect(() => {
     if (localStorage.getItem('view')) {
+      // TODO:: FOR AASHIR TO FIX
       const localExistingData = JSON.parse(localStorage.getItem('view'))
       setLocalData(localExistingData)
     }

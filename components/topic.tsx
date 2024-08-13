@@ -2,7 +2,7 @@
 import React from 'react'
 import { topicsData } from '@/data/homeData/homeData'
 import { HomepageCateogries } from 'src/types/types'
- import {} from '../public/static/images/countries/austria.png'
+import {} from '../public/static/images/countries/austria.png'
 
 const categories: HomepageCateogries[] = [
   {
@@ -94,7 +94,11 @@ const Topics = () => {
                   key={subIndex}
                 >
                   <div className="w-[72px] h-[72px] rounded-full bg-white relative mx-auto flex flex-col justify-center items-center mb-8 group-hover:bg-[#FFE8E8]">
-                    <img src={item.picture} alt="" className=" w-[32px] h-[32px] object-cover rounded-full" />
+                    <img
+                      src={item.picture}
+                      alt=""
+                      className=" w-[32px] h-[32px] object-cover rounded-full"
+                    />
                   </div>
                   <div className="course-content">
                     <h4 className=" text-2xl  mb-2 font-bold">{item.chapter}</h4>

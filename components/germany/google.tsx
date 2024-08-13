@@ -1,9 +1,13 @@
 'use client'
 import { auth } from 'app/germany/firebaseConfig'
-import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged, signInWithPopup } from 'firebase/auth'
+import {
+  GoogleAuthProvider,
+  signInWithRedirect,
+  onAuthStateChanged,
+  signInWithPopup,
+} from 'firebase/auth'
 
-
-export const signInWithGoogle =async () => {
+export const signInWithGoogle = async () => {
   const provider = new GoogleAuthProvider()
   await provider.setCustomParameters({
     prompt: 'select_account',
@@ -20,4 +24,3 @@ export const signInWithGoogle =async () => {
       console.error('Error Details:', error)
     })
 }
-

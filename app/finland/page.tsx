@@ -4,7 +4,6 @@ import SectionContainer from 'components/SectionContainer'
 import PageHeader from '@/components/general/page/PageHeader'
 import VideoPlayerCard from '@/components/general/Video/VideoPlayerCard'
 
-
 //TODO:: fill meta
 // export const metadata = genPageMetadata({ title: 'Blog' })
 
@@ -15,11 +14,7 @@ const videosList = [
   },
 ]
 
-
 export default function BlogPage() {
-  
- 
-  
   return (
     <>
       <PageHeader

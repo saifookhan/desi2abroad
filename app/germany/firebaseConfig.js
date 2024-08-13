@@ -3,8 +3,6 @@ import { getAuth } from 'firebase/auth'
 import { getDatabase, ref, goOffline } from 'firebase/database'
 import { getFirestore } from 'firebase/firestore'
 
-
-
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_Key,
   authDomain: process.env.NEXT_PUBLIC_authDomain,
@@ -19,9 +17,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
-const firestoreDB=getFirestore(app);
+const firestoreDB = getFirestore(app)
 const db = getDatabase(app)
 const dbRef = ref(db)
 
-
-export { db, auth, dbRef, goOffline,firestoreDB }
+export { db, auth, dbRef, goOffline, firestoreDB }

@@ -2,16 +2,24 @@ import React, { useEffect, useState } from 'react'
 import { Card, Avatar, List, Button, Input } from 'antd'
 import { collection, addDoc, Timestamp, query, orderBy, onSnapshot } from 'firebase/firestore'
 import { firestoreDB } from 'app/germany/firebaseConfig'
-import { onAuthStateChanged ,signInWithPopup,GoogleAuthProvider} from 'firebase/auth'
+import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth'
 import { auth } from 'app/germany/firebaseConfig'
 
+// TODO:: fix build error
 
 const { Meta } = Card
 
+type CommentType = {
+  id: string
+  name: string
+  comment: string
+  image: string
+}
+
 const Comment = () => {
   const [inputValue, setInputValue] = useState('')
-  const [comments, setComments] = useState([])
-  const [User,setUser]=useState({})
+  const [comments, setComments] = useState<CommentType[]>([])
+  const [User, setUser] = useState<User>()
 
   const handleChange = (e) => {
     const { value } = e.target
@@ -20,7 +28,7 @@ const Comment = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if(User){
+    if (User) {
       try {
         await addDoc(collection(firestoreDB, 'comments'), {
           name: User.displayName,
@@ -33,10 +41,9 @@ const Comment = () => {
       } catch (err) {
         alert(err)
       }
-    }
-    else{
-          const provider= new GoogleAuthProvider()
-          signInWithPopup(auth,provider)
+    } else {
+      const provider = new GoogleAuthProvider()
+      signInWithPopup(auth, provider)
     }
   }
 
@@ -46,35 +53,30 @@ const Comment = () => {
       const data = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-      }))
+      })) as CommentType[]
       setComments(data)
     })
 
-   
     return () => unsubscribe()
   }, [inputValue])
 
-  useEffect(
-    ()=>{
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          setUser(user)         
-          
-        } else {
-          
-          console.log('User is signed out')
-        }
-      })
-    }
-  )
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user)
+      } else {
+        console.log('User is signed out')
+      }
+    })
+  })
 
   return (
     <>
       <Card className="w-full m-auto mt-8">
         <Meta
           className="flex"
-          avatar={<Avatar src={User.photoURL} />}
-          title={User.displayName}
+          avatar={<Avatar src={User && User.photoURL} />}
+          title={User && User.displayName}
         />
         <Input
           type="textarea"
@@ -85,16 +87,17 @@ const Comment = () => {
         />
         <Button onClick={handleSubmit}>Submit</Button>
       </Card>
-      <List itemLayout="horizontal" className='my-8'>
-        {comments.map((comment) => (
-          <List.Item key={comment.id}>
-            <Meta
-              avatar={<Avatar src={comment.image} />}
-              title={comment.name}
-              description={comment.comment}
-            />
-          </List.Item>
-        ))}
+      <List itemLayout="horizontal" className="my-8">
+        {comments &&
+          comments.map((comment) => (
+            <List.Item key={comment.id}>
+              <Meta
+                avatar={<Avatar src={comment.image} />}
+                title={comment.name}
+                description={comment.comment}
+              />
+            </List.Item>
+          ))}
       </List>
     </>
   )
