@@ -36,6 +36,7 @@ export type StudyParentNode = CollapsableStudyNode & {
 
 export type HomepageCateogries = {
   chapter: string
+  picture:string
   subChapters: HomepageCateogriesCategories[]
   subChaptersTwo?: HomepageCateogriesCategories[]
 }

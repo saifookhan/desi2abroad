@@ -2,14 +2,18 @@
 import { useState, useEffect } from 'react'
 import { Collapse, message, Button } from 'antd'
 import { TiArrowForward } from 'react-icons/ti'
+import { GoDotFill } from 'react-icons/go'
+import { FaCheck } from 'react-icons/fa6'
 
 const { Panel } = Collapse
 
 const BubbleListCollapse = ({ stringifiedData }) => {
   const data = JSON.parse(stringifiedData)
   const [activeSubPanel, setActiveSubPanel] = useState<string>('00')
+  const [localData, setLocalData] = useState([])
   const [messageApi, contextHolder] = message.useMessage()
   const activeKey = ['1', '2', '3', '4', '5', '6']
+  const [isGoDotFillDisplayed, setIsGoDotFillDisplayed] = useState(false)
 
   const mainColor = [
     'bg-amber-200',
@@ -27,6 +31,15 @@ const BubbleListCollapse = ({ stringifiedData }) => {
     'bg-orange-200',
     'bg-gray-300',
   ]
+
+  const viewer = (id) => {
+    const existingView = localStorage.getItem('view')
+    const existingIds = existingView ? JSON.parse(existingView) : []
+    if (!existingIds.includes(id)) {
+      existingIds.push(id)
+      localStorage.setItem('view', JSON.stringify(existingIds))
+    }
+  }
 
   const youtubeUrlToEmbedUrl = (urls) => {
     if (urls) {
@@ -64,9 +77,15 @@ const BubbleListCollapse = ({ stringifiedData }) => {
       resultId = windowLocation.substring(positionId + searchId.length).trim()
     }
 
-
+    viewer(resultId)
     setActiveSubPanel(resultId)
   }, [])
+  useEffect(() => {
+    if (localStorage.getItem('view')) {
+      const localExistingData = JSON.parse(localStorage.getItem('view'))
+      setLocalData(localExistingData)
+    }
+  })
 
   return (
     <>
@@ -80,7 +99,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                 header={topicGroup[0].B}
                 key={index}
               >
-                <Collapse size="small" activeKey={activeSubPanel}>
+                <Collapse size="small" defaultActiveKey={activeSubPanel}>
                   {topicGroup.map((topic, subIndex) => {
                     const spliter = topic.C.split(' ')
                     const id = spliter.join('-') + `&&index=0${subIndex}${spliter[0]}`
@@ -95,11 +114,23 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                     }
 
                     const headerData = (
-                      <div className="w-full flex justify-between">
+                      <div
+                        className="w-full flex justify-between"
+                        onClick={() => {
+                          viewer(id)
+                        }}
+                      >
                         {topic.C} {topic.F ? '🎥' : ''}{' '}
-                        <Button onClick={copyLink}>
-                          <TiArrowForward />
-                        </Button>
+                        <div>
+                          {localData.includes(id) ? (
+                            <Button style={{ backgroundColor: 'green' }} className="text-white">
+                              <FaCheck />
+                            </Button>
+                          ) : null}
+                          <Button onClick={copyLink}>
+                            <TiArrowForward />
+                          </Button>
+                        </div>
                       </div>
                     )
 

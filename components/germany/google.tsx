@@ -1,9 +1,14 @@
+'use client'
 import { auth } from 'app/germany/firebaseConfig'
-import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged } from 'firebase/auth'
+import { GoogleAuthProvider, signInWithRedirect, onAuthStateChanged, signInWithPopup } from 'firebase/auth'
 
-export const signInWithGoogle = () => {
+
+export const signInWithGoogle =async () => {
   const provider = new GoogleAuthProvider()
-  signInWithRedirect(auth, provider)
+  await provider.setCustomParameters({
+    prompt: 'select_account',
+  })
+  signInWithPopup(auth, provider)
     .then((result) => {
       console.log('sign inned')
       console.log(result)
@@ -16,11 +21,3 @@ export const signInWithGoogle = () => {
     })
 }
 
-// Auth State Listener
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log('User signed in:', user)
-  } else {
-    console.log('User is signed out')
-  }
-})

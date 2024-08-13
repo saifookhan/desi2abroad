@@ -8,12 +8,16 @@ import SectionContainer, { backgroundStyles } from 'components/SectionContainer'
 import BubbleList from '@/components/general/BubbleList/BubbleList'
 import { HomepageCateogries } from 'src/types/types'
 import ArticlesList from '@/components/general/blog/ArticlesList'
-// import { getToken } from 'firebase/messaging'
-// import { messaging } from './germany/firebaseConfig'
+import { getToken } from 'firebase/messaging'
+import Topics from '@/components/topic'
+import About from '@/components/about'
+import Banner from '@/components/banner'
+
 
 const categories: HomepageCateogries[] = [
   {
     chapter: 'Germany 🇩🇪',
+    picture: '/static/images/countries/germany.png',
     subChapters: [
       {
         title: 'Study Flow: (Masters)',
@@ -25,8 +29,6 @@ const categories: HomepageCateogries[] = [
         path: '/germany-bachelors',
         disabled: true,
       },
-    ],
-    subChaptersTwo: [
       {
         title: 'Work: Germany Tech Jobs 🎥',
         path: '/germany/it-jobs',
@@ -35,6 +37,7 @@ const categories: HomepageCateogries[] = [
   },
   {
     chapter: 'Italy 🇮🇹',
+    picture: '/static/images/countries/italy.png',
     subChapters: [
       {
         title: 'Italy 🎥',
@@ -44,6 +47,7 @@ const categories: HomepageCateogries[] = [
   },
   {
     chapter: 'America 🇺🇸',
+    picture: '/static/images/countries/usa.png',
     subChapters: [
       {
         title: 'America (Study+Work) 🎥',
@@ -53,6 +57,7 @@ const categories: HomepageCateogries[] = [
   },
   {
     chapter: 'Finland 🇫🇮',
+    picture: '/static/images/countries/finland.png',
     subChapters: [
       {
         title: 'Finland 🎥',
@@ -62,6 +67,7 @@ const categories: HomepageCateogries[] = [
   },
   {
     chapter: 'Austria 🇦🇹',
+    picture: '/static/images/countries/austria.png',
     subChapters: [
       {
         title: 'Austria 🎥',
@@ -71,29 +77,9 @@ const categories: HomepageCateogries[] = [
   },
 ]
 
-function HomePage() {
-  // TODO:: Aashir commented for build
-  // const vapidKey =
-  //   'BM30735VL-jSroyNpu1VBTbDHj9al14_-LJgNqQyhxiO2fpk8gD0asFUuces7rHy9fuphRa7xolVYp0WKT8vMAU'
 
-  // useEffect(() => {
-  //   async function permit() {
-  //     const permission = await Notification.requestPermission()
-  //     if (permission !== 'granted') {
-  //       message.warning('You have denied the permissions')
-  //       return
-  //     }
-  //     try {
-  //       const token = await getToken(messaging, {
-  //         vapidKey: vapidKey,
-  //       })
-  //       console.log('FCM Token:', token)
-  //     } catch (error) {
-  //       console.error('Error getting FCM token:', error)
-  //     }
-  //   }
-  //   permit()
-  // }, [])
+function HomePage() {
+ 
   return (
     <ConfigProvider theme={theme}>
       <SectionContainer backgroundStyle={'lightGrey'}>
@@ -156,6 +142,11 @@ function HomePage() {
           )
         })}
       </SectionContainer>
+      <div className="m-auto">
+        <Banner></Banner>
+        <About></About>
+        <Topics></Topics>
+      </div>
       <SectionContainer backgroundStyle={'mediumGrey'}>
         <ArticlesList articleType={'all'} />
       </SectionContainer>

@@ -1,23 +1,27 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getDatabase, ref, goOffline } from 'firebase/database'
-import { getMessaging } from 'firebase/messaging'
+import { getFirestore } from 'firebase/firestore'
+
+
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCVwCEWiqqWeZ-MOVy4w72mD6PDxzEjvJ8',
-  authDomain: 'desi2abroad-com.firebaseapp.com',
-  databaseURL: 'https://desi2abroad-com-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'desi2abroad-com',
-  storageBucket: 'desi2abroad-com.appspot.com',
-  messagingSenderId: '120248603952',
-  appId: '1:120248603952:web:1a7ede86f3c13748d7e4f5',
-  measurementId: 'G-8DDJZ8QDD1',
+  apiKey: process.env.NEXT_PUBLIC_API_Key,
+  authDomain: process.env.NEXT_PUBLIC_authDomain,
+  databaseURL: process.env.NEXT_PUBLIC_db_Url,
+  projectId: process.env.NEXT_PUBLIC_project_Id,
+  storageBucket: process.env.NEXT_PUBLIC_storage_Bucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_sender_Id,
+  appId: process.env.NEXT_PUBLIC_app_Id,
+  measurementId: process.env.NEXT_PUBLIC_measurement_Id,
+  signInFlow: 'popup',
 }
 
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
+const firestoreDB=getFirestore(app);
 const db = getDatabase(app)
 const dbRef = ref(db)
-// const messaging = getMessaging(app)
 
-export { db, auth, dbRef, goOffline }
+
+export { db, auth, dbRef, goOffline,firestoreDB }
