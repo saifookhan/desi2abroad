@@ -8,7 +8,6 @@ import { FaUser } from 'react-icons/fa'
 
 
 const Blogs = () => {
-  console.log(allBlogs)
   return (
     <div className=" w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
       <div className="mx-auto w-full px-[15px] ">
