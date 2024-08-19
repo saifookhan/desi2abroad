@@ -7,10 +7,7 @@ import Banner from '@/components/banner'
 import Blogs from '@/components/general/blog/blogs'
 import Comments from '@/components/Comments'
 
-
-
 function HomePage() {
- 
   return (
     <ConfigProvider theme={theme}>
       <div className="m-auto">
@@ -18,11 +15,10 @@ function HomePage() {
         <About></About>
         <Topics></Topics>
         <Blogs></Blogs>
-        <div className='my-20'>
+        <div className="my-20">
           <Comments slug="this is the first"></Comments>
         </div>
       </div>
-     
     </ConfigProvider>
   )
 }

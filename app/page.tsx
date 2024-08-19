@@ -13,7 +13,6 @@ import Topics from '@/components/topic'
 import About from '@/components/about'
 import Banner from '@/components/banner'
 
-
 const categories: HomepageCateogries[] = [
   {
     chapter: 'Germany 🇩🇪',
@@ -77,9 +76,7 @@ const categories: HomepageCateogries[] = [
   },
 ]
 
-
 function HomePage() {
- 
   return (
     <ConfigProvider theme={theme}>
       <SectionContainer backgroundStyle={'lightGrey'}>

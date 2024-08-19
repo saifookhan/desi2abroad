@@ -3,6 +3,7 @@ import React from 'react'
 import { allBlogs } from 'contentlayer/generated'
 import { SlCalender } from 'react-icons/sl'
 import { FaUser } from 'react-icons/fa'
+import Image from 'next/image'
 
 const Blogs = () => {
   return (
@@ -32,8 +33,8 @@ const Blogs = () => {
             >
               <div className="course-thumb h-[260px] rounded-t-[8px]  relative">
                 {/* TODO:: For aashir to take a look */}
-                <img
-                  src={blog.images && blog.images[0]}
+                <Image
+                  src={(blog.images && blog.images[0]) || ''}
                   alt=""
                   className=" w-full h-full object-cover rounded-t-[8px]"
                 />

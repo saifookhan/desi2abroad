@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const pageId = params.pageId
-  const recordMap = await getPageData(pageId)
+  const recordMap = await getPageData()
 
   return {
     props: {

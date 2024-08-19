@@ -4,6 +4,7 @@ import React from 'react'
 import { IoBulbOutline } from 'react-icons/io5'
 import { GiArcheryTarget } from 'react-icons/gi'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
       <div className="w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
           <div>
-            <img src="/static/images/saif.jpg" alt="aboutOne" className=" mx-auto w-full" />
+            <Image src="/static/images/saif.jpg" alt="aboutOne" className=" mx-auto w-full" />
           </div>
           <div>
             <div className="mb-1 text-lg leading-7 font-semibold text-teal-500">About Edumim</div>

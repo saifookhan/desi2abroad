@@ -4,7 +4,6 @@ import Link from './Link'
 import Image from 'next/image'
 import MobileNav from './MobileNav'
 
-
 const Header = () => {
   return (
     <div className="w-full bg-gradient-to-r from-[#D8F2EF] to-white">

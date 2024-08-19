@@ -28,5 +28,5 @@ export const topicsData = [
     logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiFGAC0m7GVixb7dvDJPsUCro1f2O3X3TP-g&s',
     title: 'Myanmar',
     quantity: '670 students',
-  }
+  },
 ]

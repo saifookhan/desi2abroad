@@ -14,7 +14,7 @@ function positionCalculator(nodes: StudyParentNode[] | CollapsableStudyNode[]) {
 export function nodesMapper(nodes: StudyParentNode[]): Node<any, string | undefined>[] | undefined {
   const parentNodes = positionCalculator(nodes)
 
-  const childNodes = parentNodes.map((node,index) => {
+  const childNodes = parentNodes.map((node, index) => {
     let x = [] as CollapsableStudyNode[]
     if (node.children) {
       x = positionCalculator(node.children)

@@ -13,11 +13,14 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const { pageId } = params
-  const recordMap = await getPageContent(pageId)
+  const recordMap = await getPageContent(pageId).catch((error) => {
+    console.error('Error fetching page content:', error)
+    return null
+  })
 
-  console.log(JSON.stringify(recordMap))
-
-  return null
+  if (!recordMap) {
+    return <div>Error loading page content</div>
+  }
 
   return <NotionPage recordMap={recordMap} />
 }

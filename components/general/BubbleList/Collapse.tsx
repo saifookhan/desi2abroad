@@ -83,7 +83,7 @@ const BubbleListCollapse = ({ stringifiedData }) => {
   useEffect(() => {
     if (localStorage.getItem('view')) {
       // TODO:: FOR AASHIR TO FIX
-      const localExistingData = JSON.parse(localStorage.getItem('view'))
+      const localExistingData = JSON.parse(localStorage.getItem('view') || 'null')
       setLocalData(localExistingData)
     }
   })
@@ -120,10 +120,17 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         onClick={() => {
                           viewer(id)
                         }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            viewer(id)
+                          }
+                        }}
+                        role="button"
+                        tabIndex={0}
                       >
                         {topic.C} {topic.F ? '🎥' : ''}{' '}
                         <div>
-                          {localData.includes(id) ? (
+                          {localData.includes(id as never) ? (
                             <Button style={{ backgroundColor: 'green' }} className="text-white">
                               <FaCheck />
                             </Button>
