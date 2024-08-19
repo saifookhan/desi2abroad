@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Collapse, message, Button } from 'antd'
 import { TiArrowForward } from 'react-icons/ti'
 import { GoDotFill } from 'react-icons/go'
-import { FaCheck } from 'react-icons/fa6'
+import { FaRegCheckCircle } from 'react-icons/fa'
 
 const { Panel } = Collapse
 
@@ -129,12 +129,11 @@ const BubbleListCollapse = ({ stringifiedData }) => {
                         tabIndex={0}
                       >
                         {topic.C} {topic.F ? '🎥' : ''}{' '}
-                        <div>
-                          {localData.includes(id as never) ? (
-                            <Button style={{ backgroundColor: 'green' }} className="text-white">
-                              <FaCheck />
-                            </Button>
-                          ) : null}
+                        <div
+                          className="flex text-2xl gap-2 items-center"
+                          style={{ color: 'green' }}
+                        >
+                          {localData.includes(id as never) ? <FaRegCheckCircle /> : null}
                           <Button onClick={copyLink}>
                             <TiArrowForward />
                           </Button>
