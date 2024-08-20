@@ -79,7 +79,7 @@ module.exports = (phase, { defaultConfig }) => {
         },
       ]
     },
-    webpack5: false,
+    webpack5: true,
     webpack: (config, { isServer }) => {
       if (!isServer) {
         config.resolve.fallback.fs = false

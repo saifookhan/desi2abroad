@@ -36,13 +36,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="w-full lg:w-[50%] text-xl leading-9 font-medium h-full my-auto flex justify-around items-center hidden xl:block bottom-0 p-6">
-          <Image
-            className="w-full "
-            src={
-              'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fcb86dd61-c1ef-484d-8ad1-a9a198b73ec4%2Fc0378afa-fa6e-41be-a584-28e12002724f%2FPass_your_A1_exam_in_two_months.jpg?table=block&id=98bdc755-8561-4d4c-952d-2dac25a0a3a0&cache=v2'
-            }
-            alt="manOne"
-          />
+          <img className="w-full " src={'/static/images/alumni.jpg'} alt="manOne" />
         </div>
       </div>
     </section>

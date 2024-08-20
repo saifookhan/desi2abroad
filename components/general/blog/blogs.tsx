@@ -4,6 +4,7 @@ import { allBlogs } from 'contentlayer/generated'
 import { SlCalender } from 'react-icons/sl'
 import { FaUser } from 'react-icons/fa'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Blogs = () => {
   return (
@@ -17,12 +18,12 @@ const Blogs = () => {
             </div>
           </div>
           <div className="mb-3">
-            <a
-              href="#"
+            <Link
+              href="blog"
               className="bg-[rgb(255,126,132)] text-white hover:ring hover:ring-[rgb(255,126,132)] hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out"
             >
               Read All Blogs
-            </a>
+            </Link>
           </div>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] pt-7">
@@ -33,7 +34,7 @@ const Blogs = () => {
             >
               <div className="course-thumb h-[260px] rounded-t-[8px]  relative">
                 {/* TODO:: For aashir to take a look */}
-                <Image
+                <img
                   src={(blog.images && blog.images[0]) || ''}
                   alt=""
                   className=" w-full h-full object-cover rounded-t-[8px]"
@@ -58,12 +59,12 @@ const Blogs = () => {
                     {blog.title}
                   </a>
                 </h4>
-                <a
+                <Link
                   href={blog.filePath}
                   className=" text-black text-lg font-bold hover:underline transition duration-150"
                 >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           ))}
