@@ -31,7 +31,7 @@ export default function Footer() {
           <Link href="https://roadmap.sh">Inspired from roadmap.sh</Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Image src={"/static/images/d2A.png"} width={150} height={70} alt="logo" />
+          <Image src={'/static/images/d2A.png'} width={150} height={70} alt="logo" />
         </div>
       </div>
     </footer>
