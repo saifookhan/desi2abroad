@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const About = () => {
   return (
-    <div className="about-area py-20">
+    <div className="about-area py-20 bg-white text-black">
       <div className="w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
           <div>

@@ -69,7 +69,7 @@ const categories: HomepageCateogries[] = [
 
 const Topics = () => {
   return (
-    <div className=" py-20">
+    <div className=" py-20 bg-white text-black">
       <div className="w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
         <div className="text-center">
           <div className="mb-1 text-lg leading-7 font-semibold text-teal-500">

@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const Blogs = () => {
   return (
-    <div className=" w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
+    <div className="bg-white text-black w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px]">
       <div className="mx-auto w-full px-[15px] ">
         <div className="lg:flex justify-between items-center ">
           <div className="mb-3">

@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Banner = () => {
   return (
     <section
-      className={`lg:min-h-screen bg-cover bg-no-repeat bg-center overflow-hidden bg-[url('../src/assets/images/1.png')]`}
+      className={`lg:min-h-screen bg-cover bg-no-repeat bg-center bg-white text-black overflow-hidden bg-[url('../src/assets/images/1.png')]`}
     >
       <div className="w-full mx-auto px-[15px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1140px] 2xl:max-w-[1170px] relative flex flex-col lg:flex-row justify-around">
         <div className="w-full lg:w-[50%] xl:pt-[297px] md:pt-20 md:pb-20 pt-28 pb-14 xl:pb-40 space-y-8">

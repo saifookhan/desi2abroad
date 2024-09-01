@@ -10,7 +10,7 @@ import Comments from '@/components/Comments'
 function HomePage() {
   return (
     <ConfigProvider theme={theme}>
-      <div className="m-auto">
+      <div className="m-auto bg-white text-black">
         <Banner></Banner>
         <About></About>
         <Topics></Topics>
