@@ -84,6 +84,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         })(window, document, "clarity", "script", "kdz2zgnwib");
         `}
       </Script>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6524048527616614"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />

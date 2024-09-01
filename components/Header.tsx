@@ -35,7 +35,7 @@ const Header = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className="hidden sm:block font-medium text-gray-500 dark:text-gray-100"
+                className="hidden sm:block font-medium text-gray-500 dark:text-gray-800"
               >
                 {link.title}
               </Link>
@@ -45,9 +45,11 @@ const Header = () => {
           <MobileNav />
         </div>
         <div>
-          <button className="bg-[#FF7E84] text-white hover:ring hover:ring-[#FF7E84] hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent hidden lg:inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
-            Buy Course Now
-          </button>
+          <Link href={'/a1'}>
+            <button className="bg-[#FF7E84] text-white hover:ring hover:ring-[#FF7E84] hover:ring-opacity-100 hover:ring-offset-2 hover:ring-offset-transparent hidden lg:inline-block rounded-md py-[13px] px-6 text-base leading-6 font-medium transition-all duration-300 ease-in-out">
+              Learn German
+            </button>
+          </Link>
         </div>
       </header>
     </div>
