@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react'
 import { ConfigProvider, message } from 'antd'
 import theme from '../css/themeConfig'
-
+import { redirect } from 'next/navigation'
 import SectionContainer, { backgroundStyles } from 'components/SectionContainer'
 import BubbleList from '@/components/general/BubbleList/BubbleList'
 import { HomepageCateogries } from 'src/types/types'
@@ -77,6 +77,7 @@ const categories: HomepageCateogries[] = [
 ]
 
 function HomePage() {
+  redirect(`/home-new`)
   return (
     <ConfigProvider theme={theme}>
       <SectionContainer backgroundStyle={'lightGrey'}>
